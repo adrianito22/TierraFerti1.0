@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/btn.xml" value="0.252" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ic_baseline_nature_24.xml" value="0.252" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ll.xml" value="0.252" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/apuntalamiento.xml" value="0.12317708333333334" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx.xml" value="0.4" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1.xml" value="0.4" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1_item.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1_itemx.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_deshoje.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/cuadro2.xml" value="0.4" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/cuadro3.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/cuadro4.xml" value="0.536" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/gggg.xml" value="0.17526041666666667" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_control_cald_checkbx.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_control_cald_checkbx2.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/layout_linear.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/tierrafertil.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
