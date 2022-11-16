@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#4CAF50"
+        android:gravity="center_horizontal"
+        android:padding="7dp"
+        android:text="Plantas a la cosecha"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="12">
+
+        <Spinner
+            android:id="@+id/spinnerCintaColor"
+            style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:entries="@array/COLORcINTAarray">
+
+        </Spinner>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/backrgound_item2"
+            android:hint="T.H">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediPlantsCosechaTh"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:background="@drawable/backrgound_item2"
+            android:hint="H.N">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediPlantsCosechaHn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

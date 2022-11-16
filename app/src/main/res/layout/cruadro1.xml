@@ -133,6 +133,13 @@
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,84 +151,84 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.24" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.31" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
+        app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_percent="0.94" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.87" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.59" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.40" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -261,6 +268,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.71" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.56" />
 
     <TextView
         android:id="@+id/textView"
@@ -341,9 +355,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/ediPLantsJovesTh1"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
+
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
@@ -354,9 +373,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/ediPLantsJovesTh7"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -366,9 +390,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/ediPLantsJovesTotal"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
@@ -378,9 +407,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName12"
+        android:id="@+id/ediPLantsJovesPromedio"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
@@ -390,9 +424,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/ediPLantsJovesTh10"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
@@ -403,8 +442,13 @@
         app:layout_constraintVertical_bias="0.478" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/ediPLantsJovesTh9"
         android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -414,9 +458,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/ediPLantsJovesTh8"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -426,9 +475,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/ediPLantsJovesTh6"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -438,9 +492,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/ediPLantsJovesTh5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
+
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
@@ -451,9 +510,14 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/ediPLantsJovesTh4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
+
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
@@ -463,9 +527,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/ediPLantsJovesTh3"
         android:layout_width="0dp"
+
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789."
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
@@ -475,15 +544,20 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ediPLantsJovesTh2"
         android:layout_width="0dp"
+
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/ediPLantsJovesTh1" />
 
     <TextView
         android:id="@+id/textView7"
@@ -491,6 +565,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="1"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
@@ -498,9 +573,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/ediPLantsJovesHe1"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
@@ -511,9 +590,14 @@
         app:layout_constraintVertical_bias="0.7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName23"
+        android:id="@+id/ediPLantsJovesHe2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
@@ -524,9 +608,13 @@
         app:layout_constraintVertical_bias="0.511" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName24"
+        android:id="@+id/ediPLantsJovesHe3"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
@@ -536,9 +624,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName25"
+        android:id="@+id/ediPLantsJovesHe4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
@@ -549,9 +641,13 @@
         app:layout_constraintVertical_bias="0.566" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName26"
+        android:id="@+id/ediPLantsJovesHe5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
@@ -561,8 +657,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName27"
+        android:id="@+id/ediPLantsJovesHe6"
         android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -572,9 +673,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName28"
+        android:id="@+id/ediPLantsJovesHe7"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -584,9 +689,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName29"
+        android:id="@+id/ediPLantsJovesHe8"
         android:layout_width="0dp"
+
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -596,9 +705,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName30"
+        android:id="@+id/ediPLantsJovesHe9"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -608,9 +721,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName31"
+        android:id="@+id/ediPLantsJovesHe10"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
@@ -620,9 +737,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName32"
+        android:id="@+id/ediPLantsJovesHe10Total"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
@@ -632,9 +753,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName33"
+        android:id="@+id/ediPLantsJovesPromedioHe"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
@@ -644,9 +769,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName34"
+        android:id="@+id/ediPLantsJovesHn1"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
@@ -656,9 +786,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName35"
+        android:id="@+id/ediPLantsJovesHn2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
@@ -668,9 +802,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName36"
+        android:id="@+id/ediPLantsJovesHn3"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
@@ -680,8 +818,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName37"
+        android:id="@+id/ediPLantsJovesHn4"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_width="0dp"
+
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
@@ -691,9 +835,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName38"
+        android:id="@+id/ediPLantsJovesHn5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
@@ -703,9 +851,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName39"
+        android:id="@+id/ediPLantsJovesHn9"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -715,9 +867,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName43"
+        android:id="@+id/ediPLantsJovesHn10"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
@@ -727,9 +883,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName44"
+        android:id="@+id/ediPLantsJovesTotalHn"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
@@ -739,9 +899,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName45"
+        android:id="@+id/ediPLantsJovesPromedioHn"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
+
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
@@ -751,9 +915,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName40"
+        android:id="@+id/ediPLantsJovesHn8"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -763,9 +931,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName41"
+        android:id="@+id/ediPLantsJovesHn7"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -775,9 +947,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName42"
+        android:id="@+id/ediPLantsJovesHn6"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/backrgound_item2"
+
+        android:digits="0123456789"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -785,5 +961,30 @@
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="3dp"
+        android:background="#636363"
+        android:gravity="center"
+        android:text="plantas jovenes"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IMGcHECKoperation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        app:layout_constraintStart_toStartOf="@+id/guideline31"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_box_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

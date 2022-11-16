@@ -11,5 +11,13 @@
     </string-array>
 
 
+    <string-array name="COLORcINTAarray">
+        <item>Ninguno</item>
+        <item>Verde</item>
+        <item>Negra</item>
+
+        <item></item>
+
+    </string-array>
 
 </resources>

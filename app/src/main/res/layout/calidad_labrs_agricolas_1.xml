@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/ediPLantsJovesHe1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
