@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Spinner
-        android:id="@+id/ediAmarreFunda"
+        android:id="@+id/ediDireccion"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
     <Spinner
-        android:id="@+id/ediEnfundeTiempo"
+        android:id="@+id/ediDeshijeAtiempo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <Spinner
-        android:id="@+id/spinner4"
+        android:id="@+id/ediUsoDeFunda"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
-        android:id="@+id/spinner5"
+        android:id="@+id/ediCodo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <Spinner
-        android:id="@+id/spinner6"
+        android:id="@+id/ediHojaPuente"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <Spinner
-        android:id="@+id/spinner7"
+        android:id="@+id/ediSaneoYCirugia"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.083" />
 
     <Spinner
-        android:id="@+id/spinner8"
+        android:id="@+id/ediDesvioDeHijos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <Spinner
-        android:id="@+id/spinner9"
+        android:id="@+id/ediDeschive"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
@@ -88,7 +88,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <Spinner
-        android:id="@+id/spinner10"
+        android:id="@+id/ediCirugiaDeDedos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
