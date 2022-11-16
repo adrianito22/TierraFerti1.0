@@ -6,85 +6,13 @@
     android:layout_height="match_parent"
     app:layout_constraintGuide_percent="0.10">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline20"
-        app:layout_constraintTop_toTopOf="@+id/guideline19"
-        tools:layout_editor_absoluteX="390dp" />
-
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline27"
-        app:layout_constraintTop_toTopOf="@+id/guideline20"
-        tools:layout_editor_absoluteX="390dp" />
-
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintTop_toTopOf="@+id/guideline27"
-        tools:layout_editor_absoluteX="390dp" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline18"
-        tools:layout_editor_absoluteX="390dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintTop_toTopOf="@+id/guideline17"
-        tools:layout_editor_absoluteX="390dp" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline17"
-        app:layout_constraintTop_toTopOf="@+id/guideline16"
-        tools:layout_editor_absoluteX="390dp" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintTop_toTopOf="@+id/guideline13"
-        tools:layout_editor_absoluteX="390dp" />
-
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/ediLimpiezaDeBodejas"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline8" />
 
-    <EditText
-        android:id="@+id/EditText8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
-
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -93,11 +21,12 @@
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <EditText
-        android:id="@+id/EditText"
+        android:id="@+id/ediLimpiezaDeDesechos"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -106,25 +35,12 @@
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <EditText
-        android:id="@+id/EditText15"
+        android:id="@+id/ediResiembra"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
+        android:inputType="number"
 
         android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline27" />
-
-    <EditText
-        android:id="@+id/EditText7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="0dp"
-        android:entries="@array/porcentajesArray"
-
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="0.285"
@@ -132,12 +48,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <EditText
-        android:id="@+id/EditText6"
+        android:id="@+id/ediDobles"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="0dp"
-        android:entries="@array/porcentajesArray"
+        android:digits="0123456789"
 
+        android:inputType="number"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="0.285"
@@ -145,11 +62,12 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <EditText
-        android:id="@+id/EditText5"
+        android:id="@+id/ediHijosDeAgua"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -158,12 +76,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <EditText
-        android:id="@+id/EditText4"
+        android:id="@+id/ediUbicacion"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="0dp"
-        android:entries="@array/porcentajesArray"
+        android:digits="0123456789"
 
+        android:inputType="number"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="0.285"
@@ -171,23 +90,26 @@
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <EditText
-        android:id="@+id/ediAmarreFunda"
+        android:id="@+id/ediDireccion"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/ediEnfundeTiempo" />
+        app:layout_constraintTop_toBottomOf="@+id/ediDeshijeAtiempo" />
 
     <EditText
-        android:id="@+id/ediEnfundeTiempo"
+        android:id="@+id/ediDeshijeAtiempo"
         android:layout_width="0dp"
         android:layout_height="0dp"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -239,8 +161,10 @@
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline17" />
+        app:layout_constraintTop_toTopOf="@+id/guideline17"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView9"
@@ -309,7 +233,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.79" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
@@ -317,15 +241,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.26" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline16"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        tools:layout_editor_absoluteX="390dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"
@@ -363,13 +278,6 @@
         app:layout_constraintGuide_percent="0.62" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.68" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -384,39 +292,9 @@
         app:layout_constraintGuide_percent="0.08" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="3dp"
-        android:gravity="center"
-        android:text="%PROM"
-        android:textStyle="bold"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        tools:layout_editor_absoluteX="387dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="3dp"
-        android:gravity="center"
-        android:text="MATAS EVALUADAS"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:autoSizeMaxTextSize="18sp"
-        app:autoSizeMinTextSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="3dp"
         android:gravity="center"
         android:text="PORCENTAJE"
         android:textStyle="bold"
@@ -446,7 +324,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.89" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -460,7 +338,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -480,7 +358,6 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="3dp"
         android:gravity="center"
         android:text="OTRAS LAVORES"
         android:textSize="12sp"
@@ -492,15 +369,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintTop_toTopOf="@+id/guideline14"
-        tools:layout_editor_absoluteX="390dp" />
 
     <TextView
         android:id="@+id/textView35"
@@ -516,19 +384,7 @@
         android:layout_height="0dp"
         android:hint="OBSERVACIONES"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="@+id/guideline29" />
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="OTRAS"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="@+id/guideline27" />
+        app:layout_constraintStart_toStartOf="@+id/guideline11" />
 
     <TextView
         android:id="@+id/textView38"
@@ -536,12 +392,11 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="% PROM :"
-        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="@+id/guideline28"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
         android:id="@+id/textView40"
@@ -549,9 +404,23 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="OBSERVACONES"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline28" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

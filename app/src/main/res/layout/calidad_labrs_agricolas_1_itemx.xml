@@ -16,69 +16,49 @@
             android:layout_height="800dp">
 
             <EditText
-                android:id="@+id/spinner14"
+                android:id="@+id/ediDestore"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
+                android:digits="0123456789"
+
+                android:inputType="number"
                 android:padding="0dp"
-
-                app:layout_constraintBottom_toTopOf="@+id/guideline7"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintHorizontal_bias="0.035"
-                app:layout_constraintStart_toStartOf="@+id/guideline10"
-                app:layout_constraintTop_toTopOf="@+id/guideline25" />
-
-            <EditText
-                android:id="@+id/spinner13"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-
-                android:padding="0dp"
-
                 app:layout_constraintBottom_toTopOf="@+id/guideline25"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.035"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline24" />
 
             <EditText
-                android:id="@+id/spinner12"
+                android:id="@+id/ediRacimosCorrectos"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:padding="0dp"
+                android:digits="0123456789"
 
+                android:inputType="number"
+                android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline24"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.035"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
             <EditText
-                android:id="@+id/spinner11"
+                android:id="@+id/ediEnfundeBarreras"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:padding="0dp"
+                android:digits="0123456789"
 
+                android:inputType="number"
+                android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline6"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.035"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline22" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:gravity="center"
-                android:text="OTRAS"
-                android:textSize="13sp"
-                app:layout_constraintBottom_toTopOf="@+id/guideline7"
-                app:layout_constraintEnd_toStartOf="@+id/guideline10"
-                app:layout_constraintHorizontal_bias="0.142"
-                app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
             <TextView
                 android:id="@+id/textView26"
@@ -120,120 +100,132 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
             <EditText
-                android:id="@+id/spinner10"
+                android:id="@+id/ediCirugiaDeDedos"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
 
+                android:digits="0123456789"
+                android:inputType="number"
                 android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline22"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.035"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
             <EditText
-                android:id="@+id/spinner9"
+                android:id="@+id/ediDeschive"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
 
+                android:digits="0123456789"
+                android:inputType="number"
                 android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline21"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.285"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
             <EditText
-                android:id="@+id/spinner8"
+                android:id="@+id/ediDesvioDeHijos"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:padding="0dp"
+                android:digits="0123456789"
 
+                android:inputType="number"
+                android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline20"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.035"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
             <EditText
-                android:id="@+id/spinner7"
+                android:id="@+id/ediSaneoYCirugia"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:padding="0dp"
+                android:digits="0123456789"
 
+                android:inputType="number"
+                android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline19"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
             <EditText
-                android:id="@+id/spinner6"
+                android:id="@+id/ediHojaPuente"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:padding="0dp"
+                android:digits="0123456789"
 
+                android:inputType="number"
+                android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline18"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintHorizontal_bias="0.285"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
             <EditText
-                android:id="@+id/spinner5"
+                android:id="@+id/ediCodo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
 
+                android:digits="0123456789"
+                android:inputType="number"
                 android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline17"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
             <EditText
-                android:id="@+id/spinner4"
+                android:id="@+id/ediUsoDeFunda"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:padding="0dp"
+                android:digits="0123456789"
 
+                android:inputType="number"
+                android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline16"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
             <EditText
-                android:id="@+id/ediAmarreFunda"
+                android:id="@+id/ediDireccion"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
 
+                android:digits="0123456789"
                 android:inputType="number"
                 android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline15"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
-                app:layout_constraintTop_toBottomOf="@+id/ediEnfundeTiempo" />
+                app:layout_constraintTop_toBottomOf="@+id/ediDeshijeAtiempo" />
 
             <EditText
-                android:id="@+id/ediEnfundeTiempo"
+                android:id="@+id/ediDeshijeAtiempo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
 
+                android:digits="0123456789"
                 android:inputType="number"
                 android:padding="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline13"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
@@ -368,18 +360,11 @@
                 app:layout_constraintGuide_percent="0.62" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.91" />
-
-            <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.98" />
+                app:layout_constraintGuide_percent="1.0" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline21"
@@ -445,7 +430,7 @@
                 android:text="PORCENTAJE"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/guideline5"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -471,13 +456,6 @@
                 app:layout_constraintGuide_percent="0.05" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.8" />
-
-            <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -489,7 +467,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.56" />
+                app:layout_constraintGuide_percent="0.5" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline3"
@@ -538,30 +516,17 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/guideline26"
-                app:layout_constraintEnd_toStartOf="@+id/guideline12"
-                app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toTopOf="@+id/guideline23">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="OBSERVACIONES" />
-            </com.google.android.material.textfield.TextInputLayout>
-
             <TextView
                 android:id="@+id/textView33"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text="% PROM :"
-                app:layout_constraintBottom_toTopOf="@+id/guideline23"
+                app:layout_constraintBottom_toTopOf="@+id/guideline7"
                 app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toTopOf="@+id/guideline7" />
+                app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -569,14 +534,33 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text="TextView"
-                app:layout_constraintBottom_toTopOf="@+id/guideline23"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintBottom_toTopOf="@+id/guideline7"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toTopOf="@+id/guideline25" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="OBSERVACIONES"
+                app:layout_constraintBottom_toTopOf="@+id/guideline26"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="OBSERVACIONES" />
 
 
 </LinearLayout>

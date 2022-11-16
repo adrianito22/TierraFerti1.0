@@ -7,83 +7,70 @@
     app:layout_constraintGuide_percent="0.10">
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/idProm"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/guideline17"
-        app:layout_constraintStart_toStartOf="@+id/guideline8" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintStart_toStartOf="@+id/guideline8" />
-
-    <EditText
-        android:id="@+id/EditText6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
-        android:entries="@array/porcentajesArray"
-
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <EditText
-        android:id="@+id/EditText5"
+        android:id="@+id/idRecogeSuncho3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <EditText
-        android:id="@+id/EditText4"
+        android:id="@+id/ediUbicacion"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/ediAmarreFunda"
+        android:id="@+id/ediDireccion"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/ediEnfundeTiempo" />
+        app:layout_constraintTop_toBottomOf="@+id/ediDeshijeAtiempo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/ediEnfundeTiempo"
+        android:id="@+id/ediDeshijeAtiempo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:entries="@array/porcentajesArray"
 
+        android:digits="0123456789"
+        android:inputType="number"
         android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -98,18 +85,6 @@
         android:text="% PROM :"
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline18" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="OTRAS"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
@@ -181,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.53" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
@@ -198,18 +173,11 @@
         app:layout_constraintGuide_percent="0.32" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.44" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
@@ -249,7 +217,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.86" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -263,7 +231,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -292,6 +260,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:hint="OBSERVACIONES"
@@ -308,7 +277,19 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline18" />
+        app:layout_constraintStart_toStartOf="@+id/guideline10" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="OBSERVACIONES"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toEndOf="@+id/textInputEditText"
+        app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
