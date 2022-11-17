@@ -1,346 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
     app:layout_constraintGuide_percent="0.10">
-
-    <EditText
-        android:id="@+id/ediResiembra"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:digits="0123456789"
-
-        android:inputType="number"
-        android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline18" />
-
-    <EditText
-        android:id="@+id/ediDobles"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:digits="0123456789"
-
-        android:inputType="number"
-        android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline17" />
-
-    <EditText
-        android:id="@+id/ediHijosDeAgua"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:digits="0123456789"
-        android:inputType="number"
-        android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline17"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline16" />
-
-    <EditText
-        android:id="@+id/ediUbicacion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:digits="0123456789"
-
-        android:inputType="number"
-        android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline16"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/ediDireccion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:digits="0123456789"
-        android:inputType="number"
-        android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/ediDeshijeAtiempo" />
-
-    <EditText
-        android:id="@+id/ediDeshijeAtiempo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:digits="0123456789"
-        android:inputType="number"
-        android:padding="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline14" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="% PROM :"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline20"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline19" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="RESIEMBRA"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline18" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="DOBLES"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline18"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline17" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="HIJOS DE AGUA"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline17"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline16" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.14" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="DESHIJE A TIEMPO"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline14" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="DIRECCION"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="UBICACION"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline16"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.62" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.26" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.44" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="PORCENTAJE"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="DESHIJE"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <TextView
         android:id="@+id/textView35"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#4CAF50"
         android:gravity="center"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/guideline20"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/ediResiembra" />
+        android:padding="5dp"
+        android:text="deshije"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="OBSERVACIONES"
-        app:layout_constraintBottom_toTopOf="@+id/guideline23"
-        app:layout_constraintStart_toStartOf="@+id/guideline11" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName17"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="OBESRVACIONES"
-        app:layout_constraintBottom_toTopOf="@+id/guideline23"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="@+id/guideline20" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/editTextTextPersonName22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="Deshije a Tiempo"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="direccion"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="ubicacion"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="hijos de agua"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="dobles"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="resiembra"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

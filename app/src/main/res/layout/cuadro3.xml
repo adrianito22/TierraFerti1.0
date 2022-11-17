@@ -106,7 +106,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/ediProms"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
@@ -360,7 +360,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/ediPLantsJovesTh1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -502,7 +502,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/ediPLantsJovesTh1" />
 
     <TextView
         android:id="@+id/textView7"
@@ -519,7 +519,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/ediPLantsJovesHe1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"

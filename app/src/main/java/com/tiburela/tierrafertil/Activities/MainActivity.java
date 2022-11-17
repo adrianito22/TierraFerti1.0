@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.models.Plant;
@@ -21,6 +23,9 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView mireciclerView;
+
+
+
 
     ArrayList<Plant>miList= new ArrayList<>();
       Button btnAdnewPlant;
@@ -118,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //agregamos un nuevo objeto
 
-                  miList.add( new Plant("","",nombrePlanta,categoriresVinculadosMap));
+                  miList.add( new Plant("","",nombrePlanta,categoriresVinculadosMap,false));
 
 
 
@@ -146,5 +151,7 @@ public class MainActivity extends AppCompatActivity {
         bottomSheetDialog.show();
 
     }
+
+
 
 }

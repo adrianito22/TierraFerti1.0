@@ -60,35 +60,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Category 1" />
+            android:text="Enfunde" />
 
         <CheckBox
             android:id="@+id/checkBox2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Category 2" />
+            android:text="Deshoje" />
 
         <CheckBox
             android:id="@+id/checkBox3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Category 3" />
+            android:text="Apuntalamiento" />
 
         <CheckBox
             android:id="@+id/checkBox4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-            android:text="Category 4" />
+            android:text="Deshije" />
 
         <CheckBox
             android:id="@+id/checkBox5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Category 5" />
+            android:text="Otras labores" />
 
         <Button
             android:id="@+id/btnActualizar"

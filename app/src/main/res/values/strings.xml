@@ -11,5 +11,15 @@
     </string-array>
 
 
+    <string-array name="COLORcINTAarray">
+        <item>No</item>
+        <item>Verde</item>
+        <item>Negra</item>
+
+        <item></item>
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

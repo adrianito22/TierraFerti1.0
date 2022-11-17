@@ -6,16 +6,23 @@ public class Plant {
 
     private String uniqueIdPlant;
     private String  informeRelacionado;
+    boolean itemLayoutIsVisible;
 
 
+    public boolean isItemLayoutIsVisible() {
+        return itemLayoutIsVisible;
+    }
 
+    public void setItemLayoutIsVisible(boolean itemLayoutIsVisible) {
+        this.itemLayoutIsVisible = itemLayoutIsVisible;
+    }
 
-
-    public Plant(String uniqueIdPlant, String informeRelacionado, String nameItem, HashMap<String, String> hashMapCategiresMapsEvaluadas) {
+    public Plant(String uniqueIdPlant, String informeRelacionado, String nameItem, HashMap<String, String> hashMapCategiresMapsEvaluadas, boolean itemLayoutIsVisible) {
         this.uniqueIdPlant = uniqueIdPlant;
         this.informeRelacionado = informeRelacionado;
         this.nameItem = nameItem;
         this.hashMapCategiresMapsEvaluadas = hashMapCategiresMapsEvaluadas;
+        this.itemLayoutIsVisible=itemLayoutIsVisible;
     }
 
 

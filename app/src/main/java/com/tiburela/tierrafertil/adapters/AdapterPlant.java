@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -47,7 +46,7 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = inflater.inflate(R.layout.item_control_cald_checkbx2, parent, false);
+        View view = inflater.inflate(R.layout.layout_cald_lab_agricols, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
         view.setOnClickListener(this);
 

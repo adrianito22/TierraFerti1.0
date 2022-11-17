@@ -191,7 +191,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/ediProms"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
@@ -457,7 +457,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/ediPLantsJovesHe1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"

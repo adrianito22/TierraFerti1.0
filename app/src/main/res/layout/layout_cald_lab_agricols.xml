@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layotItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backrgound_item"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backrgound_item"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_nature_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPlantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Hacienda: 0255" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tag_background"
+                    android:tag="categorie1"
+                    android:text="Enfunde"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tag_background"
+                    android:tag="categorie2"
+                    android:text="Deshoje"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tag_background"
+                    android:tag="categorie3"
+                    android:text="Apuntalamiento"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tag_background"
+                    android:tag="categorie4"
+                    android:text="Deshije"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tag_background"
+                    android:tag="categorie5"
+                    android:text="Otras labores"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4CAF50"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="ENFUNDE"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <include
+                layout="@layout/calidad_labrs_agricolas_1_itemx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/deshoje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/apuntalamiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/deshije"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/otras_labores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
