@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //agregamos un nuevo objeto
 
-                  miList.add( new Plant("","",nombrePlanta,categoriresVinculadosMap));
+                  miList.add( new Plant("","",nombrePlanta,categoriresVinculadosMap,false));
 
 
 

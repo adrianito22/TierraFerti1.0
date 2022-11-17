@@ -60,7 +60,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/tag_background"
                     android:tag="categorie1"
-                    android:text="item1"
+                    android:text="Enfunde"
                     android:visibility="gone" />
 
                 <TextView
@@ -71,7 +71,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/tag_background"
                     android:tag="categorie2"
-                    android:text="item2"
+                    android:text="Deshoje"
                     android:visibility="gone" />
 
                 <TextView
@@ -82,7 +82,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/tag_background"
                     android:tag="categorie3"
-                    android:text="item3"
+                    android:text="Apuntalamiento"
                     android:visibility="gone" />
 
                 <TextView
@@ -93,7 +93,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/tag_background"
                     android:tag="categorie4"
-                    android:text="item4"
+                    android:text="Deshije"
                     android:visibility="gone" />
 
                 <TextView
@@ -104,7 +104,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/tag_background"
                     android:tag="categorie5"
-                    android:text="item5"
+                    android:text="Otras labores"
                     android:visibility="gone" />
 
             </LinearLayout>
@@ -136,6 +136,26 @@
 
             <include
                 layout="@layout/calidad_labrs_agricolas_1_itemx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/deshoje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/apuntalamiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/deshije"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/otras_labores"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

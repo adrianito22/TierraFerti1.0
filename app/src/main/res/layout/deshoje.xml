@@ -11,14 +11,14 @@
     app:layout_constraintGuide_percent="0.10">
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#4CAF50"
         android:gravity="center"
         android:padding="5dp"
-        android:text="apuntalamiento"
+        android:text="DESHOJE"
         android:textAllCaps="true"
         android:textColor="@color/white" />
 
@@ -47,7 +47,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="Ensunche"
+                android:text="deshoje"
                 android:textSize="14sp" />
 
             <EditText
@@ -61,7 +61,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="Recoge Puntual"
+                android:text="coret hoja correcto"
                 android:textSize="14sp" />
 
             <EditText
@@ -75,7 +75,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="Ubicacion de suncho"
+                android:text="despunte"
                 android:textSize="14sp" />
 
             <EditText
@@ -89,7 +89,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="ubicacion de puntual"
+                android:text="codo"
                 android:textSize="14sp" />
 
             <EditText
@@ -103,7 +103,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="RecojeSuncho"
+                android:text="hoja puente"
                 android:textSize="14sp" />
 
             <EditText
@@ -117,7 +117,21 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="Otras Especifique"
+                android:text="saneo y cirujia"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:text="desvio de hijos"
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -207,7 +221,22 @@
                 android:inputType="number"
                 android:padding="10dp"
                 android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backrgound_item2"
+                android:digits="0123456789."
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

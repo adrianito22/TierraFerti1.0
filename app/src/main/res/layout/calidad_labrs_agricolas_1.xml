@@ -895,7 +895,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/txtPromedio"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"

@@ -3,8 +3,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutEnfunde"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +15,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="800dp">
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/ediDestore"
@@ -130,7 +132,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
             <EditText
-                android:id="@+id/ediDesvioDeHijos"
+                android:id="@+id/ediDaipaDisco"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
@@ -159,7 +161,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
             <EditText
-                android:id="@+id/ediHojaPuente"
+                android:id="@+id/ediToldeFunda"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
@@ -174,7 +176,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
             <EditText
-                android:id="@+id/ediCodo"
+                android:id="@+id/ediEdintificacionEdad"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
@@ -202,7 +204,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
             <EditText
-                android:id="@+id/ediDireccion"
+                android:id="@+id/ediAmarreFunda"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
@@ -213,10 +215,10 @@
                 app:layout_constraintBottom_toTopOf="@+id/guideline15"
                 app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
-                app:layout_constraintTop_toBottomOf="@+id/ediDeshijeAtiempo" />
+                app:layout_constraintTop_toBottomOf="@+id/ediEnfundeAtiempo" />
 
             <EditText
-                android:id="@+id/ediDeshijeAtiempo"
+                android:id="@+id/ediEnfundeAtiempo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
@@ -365,6 +367,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="1.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.88" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline21"
@@ -529,7 +538,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
             <TextView
-                android:id="@+id/textView34"
+                android:id="@+id/txtPromedio"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center"
@@ -541,7 +550,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline25" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName15"
+                android:id="@+id/ediObservacionesz"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:ems="10"
@@ -551,7 +560,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/guideline26"
                 app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline11"
-                app:layout_constraintTop_toTopOf="@+id/guideline7" />
+                app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

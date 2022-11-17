@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.DiagnosticoFisiosanitarioo"
+            android:name=".Activities.ActivityDiagnFitoSanitario"
             android:exported="true" />
         <activity
             android:name=".Activities.MainActivity"
