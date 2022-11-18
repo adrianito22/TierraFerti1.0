@@ -1,8 +1,41 @@
 package com.tiburela.tierrafertil.models;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.UUID;
+
 public class AllFormsModel {
 
    private  String uniqueIDkeyInformAndKeYSharePref;
+    private String name;
+    private String dateCreate;
+    private String datelastModification;
+    private int tipoFormPertenece;
+    boolean  formIsUploaded;
+
+    public boolean isFormIsUploaded() {
+        return formIsUploaded;
+    }
+
+    public void setFormIsUploaded(boolean formIsUploaded) {
+        this.formIsUploaded = formIsUploaded;
+    }
+
+    public String getNotaInform() {
+        return notaInform;
+    }
+
+    public void setNotaInform(String notaInform) {
+        this.notaInform = notaInform;
+    }
+
+    private String notaInform;
+
+
+
+
+
 
     public String getUniqueIDkeyInformAndKeYSharePref() {
         return uniqueIDkeyInformAndKeYSharePref;
@@ -44,17 +77,17 @@ public class AllFormsModel {
         this.tipoFormPertenece = tipoFormPertenece;
     }
 
-    private String name;
-    private String dateCreate;
-    private String datelastModification;
-    private int tipoFormPertenece;
 
-    public AllFormsModel(String uniqueIDkeyInformAndKeYSharePref, String name, String dateCreate, String datelastModification, int tipoFormPertenece) {
-        this.uniqueIDkeyInformAndKeYSharePref = uniqueIDkeyInformAndKeYSharePref;
+    public AllFormsModel( String name, int tipoFormPertenec,String notaInform) {
+        uniqueIDkeyInformAndKeYSharePref = UUID.randomUUID().toString();
         this.name = name;
-        this.dateCreate = dateCreate;
-        this.datelastModification = datelastModification;
-        this.tipoFormPertenece = tipoFormPertenece;
+        Format formatter = new SimpleDateFormat("dd-MM-yyyy");
+        dateCreate = formatter.format(new Date().getTime());
+        datelastModification = dateCreate;
+        this.tipoFormPertenece = tipoFormPertenec;
+        formIsUploaded=false;
+        this.notaInform=notaInform;
+
     }
 
 

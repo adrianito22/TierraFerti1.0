@@ -17,12 +17,17 @@ import androidx.fragment.app.DialogFragment;
 
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
+import com.tiburela.tierrafertil.utils.Utils;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class DialogFragmentx extends DialogFragment {
 
+    String keyOfThisInform="";
+
+    Map<String, String> currentDataHhasmap = new HashMap<>();
 
     View vista;
     private EditText mEditTextTextPersonName20;
@@ -88,6 +93,10 @@ public class DialogFragmentx extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
+
+        Bundle bundle = getArguments();
+        assert bundle != null;
+        keyOfThisInform= bundle.getString(Utils.keyDialogBundle,"");
 
         return crearDialogote();
     }
@@ -194,7 +203,7 @@ public class DialogFragmentx extends DialogFragment {
 
 
 
-       return  returnArryOfEditext();
+       return  arrayEditext;
 
     }
 
@@ -226,6 +235,70 @@ public class DialogFragmentx extends DialogFragment {
         return   hasmpaDataPrefrences;
 
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        getDataOfPreferencesAndCallSetDataInViews();
+
+
+
+    }
+
+    private void getDataOfPreferencesAndCallSetDataInViews() {
+
+        if(!keyOfThisInform.trim().isEmpty()) {
+
+            currentDataHhasmap=SharePref.loadMapPreferencesDataOfFields(getActivity(),keyOfThisInform);
+
+            if(currentDataHhasmap.size()>0)  {
+
+
+                initfindviewsIdsSomeViews();
+
+                //inicimoas arrayOfViews..
+
+
+                setdatainviewsBymapData(currentDataHhasmap);
+
+                //iniciamos se data in views...
+
+
+            }
+
+        }
+    }
+
+    private void setdatainviewsBymapData(Map<String, String> currentDataHhasmap) {
+
+        /***si hay problemas de memoria inicilizar el arary editex1 veces EN LA CLASE UTILS EN UNA LISTA O ARRAY*/
+
+        EditText [] arrayEditext=returnArryOfEditext();
+        EditText editextCurrenTdEVULETO;
+        //devulve el eidtexdt que cotnien este tag
+
+        for (Map.Entry<String, String> entry : currentDataHhasmap.entrySet()) {
+
+            String key = entry.getKey();
+            String value = entry.getValue();
+
+            editextCurrenTdEVULETO=Utils.returnEditextBykey(key, arrayEditext);
+
+            if(editextCurrenTdEVULETO!=null){
+
+                editextCurrenTdEVULETO.setText(value);
+
+
+            }
+
+        }
+
+
+
+    }
+
+
 
 
     private boolean checkIAllDataCompleted(EditText [] miarrayEditext){
@@ -266,7 +339,7 @@ return true;
 
                 if(hashMap.size()>0){
                     SharePref.init(getActivity());
-                    SharePref.saveMapPreferFields(hashMap,SharePref.KEYI_CALIDAD_LABORES_AGRCICOLAS_MAP);
+                    SharePref.saveMapPreferFields(hashMap,keyOfThisInform);
 
                 }else{
 

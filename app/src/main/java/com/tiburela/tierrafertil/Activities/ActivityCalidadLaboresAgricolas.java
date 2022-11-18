@@ -10,11 +10,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
@@ -24,7 +22,7 @@ import com.tiburela.tierrafertil.utils.Utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
     RecyclerView mireciclerView;
 
     ArrayList<Plant>miList= new ArrayList<>();
@@ -57,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
     private void setDataRecyclerView(ArrayList<Plant>list){
 
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
-        AdapterPlant adapter = new AdapterPlant(MainActivity.this, list);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ActivityCalidadLaboresAgricolas.this);
+        AdapterPlant adapter = new AdapterPlant(ActivityCalidadLaboresAgricolas.this, list);
         //  this.adapter.setPlayPauseClickListener(this);
         mireciclerView.setLayoutManager(layoutManager);
         mireciclerView.setAdapter(adapter);
@@ -90,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void deploySheetaddNewPlant(){
 
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this);
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityCalidadLaboresAgricolas.this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_ver_atachx);
 
         CheckBox checkBox1=bottomSheetDialog.findViewById(R.id.checkBox1);
@@ -163,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void createSet(){
 
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this);
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityCalidadLaboresAgricolas.this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_ver_atachx);
 
         CheckBox checkBox1=bottomSheetDialog.findViewById(R.id.checkBox1);
