@@ -465,7 +465,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <Spinner
-        android:id="@+id/ediCodo"
+        android:id="@+id/ediHijosDeAgua"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:entries="@array/porcentajesArray"

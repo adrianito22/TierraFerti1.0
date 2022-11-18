@@ -37,7 +37,6 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -51,7 +50,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName46"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -65,7 +63,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName47"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -79,7 +76,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -93,7 +89,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -107,7 +102,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -131,7 +125,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName48"
+                android:id="@+id/ediDeshijeAtiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -141,10 +135,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="deshijetiempo/deshijetiempo"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName49"
+                android:id="@+id/ediDirecccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -154,10 +149,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="deshijetiempo/direccion"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName50"
+                android:id="@+id/ediUbicacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -167,10 +163,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="deshijetiempo/ubicacion"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName51"
+                android:id="@+id/ediHijosDeAgua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -180,10 +177,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="deshijetiempo/hijosagua"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName52"
+                android:id="@+id/ediDobles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -193,10 +191,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="deshijetiempo/dobles"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/ediResiembra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -206,6 +205,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="deshijetiempo/resiembra"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>

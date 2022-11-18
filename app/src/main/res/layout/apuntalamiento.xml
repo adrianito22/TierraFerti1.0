@@ -37,7 +37,6 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -51,7 +50,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName46"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -65,7 +63,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName47"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -79,7 +76,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -89,11 +85,10 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:text="ubicacion de puntual"
+                android:text="ubicacion de puntal"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -104,20 +99,6 @@
                 android:inputType="number"
                 android:padding="10dp"
                 android:text="RecojeSuncho"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName19"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="Otras Especifique"
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -131,7 +112,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName48"
+                android:id="@+id/ediEnsunche"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -141,10 +122,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="apuntalamiento/ensunche"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName49"
+                android:id="@+id/ediRecogePuntual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -154,10 +136,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="apuntalamiento/recogepuntual"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName50"
+                android:id="@+id/ediUbicacionDeSuncho"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -167,10 +150,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="apuntalamiento/ubicacionsuncho"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName51"
+                android:id="@+id/ediUbicacionDePuntal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -180,10 +164,11 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="apuntalamiento/ubicaciondepuntual"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName52"
+                android:id="@+id/ediRecojeSuncho"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -193,20 +178,9 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
+                android:tag="apuntalamiento/recojeSuncho"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 

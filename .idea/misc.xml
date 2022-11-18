@@ -3,26 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/drawable-v24/backrgound_item2.xml" value="0.2105" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/drawable/backrgound_item.xml" value="0.2105" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/drawable/backrgound_item2.xml" value="0.2105" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/activity_diagnostico_fisiosanitarioo.xml" value="0.16673792218896966" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/activity_main.xml" value="0.16673792218896966" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/cruadro1.xml" value="0.33" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/cuadro2.xml" value="0.25" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/cuadro3.xml" value="0.203125" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/gggg.xml" value="0.25" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/lay_datos_diag_fitosanitario.xml" value="0.33" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/lay_observaciones_recomdnes.xml" value="0.33" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/lay_plants_7_semanas.xml" value="0.21" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/lay_plants_a_la_cosecha.xml" value="0.33" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/lay_plants_jovenes.xml" value="0.33" />
-        <entry key="..\:/Users/CAPSULE/AndroidStudioProjects/TierraFerti1.0/app/src/main/res/layout/lay_plants_semanas.xml" value="0.25" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/btn.xml" value="0.252" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ic_baseline_nature_24.xml" value="0.252" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ll.xml" value="0.252" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/apuntalamiento.xml" value="0.136" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main_center.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/apuntalamiento.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1.xml" value="0.2" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1_item.xml" value="0.136" />
@@ -31,18 +17,23 @@
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/cuadro2.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/cuadro3.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/cuadro4.xml" value="0.536" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/deshije.xml" value="0.152" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/deshije.xml" value="0.4" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/deshoje.xml" value="0.4" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/enfunde.xml" value="0.4" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/fragment_dialog.xml" value="0.20222317229585293" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/gggg.xml" value="0.17526041666666667" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_control_cald_checkbx.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_control_cald_checkbx2.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/layout_all_calid_labr_agrcls.xml" value="0.2" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/layout_cald_lab_agricols.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/layout_linear.xml" value="0.21574074074074073" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/otras_labores.xml" value="0.176" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/otras_labores.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/otras_lavores.xml" value="0.19966230476994512" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/tierrafertil.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

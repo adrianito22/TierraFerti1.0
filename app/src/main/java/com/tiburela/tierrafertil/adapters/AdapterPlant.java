@@ -118,8 +118,8 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView txtPlantName;
-        private ImageView imgSee;
-        private LinearLayout layotItem;
+        private ImageView imageView;
+        private LinearLayout linearLayout;
 
         private TextView item1,item2,item3,item4,item5;
 
@@ -135,11 +135,10 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
             item4 =  itemView.findViewById(R.id.item4);
             item5 =  itemView.findViewById(R.id.item5);
 
+            imageView =  itemView.findViewById(R.id.imageView);
+            linearLayout =itemView.findViewById(R.id.linearLayout);
 
-            imgSee =  itemView.findViewById(R.id.imageView);
-            layotItem=itemView.findViewById(R.id.layotItem);
-
-            layotItem.findViewById(R.id.layotItem).setOnClickListener(new View.OnClickListener() {
+            linearLayout.findViewById(R.id.linearLayout).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -148,6 +147,16 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
                 }
             });
 
+
+
+            imageView.findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    clickListener.onItemClick(getAdapterPosition(), v);
+
+                }
+            });
 
         }
 
