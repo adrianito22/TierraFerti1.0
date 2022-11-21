@@ -26,152 +26,63 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:hint="DESHOJE"
+            android:visibility="visible"
+            app:endIconMode="clear_text">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="deshoje"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="corte hoja correcto"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="despunte"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="codo"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="hoja puente"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="saneo y cirujia"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="desvio de hijos"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDeshoje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
                 android:digits="0123456789."
-                android:ems="10"
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
                 android:tag="deshoje/deshoje"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediCorteHojaCorrecto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
-                android:ems="10"
                 android:gravity="center"
+                android:hint="CORTE HOJA CORRECTO"
                 android:inputType="number"
                 android:padding="10dp"
                 android:tag="deshoje/cortehojacorrecto"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DESPUNTE">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDespunte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -179,13 +90,20 @@
                 android:padding="10dp"
                 android:tag="deshoje/despunte"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CODO">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediCodo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -193,13 +111,20 @@
                 android:padding="10dp"
                 android:tag="enfunde/amareenfunde"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="HOJA PUENTE">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediHojaPuente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -207,13 +132,20 @@
                 android:padding="10dp"
                 android:tag="deshoje/hojapuente"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SANEO Y CIRUJIA">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediSaneoYcirujia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -221,13 +153,20 @@
                 android:padding="10dp"
                 android:tag="deshoje/saneocirujia"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DESVIO DE HIJOS">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDesvioDeHijos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -235,8 +174,45 @@
                 android:padding="10dp"
                 android:tag="deshoje/devioHijos"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="Observaciones">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediObservacionesDeshoje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshoje/observacionesDeshoje" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="% PROM">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediPercentDeshoje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshoje/observacionesDeshoje" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
 
     </LinearLayout>
 

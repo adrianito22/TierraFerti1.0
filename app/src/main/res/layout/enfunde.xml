@@ -23,204 +23,50 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+
+        <com.google.android.material.textfield.TextInputLayout
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            
+            android:visibility="visible"
+            app:endIconMode="clear_text">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="enfunde a tiempo"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="amarre de funda"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="uso de funda"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="identificacion de edad"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="toldeo de funda"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="limpieza de racimo"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="Daipa - Disco"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="deschive"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="cirujia de dedos"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="enfunde barrera"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="racimos correctos"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="destore"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediEnfundeAtiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
                 android:digits="0123456789."
-                android:ems="10"
                 android:gravity="center"
+                android:hint="ENFUNDE A TIEMPO"
                 android:inputType="number"
                 android:padding="10dp"
                 android:tag="enfunde/enfundetiempo"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"    
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AMARRE DE FUNDA">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediAmarreDeFunda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -229,12 +75,22 @@
                 android:tag="enfunde/amareenfunde"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="USO DE FUNDA">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediUsoDeFunda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -243,12 +99,22 @@
                 android:tag="enfunde/usodefunda"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IDENTIFICACION DE EDAD">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediIdentificacionDeEdad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -257,12 +123,21 @@
                 android:tag="enfunde/identificacionedad"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TOLDEO DE FUNDA">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediToldeDeFunda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -271,12 +146,21 @@
                 android:tag="enfunde/toldeodefunda"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LIMPIEZA DE RACIMOS">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaRacimos2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -285,12 +169,21 @@
                 android:tag="enfunde/limpiezaracimo"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DAIPA- DISCO">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDaipaDisco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -300,12 +193,22 @@
                 android:textSize="14sp" />
 
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DESCHIVE">
+
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDeschive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -315,12 +218,22 @@
                 android:textSize="14sp" />
 
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CIRUJIA DE DEDOS">
+
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediCirugiaDeDedos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -329,12 +242,22 @@
                 android:tag="enfunde/cirujiaDedos"
                 android:textSize="14sp" />
 
-            <EditText
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ENFUNDE BARRERA">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediEnfundeBarrera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -343,12 +266,22 @@
                 android:tag="enfunde/enfundebarrera"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="RACIMOS CORRECTOS">
+
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediRacimosCorrectos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -357,12 +290,22 @@
                 android:tag="enfunde/racimoscorrectos"
                 android:textSize="14sp" />
 
-            <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DESTORE">
+
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDestorex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -371,7 +314,44 @@
                 android:tag="enfunde/destore"
                 android:textSize="14sp" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="Observaciones">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediObservacionesEnfunde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshoje/observacionesEnfunde" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="% PROM">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediPercentEnfunde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshoje/observacionesEnfunde" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
 
     </LinearLayout>
 

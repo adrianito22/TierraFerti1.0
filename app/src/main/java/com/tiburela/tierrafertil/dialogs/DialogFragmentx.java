@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.utils.Utils;
@@ -31,45 +32,66 @@ public class DialogFragmentx extends DialogFragment {
 
     View vista;
     private EditText mEditTextTextPersonName20;
-    private EditText mEdiEnfundeAtiempo;
-    private EditText mEdiAmarreDeFunda;
-    private EditText mEdiUsoDeFunda;
-    private EditText mEdiIdentificacionDeEdad;
-    private EditText mEdiToldeDeFunda;
-    private EditText mEdiLimpiezaRacimos2;
-    private EditText mEdiDaipaDisco;
-    private EditText mEdiDeschive;
-    private EditText mEdiCirugiaDeDedos;
-    private EditText mEdiEnfundeBarrera;
-    private EditText mEdiRacimosCorrectos;
-    private EditText mEdiDestorex;
-    private EditText mEdiDeshoje;
-    private EditText mEdiCorteHojaCorrecto;
-    private EditText mEdiDespunte;
-    private EditText mEdiCodo;
-    private EditText mEdiHojaPuente;
-    private EditText mEdiSaneoYcirujia;
-    private EditText mEdiDesvioDeHijos;
-    private EditText mEdiEnsunche;
-    private EditText mEdiRecogePuntual;
-    private EditText mEdiUbicacionDeSuncho;
-    private EditText mEdiUbicacionDePuntal;
-    private EditText mEdiRecojeSuncho;
-    private EditText mEdiDeshijeAtiempo;
-    private EditText mEdiDirecccion;
-    private EditText mEdiUbicacion;
-    private EditText mEdiHijosDeAgua;
-    private EditText mEdiDobles;
-    private EditText mEdiResiembra;
-    private EditText mEdiNutricion;
-    private EditText mEdiManejoDeCobertura;
-    private EditText mEdiLimpiezaDePlantas;
-    private EditText mEdiRiego;
-    private EditText mEdiDrenajes;
-    private EditText mEdiLimpiezaEmpacado;
-    private EditText mEdiLimpiezaBODEGA;
-    private EditText mEdiManejoDeDesechos;
+
+    private TextInputEditText mEdiEnfundeAtiempo;
+    private TextInputEditText mEdiAmarreDeFunda;
+    private TextInputEditText mEdiUsoDeFunda;
+    private TextInputEditText mEdiIdentificacionDeEdad;
+    private TextInputEditText mEdiToldeDeFunda;
+    private TextInputEditText  mEdiLimpiezaRacimos2;
+
+
+    private  TextInputEditText mEdiDaipaDisco;
+    private  TextInputEditText mEdiDeschive;
+    private  TextInputEditText mEdiCirugiaDeDedos;
+    private  TextInputEditText mEdiEnfundeBarrera;
+    private  TextInputEditText mEdiRacimosCorrectos;
+    private  TextInputEditText mEdiDestorex;
+    private  TextInputEditText mEdiDeshoje;
+    private  TextInputEditText mEdiCorteHojaCorrecto;
+    private  TextInputEditText mEdiDespunte;
+    private  TextInputEditText mEdiCodo;
+    private  TextInputEditText mEdiHojaPuente;
+    private  TextInputEditText mEdiSaneoYcirujia;
+    private  TextInputEditText mEdiDesvioDeHijos;
+    private  TextInputEditText mEdiEnsunche;
+    private  TextInputEditText mEdiRecogePuntual;
+    private  TextInputEditText mEdiUbicacionDeSuncho;
+    private  TextInputEditText mEdiUbicacionDePuntal;
+    private  TextInputEditText mEdiRecojeSuncho;
+    private  TextInputEditText mEdiDeshijeAtiempo;
+    private  TextInputEditText mEdiDirecccion;
+    private  TextInputEditText mEdiUbicacion;
+    private  TextInputEditText mEdiHijosDeAgua;
+    private  TextInputEditText mEdiDobles;
+    private  TextInputEditText mEdiResiembra;
+    private  TextInputEditText mEdiNutricion;
+    private  TextInputEditText mEdiManejoDeCobertura;
+    private  TextInputEditText mEdiLimpiezaDePlantas;
+    private  TextInputEditText mEdiRiego;
+    private  TextInputEditText mEdiDrenajes;
+    private  TextInputEditText mEdiLimpiezaEmpacado;
+    private  TextInputEditText mEdiLimpiezaBODEGA;
+    private  TextInputEditText mEdiManejoDeDesechos;
+
+
+
+    private  TextInputEditText ediObservacionesDeshoje;
+    private  TextInputEditText ediObservacionesApuntalamiento;
+    private  TextInputEditText ediObservacionesEnfunde;
+    private  TextInputEditText ediObservacionesOtrasLabores;
+    private  TextInputEditText ediObservacionesDeshije;
+
+
+    private TextInputEditText  ediObservacionesAll;
+    private TextInputEditText  ediPercentAll;
+
+
+
+
     private Button mBtnGuardar;
+
+
 
      private ImageView imageviCloseDialog;
 
@@ -180,13 +202,25 @@ public class DialogFragmentx extends DialogFragment {
         mEdiLimpiezaEmpacado = vista.findViewById(R.id.ediLimpiezaEmpacado);
         mEdiLimpiezaBODEGA = vista.findViewById(R.id.ediLimpiezaBODEGA);
         mEdiManejoDeDesechos = vista.findViewById(R.id.ediManejoDeDesechos);
-       // mLayotItem = vista.findViewById(R.id.layotItem);
+
+
+
+           ediObservacionesDeshoje = vista.findViewById(R.id.ediObservacionesDeshoje);
+           ediObservacionesApuntalamiento = vista.findViewById(R.id.ediObservacionesApuntalamiento);
+           ediObservacionesEnfunde = vista.findViewById(R.id.ediObservacionesEnfunde);
+           ediObservacionesOtrasLabores = vista.findViewById(R.id.ediObservacionesOtrasLabores);
+           ediObservacionesDeshije = vista.findViewById(R.id.ediObservacionesDeshije);
+
+
+        ediObservacionesAll = vista.findViewById(R.id.ediObservacionesAll);
+        ediPercentAll = vista.findViewById(R.id.ediPercentAll);
+
+        // mLayotItem = vista.findViewById(R.id.layotItem);
     }
 
 
-    private EditText [] returnArryOfEditext(){
-      EditText [] arrayEditext={
-              mEditTextTextPersonName20,
+    private TextInputEditText [] returnArryOfTextInputEditText(){
+        TextInputEditText [] arrayTextInputEditText={
               mEdiEnfundeAtiempo,     mEdiAmarreDeFunda,
               mEdiUsoDeFunda,     mEdiIdentificacionDeEdad,
               mEdiToldeDeFunda,     mEdiLimpiezaRacimos2,
@@ -199,13 +233,28 @@ public class DialogFragmentx extends DialogFragment {
               mEdiHijosDeAgua,     mEdiDobles,     mEdiResiembra,     mEdiNutricion,     mEdiManejoDeCobertura,
               mEdiLimpiezaDePlantas,     mEdiRiego,     mEdiDrenajes,     mEdiLimpiezaEmpacado,
               mEdiLimpiezaBODEGA,     mEdiManejoDeDesechos,
+
+           ediObservacionesDeshoje, ediObservacionesApuntalamiento,
+           ediObservacionesEnfunde, ediObservacionesOtrasLabores,
+           ediObservacionesDeshije ,ediObservacionesAll,
+           ediPercentAll
+
+
+
+
+
+
+
+
+
       };
 
 
 
-       return  arrayEditext;
+       return  arrayTextInputEditText;
 
     }
+
 
 
 
@@ -274,8 +323,10 @@ public class DialogFragmentx extends DialogFragment {
 
         /***si hay problemas de memoria inicilizar el arary editex1 veces EN LA CLASE UTILS EN UNA LISTA O ARRAY*/
 
-        EditText [] arrayEditext=returnArryOfEditext();
-        EditText editextCurrenTdEVULETO;
+        TextInputEditText [] arrayTextInputEditText= returnArryOfTextInputEditText();
+
+
+        TextInputEditText editextCurrenTdEVULETO;
         //devulve el eidtexdt que cotnien este tag
 
         for (Map.Entry<String, String> entry : currentDataHhasmap.entrySet()) {
@@ -283,7 +334,7 @@ public class DialogFragmentx extends DialogFragment {
             String key = entry.getKey();
             String value = entry.getValue();
 
-            editextCurrenTdEVULETO=Utils.returnEditextBykey(key, arrayEditext);
+            editextCurrenTdEVULETO=Utils.returnEditextBykey(key, arrayTextInputEditText);
 
             if(editextCurrenTdEVULETO!=null){
 
@@ -332,16 +383,26 @@ return true;
             @Override
             public void onClick(View view) {
                 initfindviewsIdsSomeViews();
-                EditText [] arrayEditex=returnArryOfEditext();
+                EditText [] arrayEditex= returnArryOfTextInputEditText();
 
 
                HashMap<String ,String> hashMap= createHashMapWhitEditextArray(arrayEditex);
 
                 if(hashMap.size()>0){
+
+
                     SharePref.init(getActivity());
                     SharePref.saveMapPreferFields(hashMap,keyOfThisInform);
+                    Toast.makeText(getActivity(), "Se guardo", Toast.LENGTH_SHORT).show();
 
-                }else{
+
+                    dismiss();
+
+
+                }
+
+
+                else{
 
                     Toast.makeText(getActivity(), "no hay nada que guardar", Toast.LENGTH_SHORT).show();
 

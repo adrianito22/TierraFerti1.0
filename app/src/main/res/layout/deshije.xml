@@ -25,111 +25,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:hint="deshije a tiempo">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="Deshije a Tiempo"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="direccion"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="ubicacion"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="hijos de agua"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="dobles"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="resiembra"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDeshijeAtiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -137,13 +48,20 @@
                 android:padding="10dp"
                 android:tag="deshijetiempo/deshijetiempo"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="direccion">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDirecccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -151,13 +69,20 @@
                 android:padding="10dp"
                 android:tag="deshijetiempo/direccion"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediUbicacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -165,13 +90,20 @@
                 android:padding="10dp"
                 android:tag="deshijetiempo/ubicacion"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ubicacion">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediHijosDeAgua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -179,13 +111,20 @@
                 android:padding="10dp"
                 android:tag="deshijetiempo/hijosagua"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="dobles">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDobles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -193,13 +132,20 @@
                 android:padding="10dp"
                 android:tag="deshijetiempo/dobles"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="resiembra">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediResiembra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -207,7 +153,45 @@
                 android:padding="10dp"
                 android:tag="deshijetiempo/resiembra"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="Observaciones">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediObservacionesDeshije"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshoje/observacionesDehije" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="% PROM">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediPercentDeshije"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshijetiempo/percentDeshije" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
+
     </LinearLayout>
 
 </LinearLayout>

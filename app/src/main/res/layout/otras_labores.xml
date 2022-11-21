@@ -24,137 +24,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:hint="nutricion">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="nutricion"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="manejo de cobertura"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="limpieza de matas"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="riego"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="drenajes"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="limpieza empacado"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="limpieza de bodegas"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="manejo de deshechos"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediNutricion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -162,13 +47,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/nutricion"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="manejo de cobertura">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediManejoDeCobertura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -176,13 +68,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/manejocobertura"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="limpieza matas">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaDePlantas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -190,13 +89,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/limpiezmatas"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="riego">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediRiego"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -204,13 +110,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/riego"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="drenajes">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDrenajes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -218,13 +131,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/drenajes"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="limpieza empacado">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaEmpacado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -232,13 +152,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/limpiezempcado"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="limpieza de bodegas">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaBODEGA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -246,13 +173,20 @@
                 android:padding="10dp"
                 android:tag="otraslabores/limpiezabodega"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+        <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="manejo de deshechos">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediManejoDeDesechos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
+                
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -260,7 +194,45 @@
                 android:padding="10dp"
                 android:tag="otraslabores/manejodeshechos"
                 android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="Observaciones">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediObservacionesOtrasLabores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="deshoje/observacionesOtrasLabres" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="% PROM">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediPercentOtrasLabores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="otraslabores/percentOtrasLabores" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
 
     </LinearLayout>
 

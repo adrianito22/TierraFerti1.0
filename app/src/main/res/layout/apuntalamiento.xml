@@ -31,157 +31,156 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:orientation="vertical">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="Ensunche"
-                android:textSize="14sp" />
+                android:hint="ensunche">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="Recoge Puntual"
-                android:textSize="14sp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediEnsunche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="apuntalamiento/ensunche"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="Ubicacion de suncho"
-                android:textSize="14sp" />
+                android:hint="recoge puntual">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="ubicacion de puntal"
-                android:textSize="14sp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediRecojeSuncho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="apuntalamiento/recojeSuncho"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:text="RecojeSuncho"
-                android:textSize="14sp" />
+                android:hint="ubicacion suncho">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediUbicacionDeSuncho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="apuntalamiento/ubicacionsuncho"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ubicacion puntual">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediRecogePuntual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="apuntalamiento/recogepuntual"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="recoje suncho">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediUbicacionDePuntal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="apuntalamiento/ubicaciondepuntual"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:hint="Observaciones">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediObservacionesApuntalamiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="apuntalamiento/observacionesApuntalamiento" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:hint="% PROM">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediPercentApuntalamiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="deshoje/observacionesApuntalamiento" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/ediEnsunche"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="apuntalamiento/ensunche"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/ediRecogePuntual"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="apuntalamiento/recogepuntual"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/ediUbicacionDeSuncho"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="apuntalamiento/ubicacionsuncho"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/ediUbicacionDePuntal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="apuntalamiento/ubicaciondepuntual"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/ediRecojeSuncho"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/backrgound_item2"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="apuntalamiento/recojeSuncho"
-                android:textSize="14sp" />
-
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

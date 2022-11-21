@@ -142,6 +142,145 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:columnCount="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="PRODUCTOR"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="FINCA"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="FECHA"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="lUGAR"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="SEMANA"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="CODIGO"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.gridlayout.widget.GridLayout>
+
             <include
                 layout="@layout/enfunde"
                 android:layout_width="match_parent"
@@ -166,6 +305,120 @@
                 layout="@layout/otras_labores"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="7"
+                    android:hint="OBSERVACIONES">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediObservacionesAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="3"
+                    android:hint="% PROMED:">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediPercentAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:hint="FIRMA DEL PRODUCTOR">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:hint="FIRMA DEL TECNICO">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="deshoje/saneocirujia"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
 
             <Button
                 android:id="@+id/btnGuardar"
