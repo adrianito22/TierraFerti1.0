@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.utils.Utils;
+import com.tiburela.tierrafertil.utils.Variables;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +35,20 @@ public class DialogFragmentx extends DialogFragment {
 
     View vista;
     private EditText mEditTextTextPersonName20;
+
+    TextInputEditText[] globalTexinputEditex;
+
+    private ArrayList<Integer>milistCategoriesSelectedIndices= new ArrayList<>();
+
+
+    private TextInputEditText ediProductor;
+    private TextInputEditText ediFinca;
+    private TextInputEditText ediFecha;
+    private TextInputEditText ediLugar;
+    private TextInputEditText ediSemana;
+    private TextInputEditText odiCodigO;
+
+
 
     private TextInputEditText mEdiEnfundeAtiempo;
     private TextInputEditText mEdiAmarreDeFunda;
@@ -85,6 +102,14 @@ public class DialogFragmentx extends DialogFragment {
 
     private TextInputEditText  ediObservacionesAll;
     private TextInputEditText  ediPercentAll;
+
+    private TextInputEditText ediPercentEnfunde;
+    private TextInputEditText ediPercentDeshoje;
+    private TextInputEditText ediPercentApuntalamiento;
+    private TextInputEditText ediPercentDeshije;
+    private TextInputEditText ediPercentOtrasLabores;
+
+
 
 
 
@@ -164,6 +189,18 @@ public class DialogFragmentx extends DialogFragment {
     void initfindviewsIdsSomeViews() {
 
 
+        ediProductor = vista.findViewById(R.id.ediProductor);
+        ediFinca = vista.findViewById(R.id.ediFinca);
+        ediFecha = vista.findViewById(R.id.ediFecha);
+        ediLugar = vista.findViewById(R.id.ediLugar);
+        ediSemana = vista.findViewById(R.id.ediSemana);
+        odiCodigO = vista.findViewById(R.id.odiCodigO);
+
+
+
+
+
+
         mEdiEnfundeAtiempo = vista.findViewById(R.id.ediEnfundeAtiempo);
         mEdiAmarreDeFunda = vista.findViewById(R.id.ediAmarreDeFunda);
         mEdiUsoDeFunda = vista.findViewById(R.id.ediUsoDeFunda);
@@ -215,18 +252,33 @@ public class DialogFragmentx extends DialogFragment {
         ediObservacionesAll = vista.findViewById(R.id.ediObservacionesAll);
         ediPercentAll = vista.findViewById(R.id.ediPercentAll);
 
+          ediPercentEnfunde= vista.findViewById(R.id.ediPercentEnfunde);
+          ediPercentDeshoje= vista.findViewById(R.id.ediPercentDeshoje);
+          ediPercentApuntalamiento= vista.findViewById(R.id.ediPercentApuntalamiento);
+          ediPercentDeshije= vista.findViewById(R.id.ediPercentDeshije);
+          ediPercentOtrasLabores= vista.findViewById(R.id.ediPercentOtrasLabores);
+
+
+
         // mLayotItem = vista.findViewById(R.id.layotItem);
     }
 
 
     private TextInputEditText [] returnArryOfTextInputEditText(){
         TextInputEditText [] arrayTextInputEditText={
-              mEdiEnfundeAtiempo,     mEdiAmarreDeFunda,
+
+          ediProductor, ediFinca, ediFecha,
+          ediLugar ,ediSemana ,odiCodigO,
+
+        mEdiEnfundeAtiempo,     mEdiAmarreDeFunda,
               mEdiUsoDeFunda,     mEdiIdentificacionDeEdad,
               mEdiToldeDeFunda,     mEdiLimpiezaRacimos2,
               mEdiDaipaDisco,     mEdiDeschive,
               mEdiCirugiaDeDedos,     mEdiEnfundeBarrera,
-              mEdiRacimosCorrectos,     mEdiDestorex,     mEdiDeshoje,     mEdiCorteHojaCorrecto,
+              mEdiRacimosCorrectos,     mEdiDestorex,
+
+
+                mEdiDeshoje,     mEdiCorteHojaCorrecto,
               mEdiDespunte,     mEdiCodo,     mEdiHojaPuente,     mEdiSaneoYcirujia,     mEdiDesvioDeHijos,
               mEdiEnsunche,     mEdiRecogePuntual,     mEdiUbicacionDeSuncho,     mEdiUbicacionDePuntal,
               mEdiRecojeSuncho,     mEdiDeshijeAtiempo,     mEdiDirecccion,     mEdiUbicacion,
@@ -240,7 +292,7 @@ public class DialogFragmentx extends DialogFragment {
            ediPercentAll
 
 
-
+                //edi percent enfunde y lo demas no estan aun
 
 
 
@@ -254,6 +306,61 @@ public class DialogFragmentx extends DialogFragment {
        return  arrayTextInputEditText;
 
     }
+
+
+
+    private  TextInputEditText[][]  bydimensionalArrayCategoriesEditexts() {
+
+
+        TextInputEditText[][] arrayTextInputEditText = {
+                {        //ENFUNDE
+                        ediProductor, ediFinca, ediFecha,
+                        ediLugar, ediSemana, odiCodigO,
+
+                        mEdiEnfundeAtiempo, mEdiAmarreDeFunda,
+                        mEdiUsoDeFunda, mEdiIdentificacionDeEdad,
+                        mEdiToldeDeFunda, mEdiLimpiezaRacimos2,
+                        mEdiDaipaDisco, mEdiDeschive,
+                        mEdiCirugiaDeDedos, mEdiEnfundeBarrera,
+                        mEdiRacimosCorrectos, mEdiDestorex,
+                        ediObservacionesEnfunde,ediPercentEnfunde
+                },
+
+
+                {       //DESHOJE
+                        mEdiDeshoje, mEdiCorteHojaCorrecto,
+                        mEdiDespunte, mEdiCodo, mEdiHojaPuente, mEdiSaneoYcirujia, mEdiDesvioDeHijos,
+                        ediObservacionesDeshoje,ediPercentDeshoje
+
+                },
+
+
+                {       //APUNTALAMIENTO
+                        mEdiEnsunche, mEdiRecogePuntual, mEdiUbicacionDeSuncho, mEdiUbicacionDePuntal,
+                        mEdiRecojeSuncho, ediObservacionesApuntalamiento,ediPercentApuntalamiento
+
+                },
+
+                {    //DESHIJE
+                        mEdiDeshijeAtiempo, mEdiDirecccion, mEdiUbicacion,
+                        mEdiHijosDeAgua, mEdiDobles, mEdiResiembra, ediObservacionesDeshije,ediPercentDeshije
+                },
+
+
+                {       //OTRAS LABORES
+                        mEdiNutricion, mEdiManejoDeCobertura,
+                        mEdiLimpiezaDePlantas, mEdiRiego, mEdiDrenajes, mEdiLimpiezaEmpacado,
+                        mEdiLimpiezaBODEGA, mEdiManejoDeDesechos, ediObservacionesOtrasLabores,ediPercentOtrasLabores
+                }
+
+
+        };
+
+
+
+        return  arrayTextInputEditText;
+    }
+
 
 
 
@@ -434,6 +541,153 @@ return true;
     }
 
 
+
+
+
+
+  private void visibleLayoutByCategoriesSelected(String [] categoriesSelected){
+
+      for(String currenCategory: categoriesSelected){
+
+            if(currenCategory.equals("Enfunde")){
+                LinearLayout   layoutEnfunde= vista.findViewById(R.id.layoutEnfunde);
+                layoutEnfunde.setVisibility(View.VISIBLE);
+
+                milistCategoriesSelectedIndices.add(0);
+
+            }
+
+          if(currenCategory.equals("Deshoje")){
+
+              LinearLayout   layDeshoje= vista.findViewById(R.id.layDeshoje);
+              layDeshoje.setVisibility(View.VISIBLE);
+              milistCategoriesSelectedIndices.add(1);
+
+          }
+
+
+          if(currenCategory.equals("Apuntalamiento")){
+
+              LinearLayout   layApuntalamiento= vista.findViewById(R.id.layApuntalamiento);
+              layApuntalamiento.setVisibility(View.VISIBLE);
+              milistCategoriesSelectedIndices.add(2);
+
+          }
+
+
+
+          if(currenCategory.equals("Deshije")){
+              LinearLayout   layDeshije= vista.findViewById(R.id.layDeshije);
+              layDeshije.setVisibility(View.VISIBLE);
+              milistCategoriesSelectedIndices.add(3);
+          }
+
+
+          if(currenCategory.equals("Otras labores")){
+              LinearLayout   layOtrasLabores= vista.findViewById(R.id.layOtrasLabores);
+              layOtrasLabores.setVisibility(View.VISIBLE);
+              milistCategoriesSelectedIndices.add(4);
+          }
+
+        }
+  }
+
+
+
+  ///vamos hacer operacion
+
+
+    private void doPercenteCategorie(int categorieSelected){   ///
+
+        if(categorieSelected== Variables.ENFUNDE){
+          //Realizamos la operacion percent...
+
+            globalTexinputEditex=bydimensionalArrayCategoriesEditexts()[0];
+
+
+        }
+
+
+
+        else if(categorieSelected== Variables.DESHOJE){
+
+            globalTexinputEditex=bydimensionalArrayCategoriesEditexts()[1];
+
+
+        }
+
+        else if(categorieSelected== Variables.DESHIJE){
+
+
+            globalTexinputEditex=bydimensionalArrayCategoriesEditexts()[3];
+
+        }
+
+        else if(categorieSelected== Variables.APUNTALAMIENTO){
+            globalTexinputEditex=bydimensionalArrayCategoriesEditexts()[2];
+
+
+
+        }
+
+        else if(categorieSelected== Variables.OTRAS_LABORES){
+
+            globalTexinputEditex=bydimensionalArrayCategoriesEditexts()[4];
+
+
+        }
+
+
+    else if(categorieSelected== Variables.ALL_CATEGORIES){
+
+            TextInputEditText[] [] globalTexinputEditex=bydimensionalArrayCategoriesEditexts();
+
+
+        }
+
+
+
+        if(categorieSelected!=Variables.ALL_CATEGORIES){  //si no es llactegories
+
+             float percentCategorie=0;
+
+            for(int indice=0; indice<globalTexinputEditex.length; indice++){
+
+
+                if(indice!=globalTexinputEditex.length-1){ //menos 2 creo..
+
+                    if(!globalTexinputEditex[indice].getText().toString().trim().isEmpty()){
+
+                       /// percentCategorie
+
+
+                    }
+
+
+                    //seguimos sumando
+
+                }else{
+                    //mostramos la operacion
+
+
+                }
+
+
+            }
+
+            ///itremoas ese array
+
+        }else{   ///si es all categories
+
+
+
+        }
+
+
+
+
+
+    }
 
 }
 

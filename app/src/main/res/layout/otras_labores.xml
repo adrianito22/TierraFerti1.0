@@ -4,6 +4,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layOtrasLabores"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -29,7 +30,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="nutricion">
@@ -39,7 +40,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -50,7 +51,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="manejo de cobertura">
@@ -60,7 +61,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -71,7 +72,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="limpieza matas">
@@ -81,7 +82,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -92,7 +93,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="riego">
@@ -102,7 +103,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -113,7 +114,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="drenajes">
@@ -123,7 +124,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -134,7 +135,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="limpieza empacado">
@@ -144,7 +145,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -165,7 +166,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"
@@ -176,7 +177,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="manejo de deshechos">
@@ -186,7 +187,7 @@ style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                
+
                 android:digits="0123456789."
                 android:ems="10"
                 android:gravity="center"

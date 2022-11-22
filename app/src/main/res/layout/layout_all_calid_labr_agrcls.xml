@@ -156,10 +156,11 @@
                     app:layout_columnWeight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediProductor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
 
+                        android:layout_marginTop="10dp"
                         android:digits="0123456789."
                         android:ems="10"
                         android:gravity="center"
@@ -178,10 +179,11 @@
                     app:layout_columnWeight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediFinca"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
 
+                        android:layout_marginTop="10dp"
                         android:digits="0123456789."
                         android:ems="10"
                         android:gravity="center"
@@ -200,10 +202,11 @@
                     app:layout_columnWeight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediFecha"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
 
+                        android:layout_marginTop="10dp"
                         android:digits="0123456789."
                         android:ems="10"
                         android:gravity="center"
@@ -222,10 +225,11 @@
                     app:layout_columnWeight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediLugar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
 
+                        android:layout_marginTop="10dp"
                         android:digits="0123456789."
                         android:ems="10"
                         android:gravity="center"
@@ -244,10 +248,11 @@
                     app:layout_columnWeight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediSemana"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
 
+                        android:layout_marginTop="10dp"
                         android:digits="0123456789."
                         android:ems="10"
                         android:gravity="center"
@@ -266,10 +271,11 @@
                     app:layout_columnWeight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/odiCodigO"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
 
+                        android:layout_marginTop="10dp"
                         android:digits="0123456789."
                         android:ems="10"
                         android:gravity="center"

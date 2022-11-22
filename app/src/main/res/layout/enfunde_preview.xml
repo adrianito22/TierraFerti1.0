@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    app:layout_constraintGuide_percent="0.10">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#4CAF50"
+                    android:gravity="center"
+                    android:text="Enfunde"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtItem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="enfunde a tiempo"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="amarre de funda"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="uso de funda"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="identificacion de edad"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="toldeo de funda"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="limpieza de racimo"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="Daipa - Disco"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="deschive"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="cirujia de dedos"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="enfunde barrera"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="racimos correctos"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtItem12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="destore"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Matas Evaluadas"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/enfundetiempo"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/amareenfunde"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/usodefunda"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/identificacionedad"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/toldeodefunda"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/limpiezaracimo"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/dipadisco"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/deschive"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/cirujiaDedos"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/enfundebarrera"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/racimoscorrectos"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ediNumMatasEvaluadas12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:tag="enfunde/destore"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="% PROM" />
+
+                <TextView
+                    android:id="@+id/txtProm1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10dfg"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtProm12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backrgound_item2"
+                    android:digits="0123456789."
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:text="10df"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

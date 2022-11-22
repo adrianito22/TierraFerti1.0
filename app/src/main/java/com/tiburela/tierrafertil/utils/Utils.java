@@ -3,10 +3,18 @@ package com.tiburela.tierrafertil.utils;
 import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.tiburela.tierrafertil.models.ResultCaldLabAgricls;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Utils {
 
    public static  String [] arrayWhitkeysMapCategories ={"Enfunde","Deshoje","Apuntalamiento","Deshije","Otras labores"};
+
+
+
+   public static HashMap<String, ArrayList<ResultCaldLabAgricls>>hasmapCalidLAbsAgricls= new HashMap<>();
 
 
    public static  String keyIntentXtraAllinforms ="KEY EXTRASS";
