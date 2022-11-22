@@ -8,6 +8,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tiburela.tierrafertil.models.AllFormsModel;
+import com.tiburela.tierrafertil.models.Plant;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,6 +25,7 @@ public class SharePref {
 
     public static final String KEYI_CALIDAD_LABORES_AGRCICOLAS_MAP="KEYCALIDADLABORES";
     public static final String KEY_AllINFORMS_SHAREP="kEYALLINFORMSlIST";
+    public static  final String KEY_ALL_PLANTS="HELOOHEYPLANTS";
 
 
 
@@ -154,6 +156,21 @@ public class SharePref {
     }
 
 
+    public static void saveListInformPlants (List<Plant> listInforms, String KeyTOsAVE) {
+        Gson   gson = new Gson();
+        String jsonListString = gson.toJson(listInforms);
+
+        mSharedPrefUniqueObjc.edit()
+                //.remove("My_map")
+                .putString(KeyTOsAVE, jsonListString) //se guarda en una solo string..
+                .apply();
+
+    }
+
+
+
+
+
     public static  List<AllFormsModel> getListAlLiforms ( String KeyOfItem) {
         Gson   gson = new Gson();
         String response=mSharedPrefUniqueObjc.getString(KeyOfItem , "");
@@ -180,5 +197,87 @@ public class SharePref {
 
 
     }
+
+
+//    public static  Map<String,AllFormsModel> loadMapPreferencsHashMapOfHashMap(String keyShare) {
+
+
+    public static  Map<String,  Map<String,String>> loadMapPreferencsHashMapOfHashMapPlanstData(String keyShare) {
+
+        Gson   gson = new Gson();
+        String response=mSharedPrefUniqueObjc.getString(keyShare , "");
+
+        Type type = new TypeToken<Map<String, Map<String,String>>>(){}.getType();
+
+        Map<String, Map<String,String>> map;
+        map = gson.fromJson(response, type);
+
+
+        if(response.equals("")) {
+            Log.i("lashareperf","no hay data en share");
+
+            map= new HashMap<>();
+            return map;
+
+        }else{
+
+            Log.i("lashareperf","Si hay data en share y data es length es "+response);
+
+            return map;
+
+
+        }
+
+
+
+    }
+
+
+
+    public static  void saveHashMapOfHashmapPlants(  Map<String,  Map<String,String>> inputMap,String keySharePref) {
+        if (mSharedPrefUniqueObjc != null){
+            // JSONObject jsonObject = new JSONObject(inputMap);
+            //   String jsonString = jsonObject.toString();
+            mSharedPrefUniqueObjc.edit()
+                    //  .remove("My_map")
+                    .putString(keySharePref, new Gson().toJson(inputMap))
+
+
+                    // .putString(keySharePref, jsonString)
+                    .apply();
+        }
+    }
+
+
+
+    public static  List<Plant> getListAlLiformsPlants ( String KeyOfItem) {
+
+        Gson   gson = new Gson();
+        String response=mSharedPrefUniqueObjc.getString(KeyOfItem , "");
+
+        Type type = new TypeToken<List<Plant>>(){}.getType();
+        List<Plant> carsList;
+        carsList = gson.fromJson(response, type);
+
+
+        if(response.equals("")) {
+            Log.i("lashareperf","no hay data en share plant ");
+
+            carsList= new ArrayList<>();
+            return carsList;
+
+        }else{
+
+            Log.i("lashareperf","Si hay data en share  plant y el length es "+carsList.size());
+
+            return carsList;
+
+
+        }
+
+
+    }
+
+
 
 }

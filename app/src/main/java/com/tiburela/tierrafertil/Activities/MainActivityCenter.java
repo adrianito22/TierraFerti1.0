@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +24,9 @@ public class MainActivityCenter extends AppCompatActivity {
 
     LinearLayout layCalidLabresAgriocolas;
     LinearLayout layDiagnotiscoFitosa;
+    LinearLayout layMisInformes;
+
+
     int tipoInformeSelecionado;
 
 
@@ -37,6 +39,9 @@ public class MainActivityCenter extends AppCompatActivity {
 
          layCalidLabresAgriocolas=findViewById(R.id.layCalidLabresAgriocolas);
          layDiagnotiscoFitosa=findViewById(R.id.layDiagnotiscoFitosa);
+
+        layMisInformes=findViewById(R.id.layMisInformes);
+
         eventosBtn();
 
     }
@@ -48,7 +53,7 @@ public class MainActivityCenter extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent intencion = new Intent(MainActivityCenter.this,ActivityCalidadLaboresAgricolas.class );
+                Intent intencion = new Intent(MainActivityCenter.this, ActivityPlantCaldLbrs.class );
 
                 tipoInformeSelecionado=Typeinforms.CALIDAD_LABRES_AGRICOLAS;
                 sheetOptionsForm(intencion,tipoInformeSelecionado);
@@ -63,16 +68,40 @@ public class MainActivityCenter extends AppCompatActivity {
 
                 tipoInformeSelecionado=Typeinforms.INFORM_FITOSANITARIO;
 
-
-
                 Intent intencion = new Intent(MainActivityCenter.this,ActivityDiagnFitoSanitario.class );
 
-             sheetOptionsForm(intencion,tipoInformeSelecionado);
+                 sheetOptionsForm(intencion,tipoInformeSelecionado);
 
 
 
             }
         });
+
+
+        layMisInformes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                tipoInformeSelecionado=Typeinforms.ALL_INFORMS;
+
+
+
+                Intent intencion = new Intent(MainActivityCenter.this,ActivityAllinformsCreates.class );
+
+
+
+                intencion.putExtra(Utils.keyIntentXtraAllinforms,Typeinforms.ALL_INFORMS);
+                startActivity(intencion);
+
+
+              //  sheetOptionsForm(intencion,tipoInformeSelecionado);
+
+
+
+            }
+        });
+
+
 
     }
 
@@ -207,7 +236,7 @@ public class MainActivityCenter extends AppCompatActivity {
     private void decideIRActivity(int informType){
         if(informType ==Typeinforms.CALIDAD_LABRES_AGRICOLAS){
 
-           Intent intencion = new Intent(MainActivityCenter.this,ActivityCalidadLaboresAgricolas.class);
+           Intent intencion = new Intent(MainActivityCenter.this, ActivityPlantCaldLbrs.class);
 
             intencion.putExtra(Utils.KEY_INTEN_LABORES_AGROICOLAS,123);
             startActivity(intencion);

@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterAllinforms;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.AllFormsModel;
+import com.tiburela.tierrafertil.utils.Typeinforms;
 import com.tiburela.tierrafertil.utils.Utils;
 
 import java.util.ArrayList;
@@ -58,6 +60,40 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
         SharePref.init(ActivityAllinformsCreates.this);
 
+        if(tipoInformCurrent == Typeinforms.ALL_INFORMS ){  //ES TODOSD LOS INFORMES
+            setDataRecyclerView((allInformsShareList));
+        }
+
+
+
+        else
+        {
+
+
+            lisInformFiltered = (ArrayList<AllFormsModel>) generateListByEspecificType(allInformsShareList);
+
+            setDataRecyclerView(( lisInformFiltered));
+
+        }
+
+
+
+
+
+
+
+
+
+         //aquio chekear el tipo de informe...
+
+
+
+
+
+
+
+
+
         mapAllInformsPrferences = SharePref.loadMapPreferencesDataOfFields(SharePref.KEY_AllINFORMS_SHAREP);
 
 
@@ -77,13 +113,15 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
         allInformsShareList=mapToArrayList(mapAllInformsPrferences);
 
-        if(tipoInformCurrent ==0 ){
+        if(tipoInformCurrent == Typeinforms.ALL_INFORMS ){  //ES TODOSD LOS INFORMES
 
 
             setDataRecyclerView((allInformsShareList));
 
 
-        }else{
+        }
+
+        else{
 
             lisInformFiltered = (ArrayList<AllFormsModel>) generateListByEspecificType(allInformsShareList);
 
@@ -193,8 +231,17 @@ ArrayList<AllFormsModel> lisInformFiltered;
                /**abrimos el informe dpeendiendo del tipo de informe */
 
                 //aqui recuperamos el id ...del informe...
-
                 //intent...//aqui abrimos dialog.... y le pasamos un intent...
+
+                   Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityPlantCaldLbrs.class);
+                   intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
+                    intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
+
+
+                   hgjhg
+                     ///aqui deberiamos  obtenr el id del hashmmap plantss
+
+                /*
 
                 FragmentManager fm = getSupportFragmentManager();
                 DialogFragmentx dialog = new DialogFragmentx();
@@ -205,7 +252,7 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
                 dialog.show(getSupportFragmentManager(),"My  FragmentDIalog");
 
-
+*/
 
 
                 //

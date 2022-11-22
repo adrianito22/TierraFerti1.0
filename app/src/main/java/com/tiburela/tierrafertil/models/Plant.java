@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class Plant {
 
-    private String uniqueIdPlant;
-    private String  informeRelacionado;
+    private String uniqueIdPlantAndKeyShare;
+    private String idIinformFatherRelacionado;
     boolean itemLayoutIsVisible;
 
 
@@ -17,9 +17,10 @@ public class Plant {
         this.itemLayoutIsVisible = itemLayoutIsVisible;
     }
 
-    public Plant(String uniqueIdPlant, String informeRelacionado, String nameItem, HashMap<String, String> hashMapCategiresMapsEvaluadas, boolean itemLayoutIsVisible) {
-        this.uniqueIdPlant = uniqueIdPlant;
-        this.informeRelacionado = informeRelacionado;
+    public Plant(String idIinformFatherRelacionado, String nameItem, HashMap<String, String> hashMapCategiresMapsEvaluadas, boolean itemLayoutIsVisible) {
+
+        uniqueIdPlantAndKeyShare = java.util.UUID.randomUUID().toString();
+        this.idIinformFatherRelacionado = idIinformFatherRelacionado;
         this.nameItem = nameItem;
         this.hashMapCategiresMapsEvaluadas = hashMapCategiresMapsEvaluadas;
         this.itemLayoutIsVisible=itemLayoutIsVisible;
@@ -42,20 +43,20 @@ public class Plant {
 
 
 
-    public String getUniqueIdPlant() {
-        return uniqueIdPlant;
+    public String getUniqueIdPlantAndKeyShare() {
+        return uniqueIdPlantAndKeyShare;
     }
 
-    public void setUniqueIdPlant(String uniqueIdPlant) {
-        this.uniqueIdPlant = uniqueIdPlant;
+    public void setUniqueIdPlantAndKeyShare(String uniqueIdPlantAndKeyShare) {
+        this.uniqueIdPlantAndKeyShare = uniqueIdPlantAndKeyShare;
     }
 
-    public String getInformeRelacionado() {
-        return informeRelacionado;
+    public String getIdIinformFatherRelacionado() {
+        return idIinformFatherRelacionado;
     }
 
-    public void setInformeRelacionado(String informeRelacionado) {
-        this.informeRelacionado = informeRelacionado;
+    public void setIdIinformFatherRelacionado(String idIinformFatherRelacionado) {
+        this.idIinformFatherRelacionado = idIinformFatherRelacionado;
     }
 
     public String getNameItem() {
