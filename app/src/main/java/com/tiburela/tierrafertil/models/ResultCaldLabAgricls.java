@@ -31,10 +31,23 @@ public class ResultCaldLabAgricls {
     private int unmPlantasCalificadas;
     private float promedio ;
 
-    public ResultCaldLabAgricls(String itemCalificadoName, int unmPlantasCalificadas, float promedio) {
+    public boolean isTitle() {
+        return isTitle;
+    }
+
+    public void setTitle(boolean title) {
+        isTitle = title;
+    }
+
+    private  boolean isTitle;
+
+
+
+    public ResultCaldLabAgricls(String itemCalificadoName, int unmPlantasCalificadas, float promedio,boolean isTitle) {
         this.itemCalificadoName = itemCalificadoName;
         this.unmPlantasCalificadas = unmPlantasCalificadas;
         this.promedio = promedio;
+        this. isTitle=isTitle;
     }
 
 

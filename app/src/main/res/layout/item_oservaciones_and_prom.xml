@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp"
+    android:paddingBottom="10dp"
+    app:layout_constraintGuide_percent="0.10">
+
+    <TextView
+        android:id="@+id/txtNameItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="10df"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtPromedio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="10df"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtNumPlntasd4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/backrgound_item2"
+        android:digits="0123456789."
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="10df"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>
+

@@ -117,24 +117,128 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
 
 
+    private void addDtatOrecicler(){
+
+      //  String [] [] namesValues= { },
+
+                String [] [] namesValues= {
+                {"enfunde a tiempo","amarre enfunde","uso de efunda","identificacion edad","toldeo de funda",
+                "limpieza racimo","dipadisco","deschive", "cirujia Dedos","enfunde barrera","racimos correctos","destore"},
+
+                {"deshoje","corte hoja correcto","despunte", "codo","hoja puente","saneo cirujia"
+                        ,"devio Hijos"}
+
+                ,{"ensunche","recojeSuncho","ubicacionsuncho","recogepuntual",
+                "ubicaciondepuntual"},
+
+                {"deshijetiempo","direccion","ubicacion","hijosagua"},
+
+                {"dobles","resiembra",
+
+                "drenajes","limpiezempcado","limpiezabodega","manejodeshechos",
+                "nutricion", "manejocobertura","limpiezmatas","riego",
+                }
+        };
+
+
+
+        for(int indice=0;indice<namesValues.length;indice++) { //obteemos por ejemplo  namesValues
+            //obtenemos un array lis
+            String [] miArray  =namesValues[indice];
+
+            for(int indice2=0;indice2<miArray.length;indice2++) { //iteramos el array y las k
+
+
+
+            }
+
+        }
+
+
+        ArrayList <ResultCaldLabAgricls>listPreferencesAllinformsX= new ArrayList();
+
+        //itreamos names and values();
+
+        listPreferencesAllinformsX.add(new ResultCaldLabAgricls(3,2,3,2  ));
+
+
+
+
+    }
+
 
     private ResultCaldLabAgricls createoBJECTResultCaldLabAgriclsbYMap(Map<String, String>miMapa){
 
         //ARARY BIDMEIONAL CON NAMES SECCIONES....
 
-       String [] [] datSeccion= { {"Labres agricolas","seccion 1","seccion 3","seccion4"},{"Labres agricolas","seccion 1","seccion 3","seccion4"}
-         ,{"Labres agricolas","seccion 1","seccion 3","seccion4"},{"Labres agricolas","seccion 1","seccion 3","seccion4"},
-               {"Labres agricolas","seccion 1","seccion 3","seccion4"},{"Labres agricolas","seccion 1","seccion 3","seccion4"}
+        String [] namesSecciones= {"ENFUNDE","DESHOJE","APUNTALAMIENTO","DESHIJE","OTRAS LABORES"};
 
+
+                String [] [] namesValues= { {"enfunde a tiempo","amarre enfunde","uso de efunda","identificacion edad","toldeo de funda",
+                "limpieza racimo","dipadisco","deschive", "cirujia Dedos","enfunde barrera","racimos correctos","destore"},
+
+    {"deshoje","corte hoja correcto","despunte", "codo","hoja puente","saneo cirujia"
+            ,"devio Hijos"}
+
+     ,{"/ensunche","recojeSuncho","ubicacionsuncho","recogepuntual",
+                "ubicaciondepuntual"},
+
+
+     {"deshijetiempo","direccion","ubicacion","hijosagua"},
+                {"dobles","resiembra"},
+
+
+       {"nutricion", "manejocobertura","limpiezmatas","riego",
+                        "drenajes","limpiezempcado","limpiezabodega","manejodeshechos"}
+        };
+
+        String [] [] keysBySeccion= {{"enfunde/enfundetiempo","enfunde/amareenfunde","enfunde/usodefunda","enfunde/identificacionedad","enfunde/toldeodefunda" +
+                "enfunde/limpiezaracimo","enfunde/dipadisco","enfunde/deschive",
+                "enfunde/cirujiaDedos","enfunde/enfundebarrera","enfunde/racimoscorrectos","enfunde/destore"},
+
+                {"deshoje/deshoje","deshoje/cortehojacorrecto","deshoje/despunte", "deshoje/codo","deshoje/hojapuente","deshoje/saneocirujia"
+                        ,"deshoje/devioHijos"},
+
+                {"apuntalamiento/ensunche","apuntalamiento/recojeSuncho","apuntalamiento/ubicacionsuncho","apuntalamiento/recogepuntual",
+                "apuntalamiento/ubicaciondepuntual"},
+
+                {"deshijetiempo/deshijetiempo","deshijetiempo/direccion","deshijetiempo/ubicacion","deshijetiempo/hijosagua"},
+                {"deshijetiempo/dobles","deshijetiempo/resiembra"},
+
+                {"otraslabores/nutricion", "otraslabores/manejocobertura","otraslabores/limpiezmatas","otraslabores/riego",
+                        "otraslabores/drenajes","otraslabores/limpiezempcado","otraslabores/limpiezabodega","otraslabores/manejodeshechos"}
         };
 
 
 
-        String [] [] keysBySeccion= { {"ab/letras","sma/letras","seccion 3","seccion4"},{"Labres agricolas","seccion 1","seccion 3","seccion4"}
-                ,{"Labres agricolas","seccion 1","seccion 3","seccion4"},{"Labres agricolas","seccion 1","seccion 3","seccion4"},
-                {"Labres agricolas","seccion 1","seccion 3","seccion4"},{"Labres agricolas","seccion 1","seccion 3","seccion4"}
 
-        };
+        //NECESITAMOS CREAR EL SIZE DE LISTAS DE NAMES SECCION
+        for(int indice=0;  indice<namesSecciones.length; indice++){ //iteramos el primer
+
+            ArrayList<ResultCaldLabAgricls>list= new ArrayList<>();
+
+            //
+
+
+        }
+
+
+        //NECESITAMOS CREAR EL SIZE DE LISTAS DE NAMES SECCION
+        for(int indice=0;  indice<namesSecciones.length; indice++){ //iteramos el primer
+
+            ArrayList<ResultCaldLabAgricls>list= new ArrayList<>();
+
+            //
+
+
+        }
+
+
+
+
+
+
+
 
 
 
@@ -142,6 +246,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
          for(){
          int float value=0;
+
 
              for(){ ///iteramos el mapa suando keys  ///si el key contiene este obtenemos el resultadp
 
@@ -152,7 +257,6 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
 
          }
-
 
         //for para iterar ambos array de tidpo String..
 
@@ -165,12 +269,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
         //iterar hasm
 
 
-
-
        //cremaos la data procuarar...que en donde sale info de planta este todo  todo si no no se puede obtener data... y mostrar ...
-
-
-
 
 
 
@@ -184,18 +283,11 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
     private void setDataRecyclerView(ArrayList<Plant> list){
 
-
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ActivityResultCtrLabr.this);
         AdpaterResultCalLabrsAgrcls adapter = new AdpaterResultCalLabrsAgrcls(ActivityResultCtrLabr.this, list);
         //  this.adapter.setPlayPauseClickListener(this);
         mireclcierView.setLayoutManager(layoutManager);
         mireclcierView.setAdapter(adapter);
-
-
-
-
-
-
     }
 
 }
