@@ -171,7 +171,20 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
         //ARARY BIDMEIONAL CON NAMES SECCIONES....
 
+        Map<String, String>miMapaoFPrefrernces=new HashMap<>();
+
+
+
+
+        int contadorCategoriasOfSUbArrays =0;
+
+
+
         String [] namesSecciones= {"ENFUNDE","DESHOJE","APUNTALAMIENTO","DESHIJE","OTRAS LABORES"};
+
+          //obtyemmos la categoria actual
+           String actegoriaActual=namesSecciones [contadorCategoriasOfSUbArrays];
+
 
 
                 String [] [] namesValues= { {"enfunde a tiempo","amarre enfunde","uso de efunda","identificacion edad","toldeo de funda",
@@ -192,7 +205,13 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
                         "drenajes","limpiezempcado","limpiezabodega","manejodeshechos"}
         };
 
-        String [] [] keysBySeccion= {{"enfunde/enfundetiempo","enfunde/amareenfunde","enfunde/usodefunda","enfunde/identificacionedad","enfunde/toldeodefunda" +
+
+                   //colcoar la lista de indfices keys que no existiran ...
+
+
+                ResultCaldLabAgricls [] dsjdhd ={};
+
+        String [] [] keysBySeccion= {{"enfunde/enfundetiempo","enfunde/amareenfunde","enfunde/usodefunda","enfunde/identificacionedad","enfunde/toldeodefunda" ,
                 "enfunde/limpiezaracimo","enfunde/dipadisco","enfunde/deschive",
                 "enfunde/cirujiaDedos","enfunde/enfundebarrera","enfunde/racimoscorrectos","enfunde/destore"},
 
@@ -210,6 +229,56 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
         };
 
 
+        String []  keysBySeccionxx= {"enfunde/enfundetiempo","enfunde/amareenfunde","enfunde/usodefunda","enfunde/identificacionedad","enfunde/toldeodefunda" ,
+                "enfunde/limpiezaracimo","enfunde/dipadisco","enfunde/deschive",
+                "enfunde/cirujiaDedos","enfunde/enfundebarrera","enfunde/racimoscorrectos","enfunde/destore"
+
+                ,"deshoje/deshoje","deshoje/cortehojacorrecto","deshoje/despunte", "deshoje/codo","deshoje/hojapuente","deshoje/saneocirujia"
+                        ,"deshoje/devioHijos",
+
+                "apuntalamiento/ensunche","apuntalamiento/recojeSuncho","apuntalamiento/ubicacionsuncho","apuntalamiento/recogepuntual",
+                        "apuntalamiento/ubicaciondepuntual",
+
+                "deshijetiempo/deshijetiempo","deshijetiempo/direccion","deshijetiempo/ubicacion","deshijetiempo/hijosagua",
+                "deshijetiempo/dobles","deshijetiempo/resiembra",
+
+                "otraslabores/nutricion", "otraslabores/manejocobertura","otraslabores/limpiezmatas","otraslabores/riego",
+                        "otraslabores/drenajes","otraslabores/limpiezempcado","otraslabores/limpiezabodega","otraslabores/manejodeshechos"
+        };
+
+
+
+
+
+
+        ///ahora actualizamos
+        //recoremos esto 10 veces...
+        dfgfg
+
+        //creamos
+
+
+
+
+        //iteramos keys
+        String  [] currentARRaySeccion=keysBySeccion[contadorCategoriasOfSUbArrays];
+
+
+        int contadorSeecion = 0;
+
+        for(String key: currentARRaySeccion) {  //iteramos el array seccion
+            if(miMapaoFPrefrernces.containsKey(key)) { ///ok obten este value
+
+
+            }
+
+
+        }
+
+        contadorSeecion++;
+
+///ENTONCES ITERAMOS
+
 
 
         //NECESITAMOS CREAR EL SIZE DE LISTAS DE NAMES SECCION
@@ -232,31 +301,10 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
 
         }
-
-
-
-
-
-
-
 
 
 
         //busca las que contiene el primer keybuseccion y gaudar el resultado
-
-         for(){
-         int float value=0;
-
-
-             for(){ ///iteramos el mapa suando keys  ///si el key contiene este obtenemos el resultadp
-
-                  //aqui sumamos el value:
-             }
-
-             //aqui gaurdamos este value y creamos un objeto result y lo agaregamos a la array lis:::
-
-
-         }
 
         //for para iterar ambos array de tidpo String..
 
@@ -274,7 +322,23 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
 
 
-        ResultCaldLabAgricls item= new ResultCaldLabAgricls();
+     //   ResultCaldLabAgricls item= new ResultCaldLabAgricls();
+
+
+    }
+
+    private   ArrayList<ResultCaldLabAgricls> returnListInitialResults(  String [] [] keysBySeccion, String []  namesItems,int numPlantasCalificadas){
+        ArrayList<ResultCaldLabAgricls>LIStff= new ArrayList();
+
+        for(int indice=0; indice<keysBySeccion.length; indice++){
+            //aquii le agregamos si es title otro u optro....pilaxx //dpendiendo del indice
+
+            LIStff.add(new ResultCaldLabAgricls(namesItems[indice],numPlantasCalificadas,0 ,false));
+
+
+        }
+
+        return LIStff;
 
 
     }
