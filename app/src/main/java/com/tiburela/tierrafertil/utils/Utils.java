@@ -18,6 +18,8 @@ public class Utils {
 
 
    public static  String keyIntentXtraAllinforms ="KEY EXTRASS";
+   public static  String keyIntentXtraInformsPlant ="KEY EXTRASSplant";
+
 
    public static  String keyDialogBundle ="diaslogBundleKey";
 

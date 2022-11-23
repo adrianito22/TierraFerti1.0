@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:orientation="horizontal"
-            android:visibility="invisible">
+            android:visibility="visible">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -127,6 +127,7 @@
                 app:cardCornerRadius="30dp">
 
                 <LinearLayout
+                    android:id="@+id/layMisInformes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -153,7 +154,7 @@
                         android:ems="10"
                         android:fontFamily="sans-serif-black"
                         android:gravity="center_horizontal"
-                        android:text="Calidad Labores Agricolas"
+                        android:text="Mis Informes"
                         android:textSize="15sp" />
 
                 </LinearLayout>
@@ -169,6 +170,7 @@
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
                 android:paddingRight="5dp"
+                android:visibility="invisible"
                 app:cardCornerRadius="30dp">
 
                 <LinearLayout

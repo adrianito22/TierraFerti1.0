@@ -14,6 +14,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.tiburela.tierrafertil.R;
+import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.Plant;
@@ -22,8 +23,13 @@ import com.tiburela.tierrafertil.utils.Utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
+public class ActivityPlantCaldLbrs extends AppCompatActivity {
+  ///aquimostramos en un recilcerlos objetos plant...
+
+
     RecyclerView mireciclerView;
+   int tipoInformCurrent=0;
+
 
     ArrayList<Plant>miList= new ArrayList<>();
       Button btnAdnewPlant;
@@ -34,6 +40,36 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            tipoInformCurrent = extras.getInt(Utils.keyIntentXtraInformsPlant);
+
+
+            //The key argument here must match that used in the other activity
+        }
+
+
+        ///obtenemos una lista con las plantas...
+        //obtenemos la lista.......
+
+       /// opbtenmos plantas que cotneienn esteid...
+
+        miList= (ArrayList<Plant>) SharePref.getListAlLiformsPlants(SharePref.KEY_ALL_PLANTS); //pbtenmos todaslas plantas
+
+
+        //y mostramos solo las plantas.... de este
+
+
+        if(miList == null) {
+
+            Log.i("debuggg.","es nulo");
+        }else
+            Log.i("debuggg.","no es nulo");
+
+
+
+
+        ///PBTENEMOS EL INTENT
         mireciclerView =findViewById(R.id.mirecicler);
         btnAdnewPlant=findViewById(R.id.btnAdnewPlant);
         btnAdnewPlant.setOnClickListener(new View.OnClickListener() {
@@ -55,8 +91,8 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
     private void setDataRecyclerView(ArrayList<Plant>list){
 
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ActivityCalidadLaboresAgricolas.this);
-        AdapterPlant adapter = new AdapterPlant(ActivityCalidadLaboresAgricolas.this, list);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ActivityPlantCaldLbrs.this);
+        AdapterPlant adapter = new AdapterPlant(ActivityPlantCaldLbrs.this, list);
         //  this.adapter.setPlayPauseClickListener(this);
         mireciclerView.setLayoutManager(layoutManager);
         mireciclerView.setAdapter(adapter);
@@ -66,15 +102,18 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
             @Override
             public void onItemClick(int position, View v) {
 
+
              //abrimos dialog
 
-                Log.i("elcickler","el click es llamado");
+                Log.i("elcicklerxdff","el click es llamado aqui ...");
 
                 FragmentManager fm = getSupportFragmentManager();
                 DialogFragmentx dialog = new DialogFragmentx();
                 dialog.show(getSupportFragmentManager(),"My  FragmentDIalog");
 
               //  deploySheetaddNewPlant();
+
+
 
 
             }
@@ -88,7 +127,7 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
 
     private void deploySheetaddNewPlant(){
 
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityCalidadLaboresAgricolas.this);
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityPlantCaldLbrs.this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_ver_atachx);
 
         CheckBox checkBox1=bottomSheetDialog.findViewById(R.id.checkBox1);
@@ -128,7 +167,10 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
 
                     //agregamos un nuevo objeto
 
-                  miList.add( new Plant("","",nombrePlanta,categoriresVinculadosMap,false));
+
+
+
+                miList.add( new Plant("",nombrePlanta,categoriresVinculadosMap,false));
 
 
 
@@ -161,7 +203,7 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
 
     private void createSet(){
 
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityCalidadLaboresAgricolas.this);
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityPlantCaldLbrs.this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_ver_atachx);
 
         CheckBox checkBox1=bottomSheetDialog.findViewById(R.id.checkBox1);
@@ -201,7 +243,7 @@ public class ActivityCalidadLaboresAgricolas extends AppCompatActivity {
 
                 //agregamos un nuevo objeto
 
-                miList.add( new Plant("","",nombrePlanta,categoriresVinculadosMap,false));
+                miList.add( new Plant("",nombrePlanta,categoriresVinculadosMap,false));
 
 
 
