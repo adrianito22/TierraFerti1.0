@@ -11,8 +11,10 @@
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ova.xml" value="0.251" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_allinforms_creates.xml" value="0.20222317229585293" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_diagn_fito_sanitario.xml" value="0.19966230476994512" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main_center.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_result_ctr_labr.xml" value="0.20222317229585293" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/all_inform_item.xml" value="0.20222317229585293" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/apuntalamiento.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1.xml" value="0.2" />
@@ -25,7 +27,7 @@
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/deshije.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/deshoje.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/enfunde.xml" value="0.4" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/enfunde_preview.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/enfunde_preview.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/fragment_dialog.xml" value="0.20222317229585293" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/fragment_plantas_a_cosecha.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/gggg.xml" value="0.17526041666666667" />

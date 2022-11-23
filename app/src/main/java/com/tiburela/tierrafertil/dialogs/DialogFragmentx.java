@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class DialogFragmentx extends DialogFragment {
 
-    String keyOfThisInform="";
+    String keyPreferencesThisForm ="";
 
     Map<String, String> currentDataHhasmap = new HashMap<>();
 
@@ -142,8 +142,12 @@ public class DialogFragmentx extends DialogFragment {
 
 
         Bundle bundle = getArguments();
-        assert bundle != null;
-        keyOfThisInform= bundle.getString(Utils.keyDialogBundle,"");
+
+
+        if(bundle != null){
+            keyPreferencesThisForm = bundle.getString(Utils.keyDialogBundle,"");
+        }
+
 
         return crearDialogote();
     }
@@ -404,9 +408,9 @@ public class DialogFragmentx extends DialogFragment {
 
     private void getDataOfPreferencesAndCallSetDataInViews() {
 
-        if(!keyOfThisInform.trim().isEmpty()) {
+        if(!keyPreferencesThisForm.trim().isEmpty()) {
 
-            currentDataHhasmap=SharePref.loadMapPreferencesDataOfFields(getActivity(),keyOfThisInform);
+            currentDataHhasmap=SharePref.loadMapPreferencesDataOfFields(getActivity(), keyPreferencesThisForm);
 
             if(currentDataHhasmap.size()>0)  {
 
@@ -499,7 +503,7 @@ return true;
 
 
                     SharePref.init(getActivity());
-                    SharePref.saveMapPreferFields(hashMap,keyOfThisInform);
+                    SharePref.saveMapPreferFields(hashMap, keyPreferencesThisForm);
                     Toast.makeText(getActivity(), "Se guardo", Toast.LENGTH_SHORT).show();
 
 

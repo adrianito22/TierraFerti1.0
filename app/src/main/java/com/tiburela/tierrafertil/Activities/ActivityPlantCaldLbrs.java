@@ -18,10 +18,13 @@ import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.Plant;
+import com.tiburela.tierrafertil.utils.Typeinforms;
 import com.tiburela.tierrafertil.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class ActivityPlantCaldLbrs extends AppCompatActivity {
   ///aquimostramos en un recilcerlos objetos plant...
@@ -29,10 +32,18 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
     RecyclerView mireciclerView;
    int tipoInformCurrent=0;
+   String keySharePrefeItem="";
 
 
-    ArrayList<Plant>miList= new ArrayList<>();
-      Button btnAdnewPlant;
+   Button btnSaveAndCalc;
+
+
+    Map<String,Plant> mapPlants = new HashMap<>();
+      ImageView btnAdnewPlant;
+
+
+      ArrayList<Plant>milist= new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,35 +53,58 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+
+
             tipoInformCurrent = extras.getInt(Utils.keyIntentXtraInformsPlant);
+            keySharePrefeItem = extras.getString(SharePref.keyIntent);
+
 
 
             //The key argument here must match that used in the other activity
         }
 
 
+
+
+
         ///obtenemos una lista con las plantas...
         //obtenemos la lista.......
 
        /// opbtenmos plantas que cotneienn esteid...
+        mireciclerView =findViewById(R.id.mirecicler);
+        btnSaveAndCalc=findViewById(R.id.btnSaveAndCalc);
 
-        miList= (ArrayList<Plant>) SharePref.getListAlLiformsPlants(SharePref.KEY_ALL_PLANTS); //pbtenmos todaslas plantas
+
+
+        SharePref.init(ActivityPlantCaldLbrs.this);
+        mapPlants =  SharePref.getMapOfPlantsObjects(keySharePrefeItem); /////aqui le pasmas el key del objeto all forms  que se eleciono anteriormente
 
 
         //y mostramos solo las plantas.... de este
 
 
-        if(miList == null) {
+        if(mapPlants != null) {
+
+            milist=Utils.arraListByHASMPA(mapPlants);
+
+            setDataRecyclerView(milist);
+
+            ///llamaos recicler
+
+
+            Log.i("debuggg.","no es nuelo");
+        }else
+        {
+              ///si tinee data lo ponemos en el recicler...
 
             Log.i("debuggg.","es nulo");
-        }else
-            Log.i("debuggg.","no es nulo");
+
+
+        }
 
 
 
 
-        ///PBTENEMOS EL INTENT
-        mireciclerView =findViewById(R.id.mirecicler);
         btnAdnewPlant=findViewById(R.id.btnAdnewPlant);
         btnAdnewPlant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +116,21 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
             }
         });
+
+        btnSaveAndCalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                lalamao activity
+
+                //deploySheetaddNewPlant();
+
+
+
+            }
+        });
+
+
 
     }
 
@@ -107,8 +156,19 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
                 Log.i("elcicklerxdff","el click es llamado aqui ...");
 
+
+
+
+
+
                 FragmentManager fm = getSupportFragmentManager();
                 DialogFragmentx dialog = new DialogFragmentx();
+
+
+                Bundle bundle = new Bundle();
+                bundle.putString(Utils.keyDialogBundle,v.getTag().toString());
+                dialog.setArguments(bundle);
+
                 dialog.show(getSupportFragmentManager(),"My  FragmentDIalog");
 
               //  deploySheetaddNewPlant();
@@ -152,7 +212,7 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
              //confirguramos el nuevo objeto
 
-                String nombrePlanta="Planta Num "+miList.size()+1;
+                String nombrePlanta="Planta Num "+ mapPlants.size()+1;
 
                 HashMap<String, String>categoriresVinculadosMap= new HashMap<>();
 
@@ -169,13 +229,21 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
 
 
+               Plant plantObject=new Plant("","",categoriresVinculadosMap,false);
+                mapPlants.put(UUID.randomUUID().toString(),plantObject);
+                 milist.add(plantObject);
 
-                miList.add( new Plant("",nombrePlanta,categoriresVinculadosMap,false));
 
+                 //guardamos nuevo objeto planta en hasmap
+
+                  SharePref.saveHashMapOfHashmapWhitPlatsObject(mapPlants,keySharePrefeItem);
 
 
                 //lalamos recicler
-                setDataRecyclerView(miList);
+                setDataRecyclerView(milist);
+
+
+
 
 
                 bottomSheetDialog.dismiss();
@@ -228,7 +296,7 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
                 //confirguramos el nuevo objeto
 
-                String nombrePlanta="Planta Num "+miList.size()+1;
+                String nombrePlanta="Planta Num "+ mapPlants.size()+1;
 
                 HashMap<String, String>categoriresVinculadosMap= new HashMap<>();
 
@@ -243,12 +311,12 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
                 //agregamos un nuevo objeto
 
-                miList.add( new Plant("",nombrePlanta,categoriresVinculadosMap,false));
+             //   mapPlants.add( new Plant("",nombrePlanta,categoriresVinculadosMap,false));
 
 
 
                 //lalamos recicler
-                setDataRecyclerView(miList);
+              //  setDataRecyclerView(mapPlants);
 
 
                 bottomSheetDialog.dismiss();

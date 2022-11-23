@@ -14,28 +14,26 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityResultCtrLabr"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ActivityAllinformsCreates"
             android:exported="true" />
         <activity
             android:name=".Activities.MainActivityCenter"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".Activities.ActivityDiagnFitoSanitario"
             android:exported="true" />
         <activity
             android:name=".Activities.ActivityPlantCaldLbrs"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

@@ -60,6 +60,17 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
         SharePref.init(ActivityAllinformsCreates.this);
 
+        //recuperamos el mapa  con informes allainform de perefrencias
+
+        Map<String, AllFormsModel> mapaOfPREFERENces= SharePref.loadMapPreferencesDataOfFields(SharePref.KEY_AllINFORMS_SHAREP);
+
+
+        //convertimos mapa en arra list
+        allInformsShareList= Utils.arraListByHASMPAAllForms(mapaOfPREFERENces);
+
+
+
+
         if(tipoInformCurrent == Typeinforms.ALL_INFORMS ){  //ES TODOSD LOS INFORMES
             setDataRecyclerView((allInformsShareList));
         }
@@ -67,7 +78,7 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
 
         else
-        {
+        {     //filtramos la lista
 
 
             lisInformFiltered = (ArrayList<AllFormsModel>) generateListByEspecificType(allInformsShareList);
@@ -75,10 +86,6 @@ ArrayList<AllFormsModel> lisInformFiltered;
             setDataRecyclerView(( lisInformFiltered));
 
         }
-
-
-
-
 
 
 
@@ -154,21 +161,17 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
 
 
+                // String keySharePrefrencesItemClicked=v.getTag().toString();
+
 
                 sheetBootomInforOptions(v.getTag().toString());
 
 
                 Log.i("elcickler","el click es llamado");
 
-                /*
 
-                FragmentManager fm = getSupportFragmentManager();
-                DialogFragmentx dialog = new DialogFragmentx();
-                dialog.show(getSupportFragmentManager(),"My  FragmentDIalog");
 
-                //  deploySheetaddNewPlant();
 
-*/
             }
         });
 
@@ -233,12 +236,42 @@ ArrayList<AllFormsModel> lisInformFiltered;
                 //aqui recuperamos el id ...del informe...
                 //intent...//aqui abrimos dialog.... y le pasamos un intent...
 
-                   Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityPlantCaldLbrs.class);
+                Log.i("elcickler","el click es llamadoen sheet");
+
+
+
+
+                Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityPlantCaldLbrs.class);
+
+
                    intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
-                    intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
+                    intent.putExtra(SharePref.keyIntent,idSelectedItem); //aqui le pasamoe el id del form all forms
+
+                       startActivity(intent);
 
 
-                   hgjhg
+
+
+/*
+                FragmentManager fm = getSupportFragmentManager();
+                DialogFragmentx dialog = new DialogFragmentx();
+
+                Bundle bundle = new Bundle();
+                bundle.putString(Utils.keyDialogBundle,);
+                dialog.setArguments(bundle);
+
+
+                dialog.show(getSupportFragmentManager(),"My  FragmentDIalog");
+
+                //  deploySheetaddNewPlant();
+
+*/
+
+
+
+
+//lkjl
+
                      ///aqui deberiamos  obtenr el id del hashmmap plantss
 
                 /*

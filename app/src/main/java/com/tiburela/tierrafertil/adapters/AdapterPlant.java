@@ -61,7 +61,7 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-
+       holder.linearLayout.setTag(listPlant.get(position).getUniqueIdPlantAndKeyShare());
 
 
      holder.txtPlantName.setText(listPlant.get(position).getNameItem());

@@ -27,6 +27,7 @@ public class SharePref {
     public static final String KEY_AllINFORMS_SHAREP="kEYALLINFORMSlIST";
     public static  final String KEY_ALL_PLANTS="HELOOHEYPLANTS";
 
+    public static  final String keyIntent="esunketuur";
 
 
     private static SharedPreferences mSharedPrefUniqueObjc;
@@ -204,7 +205,7 @@ public class SharePref {
 
     public static  Map<String,  Map<String,String>> loadMapPreferencsHashMapOfHashMapPlanstData(String keyShare) {
 
-        Gson   gson = new Gson();
+        Gson gson = new Gson();
         String response=mSharedPrefUniqueObjc.getString(keyShare , "");
 
         Type type = new TypeToken<Map<String, Map<String,String>>>(){}.getType();
@@ -234,7 +235,7 @@ public class SharePref {
 
 
 
-    public static  void saveHashMapOfHashmapPlants(  Map<String,  Map<String,String>> inputMap,String keySharePref) {
+    public static  void saveHashMapOfHashmapWhitPlatsObject(  Map<String, Plant> inputMap,String keySharePref) {
         if (mSharedPrefUniqueObjc != null){
             // JSONObject jsonObject = new JSONObject(inputMap);
             //   String jsonString = jsonObject.toString();
@@ -250,27 +251,28 @@ public class SharePref {
 
 
 
-    public static  List<Plant> getListAlLiformsPlants ( String KeyOfItem) {
+    public static   Map<String,Plant> getMapOfPlantsObjects(String KeyOfItem) {
 
         Gson   gson = new Gson();
         String response=mSharedPrefUniqueObjc.getString(KeyOfItem , "");
 
-        Type type = new TypeToken<List<Plant>>(){}.getType();
-        List<Plant> carsList;
-        carsList = gson.fromJson(response, type);
+        Type type = new TypeToken<Map<String,Plant>>(){}.getType();
+
+        Map<String,Plant> mapPlants;
+        mapPlants = gson.fromJson(response, type);
 
 
         if(response.equals("")) {
             Log.i("lashareperf","no hay data en share plant ");
 
-            carsList= new ArrayList<>();
-            return carsList;
+            mapPlants= new HashMap<>();
+            return mapPlants;
 
         }else{
 
-            Log.i("lashareperf","Si hay data en share  plant y el length es "+carsList.size());
+            Log.i("lashareperf","Si hay data en share  plant y el length es "+mapPlants.size());
 
-            return carsList;
+            return mapPlants;
 
 
         }

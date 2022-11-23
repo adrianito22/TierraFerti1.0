@@ -166,7 +166,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
-                android:layout_weight="1"
                 android:hint="Observaciones">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -188,7 +187,8 @@
                     android:id="@+id/ediPercentDeshije"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:tag="deshijetiempo/percentDeshije" />
+                    android:tag="deshijetiempo/percentDeshije"
+                    android:visibility="gone" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 

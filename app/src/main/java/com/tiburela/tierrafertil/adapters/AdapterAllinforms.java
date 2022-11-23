@@ -63,6 +63,7 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
 
 
 
+
     }
 
 

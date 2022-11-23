@@ -3,10 +3,13 @@ package com.tiburela.tierrafertil.utils;
 import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.tiburela.tierrafertil.models.AllFormsModel;
+import com.tiburela.tierrafertil.models.Plant;
 import com.tiburela.tierrafertil.models.ResultCaldLabAgricls;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Utils {
 
@@ -45,5 +48,23 @@ public class Utils {
    }
    return currenEditextx;
 
-}}
+}
+
+public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
+
+   ArrayList<Plant> plantArrayList = new ArrayList<>(hasmpap.values());
+      return  plantArrayList;
+
+}
+
+
+   public static ArrayList <AllFormsModel> arraListByHASMPAAllForms(Map<String, AllFormsModel> hasmpap){
+
+      ArrayList<AllFormsModel> plantArrayList = new ArrayList<>(hasmpap.values());
+      return  plantArrayList;
+
+   }
+
+
+}
 
