@@ -30,6 +30,8 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView"
+                android:tag="Pjovenes"
+
                 android:name="com.tiburela.tierrafertil.fragments.digntiFitoSanitario.FragmtPlantsJovenes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -37,6 +39,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView2"
+                android:tag="0semanas"
                 android:name="com.tiburela.tierrafertil.fragments.digntiFitoSanitario.FragmtPlants0Semns"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,12 +57,22 @@
                 android:layout_marginTop="10dp" />
 
 
+
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView4"
+                android:tag="acosecha"
                 android:name="com.tiburela.tierrafertil.fragments.digntiFitoSanitario.FragmtPlantsAcosecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/btnGuardarzzz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="Guardar " />
 
         </LinearLayout>
 

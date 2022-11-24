@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import com.tiburela.tierrafertil.Activities.ActivityDiagnFitoSanitario;
 import com.tiburela.tierrafertil.MyInterface;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
@@ -32,7 +33,6 @@ public class FragmtPlants0Semns extends Fragment implements MyInterface {
     ConstraintLayout contraintfarhter0Semanas;
     TextView textPlatas0Semanas;
 
-    String intentSahrePrefrencesKey = "";
 
 
     EditText ediTh1;
@@ -131,7 +131,14 @@ public class FragmtPlants0Semns extends Fragment implements MyInterface {
          view = inflater.inflate(R.layout.fragment_plantas_0_semns, container, false);
         findviewsId();
         initArraysEditex();
+        if(Utils.hasmapFitosnitario.size()>0) {
+            Log.i("slaerorfd","zznsi es mayor de cero");
 
+        }else {
+
+            Log.i("slaerorfd","nzzo es mayor de cero");
+
+        }
         addEVENT();
 
 
@@ -575,7 +582,7 @@ private void addEVENT() {
 
     public void saveDataCurrentPlants0Semanas() {
 
-        Utils.SAVEhashmapCurrentCuadro("/pl0Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,intentSahrePrefrencesKey);
+        Utils.SAVEhashmapCurrentCuadro("/pl0Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
 
 
     }

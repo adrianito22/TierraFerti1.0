@@ -47,7 +47,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:digits="0123456789."
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -68,7 +67,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:digits="0123456789"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -100,7 +98,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:digits="0123456789."
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -120,7 +117,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:digits="0123456789"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -152,7 +148,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:digits="0123456789."
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -174,10 +169,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:digits="0123456789"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 

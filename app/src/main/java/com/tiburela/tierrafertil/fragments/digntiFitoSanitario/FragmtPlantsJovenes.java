@@ -15,6 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.tiburela.tierrafertil.Activities.ActivityDiagnFitoSanitario;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.utils.Utils;
 
@@ -28,7 +29,7 @@ import java.text.DecimalFormat;
 public class FragmtPlantsJovenes extends Fragment {
 
     ImageView IMGcHECKoperation;
-    String intentSahrePrefrencesKey = "";
+   // String ActivityDiagnFitoSanitario.keyprefrencesGlobaL = "";
 
     ConstraintLayout contraintfarhter;
      TextView textPlatasjoevns;
@@ -129,6 +130,16 @@ public class FragmtPlantsJovenes extends Fragment {
          view = inflater.inflate(R.layout.fragment_plantas_jovens, container, false);
         findviewsId();
         initArraysEditex();
+
+        if(Utils.hasmapFitosnitario.size()>0) {
+            Log.i("slaerorfd","zznsi es mayor de cero");
+
+        }else {
+
+            Log.i("slaerorfd","nzzo es mayor de cero");
+
+        }
+
 
         addEVENT();
         // Inflate the layout for this fragment
@@ -551,7 +562,7 @@ private void addEVENT() {
 
 
         //meotodo para gregar data by hashmap
-        Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/plJovenes");
+        Utils.addDataHashmapInEditext( Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/plJovenes");
 
 
 
@@ -560,8 +571,9 @@ private void addEVENT() {
 
 
 
-    public void saveDataCurrentPlantsAcosecha() {
-        Utils.SAVEhashmapCurrentCuadro("/plJovenes", arrayColumnHn,arrayColumnTh, arrayColumnHe,intentSahrePrefrencesKey);
+    public void saveDataCurrentPlantsJovenes() {
+
+        Utils.SAVEhashmapCurrentCuadro("/plJovenes", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
 
     }
 

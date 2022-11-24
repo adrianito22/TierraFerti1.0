@@ -199,6 +199,11 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
      // String tag = "/pl0Semns";
 
 
+
+      Log.i("slaerorfd","en save cuadro el size es "+ Utils.hasmapFitosnitario.size());
+
+
+
       for (int indice = 0; indice < arrayColumnHn.length; indice++) {
 
          if (!arrayColumnHn[indice].getText().toString().trim().isEmpty()) {

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import com.tiburela.tierrafertil.Activities.ActivityDiagnFitoSanitario;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.utils.Utils;
 
@@ -23,7 +24,6 @@ import java.text.DecimalFormat;
  * create an instance of this fragment.
  */
 public class FragmtPlants7Semanas extends Fragment {
-    String intentSahrePrefrencesKey = "";
 
     ImageView IMGcHECKoperation;
 
@@ -126,6 +126,18 @@ public class FragmtPlants7Semanas extends Fragment {
          view = inflater.inflate(R.layout.fragment_plantas_7_smns, container, false);
         findviewsId();
         initArraysEditex();
+
+
+        if(Utils.hasmapFitosnitario.size()>0) {
+            Log.i("slaerorfd","zznsi es mayor de cero");
+
+        }else {
+
+            Log.i("slaerorfd","nzzo es mayor de cero");
+
+        }
+
+
 
         addEVENT();
         // Inflate the layout for this fragment
@@ -552,9 +564,36 @@ private void addEVENT() {
     }
 
 
+    public void addDtainViews() {// si no se colca la data llmaos erste metodo
+
+        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
+
+
+    }
+
+
     public void saveDataCurrentPlants7Semanas() {
 
-        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,intentSahrePrefrencesKey);
+if(ediTh1== null)  {
+
+    Log.i("slaerorfd"," si es nulo" );
+
+}else {
+
+    Log.i("slaerorfd"," no  es nulo" );
+
+
+}
+
+
+        findviewsId();
+        initArraysEditex();
+
+        Log.i("slaerorfd"," sellamo save in fragemntpolkants el key es this. " + ActivityDiagnFitoSanitario.keyprefrencesGlobaL );
+
+
+
+        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
 
 
     }

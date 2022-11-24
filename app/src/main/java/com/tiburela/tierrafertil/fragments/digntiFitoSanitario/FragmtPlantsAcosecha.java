@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import com.tiburela.tierrafertil.Activities.ActivityDiagnFitoSanitario;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.utils.Utils;
 
@@ -27,7 +28,6 @@ import java.text.DecimalFormat;
 public class FragmtPlantsAcosecha extends Fragment {
 
     ImageView IMGcHECKoperation;
-    String intentSahrePrefrencesKey = "";
 
     ConstraintLayout contraintLyPlantsAcosecha;
     TextView txtPlntasAlaCosecha;
@@ -130,7 +130,14 @@ public class FragmtPlantsAcosecha extends Fragment {
         view = inflater.inflate(R.layout.fragment_plantas_a_cosecha, container, false);
         findviewsId();
         initArraysEditex();
+        if(Utils.hasmapFitosnitario.size()>0) {
+            Log.i("slaerorfd","zznsi es mayor de cero");
 
+        }else {
+
+            Log.i("slaerorfd","nzzo es mayor de cero");
+
+        }
         addEVENT();
         // Inflate the layout for this fragment
         return view;
@@ -561,7 +568,7 @@ public class FragmtPlantsAcosecha extends Fragment {
 
 
     public void saveDataCurrentPlantsAcosecha() {
-        Utils.SAVEhashmapCurrentCuadro("/plCosecha", arrayColumnHn, arrayColumnHe,intentSahrePrefrencesKey);
+        Utils.SAVEhashmapCurrentCuadro("/plCosecha", arrayColumnHn, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
 
     }
 
