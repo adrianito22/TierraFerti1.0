@@ -160,8 +160,8 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView txtResultCaldLabAgriclsName;
-        private ImageView imageView;
-        private LinearLayout linearLayout;
+       // private ImageView imageView;
+      //  private LinearLayout linearLayout;
 
         private TextView txtNameItem;
         private TextView txtNumPlntasd;
@@ -179,9 +179,11 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
             txtPromedio =  itemView.findViewById(R.id.txtPromedio);
 
 
-            imageView =  itemView.findViewById(R.id.imageView);
-            linearLayout =itemView.findViewById(R.id.linearLayout);
+           // imageView =  itemView.findViewById(R.id.imageView);
+           // linearLayout =itemView.findViewById(R.id.linearLayout);
 
+
+           /*
             linearLayout.findViewById(R.id.linearLayout).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -202,7 +204,7 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
 
                 }
             });
-
+*/
         }
 
         @Override
@@ -217,21 +219,15 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
     public int getItemViewType(int position) {
 
 
-        if(position ==0 ||position ==10  || position ==15  ||position ==20  ||position ==25 ){ //le ponemos el nombre
+        if(position ==0 || position ==14 ||  position ==23  ||position ==30  ||position ==38 ){ //le ponemos el nombre
 
             return LAYOUT_TITLE_CATEGORY;
 
         }
 
+  //ap es 23 -deshije 30
 
-        else if(position ==17) {
-
-            return LAYOUT_3_VALUES;
-
-
-        }
-
-        else if(position ==26) {
+        else if(position ==13 || position ==22 || position == 29 || position ==37|| position==47 ) {  //OBSERVACION Y PROMEDIO
 
             return LAYOUT_OBSERV_AND_PROM;
 

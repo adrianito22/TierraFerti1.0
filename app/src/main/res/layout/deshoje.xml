@@ -152,7 +152,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:padding="10dp"
-                android:tag="deshoje/saneocirujia"
+                android:tag="deshoje/saneocirujiax"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 

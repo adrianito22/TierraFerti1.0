@@ -396,6 +396,54 @@ public class DialogFragmentx extends DialogFragment {
 
     }
 
+    private   boolean checkIFdATAiSvALIDATE(EditText [] miarrayEditext){
+
+        HashMap<String,String>hasmpaDataPrefrences= new HashMap<>();
+
+
+
+        for(EditText currentEditext: miarrayEditext){
+            String value=currentEditext.getText().toString();
+
+
+            if(!value.trim().isEmpty()){
+
+               try {
+
+                   float valuex=Float.parseFloat(value);
+
+
+                   if(valuex>100){
+                       currentEditext.requestFocus();
+                       currentEditext.setError("No mayor a 100");
+                       return false;
+                   }
+
+
+                   if(valuex<0){
+                       currentEditext.requestFocus();
+                       currentEditext.setError("No menor a 0");
+                       return false;
+                   }
+
+
+               } catch (Exception e) {
+                   e.printStackTrace();
+
+               }
+
+            }
+
+
+        }
+
+
+
+
+        return   true;
+
+    }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -495,6 +543,12 @@ return true;
             public void onClick(View view) {
                 initfindviewsIdsSomeViews();
                 EditText [] arrayEditex= returnArryOfTextInputEditText();
+
+
+                if(!checkIFdATAiSvALIDATE(arrayEditex)){
+                    return;
+
+                }
 
 
                HashMap<String ,String> hashMap= createHashMapWhitEditextArray(arrayEditex);
