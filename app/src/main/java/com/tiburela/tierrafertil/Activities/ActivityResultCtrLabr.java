@@ -99,13 +99,39 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
                     Log.i("noContains","el key es "+miarrayKEY[indice2]);
 
 
-                    float valueThisItem=listOrecicleDataInitial.get(indiceListPlants).getPromedio() +Float.parseFloat(mihasmaPplantsObject.get(miarrayKEY[indice2]));
-                    listOrecicleDataInitial.get(indice2).setPromedio(valueThisItem);
+
+
+                    //guardamos el promedio
+                    float valueThisItem;
+                   //  float valueThisItem=listOrecicleDataInitial.get(indiceListPlants).getPromedio() +Float.parseFloat(mihasmaPplantsObject.get(miarrayKEY[indice2]));
+                    // listOrecicleDataInitial.get(indice2).setPromedio(valueThisItem);
 
                     //si es indice entre 1 al 9
 
 
-                    if(indiceListPlants==listPlantsObjects.size()-1) {  ///si es el ultimo indice de listPlantsObjects.size(); hacemos la operacion
+
+                 //   if(miarrayKEY[indice2] .equals("enfunde/enfundetiempo")) {
+
+                        Log.i("esdebrr","el value de enfunde anteriuor  dese la lista es "+listOrecicleDataInitial.get(indice2).getPromedio());
+
+                                Log.i("esdebrr","el value de  este item of hjashmap es " +Float.parseFloat(mihasmaPplantsObject.get(miarrayKEY[indice2])));
+
+
+                        valueThisItem=listOrecicleDataInitial.get(indice2).getPromedio() +Float.parseFloat(mihasmaPplantsObject.get(miarrayKEY[indice2]));
+                        listOrecicleDataInitial.get(indice2).setPromedio(valueThisItem);
+
+                        Log.i("esdebrr","el value de enfunde a tiempo es ahora es "+listOrecicleDataInitial.get(indice2).getPromedio());
+
+
+                  //  }
+
+
+
+
+
+                    if(indiceListPlants==listPlantsObjects.size()-1) {
+                        ///si es el ultimo indice de listPlantsObjects.size(); hacemos la operacion
+                        Log.i("esdebrr","generamos promedio ");
 
 
                         ///multiplicamos los valores del 1 al 5.....
@@ -114,7 +140,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
                         float promedioPorCategorias=generaPromedioCategoriaByINDEXhasta(1,12,listOrecicleDataInitial);
                         listOrecicleDataInitial.get(13).setItemCalificadoName("Prom  ");//observacion
-                        listOrecicleDataInitial.get(13).setPromedio(promedioPorCategorias);
+                        listOrecicleDataInitial.get(13).setPromedio(promedioPorCategorias/12 ); // 12 es el numero de items de esta categoria
 
 
 
@@ -122,7 +148,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
                          promedioPorCategorias=generaPromedioCategoriaByINDEXhasta(15,21,listOrecicleDataInitial);
                         listOrecicleDataInitial.get(22).setItemCalificadoName("Prom  ");//observacion
-                        listOrecicleDataInitial.get(22).setPromedio(promedioPorCategorias);
+                        listOrecicleDataInitial.get(22).setPromedio(promedioPorCategorias/7);
 
 
 
@@ -130,7 +156,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
                         promedioPorCategorias=generaPromedioCategoriaByINDEXhasta(24,28,listOrecicleDataInitial);
                         listOrecicleDataInitial.get(29).setItemCalificadoName("Prom  ");//observacion
-                        listOrecicleDataInitial.get(29).setPromedio(promedioPorCategorias);
+                        listOrecicleDataInitial.get(29).setPromedio(promedioPorCategorias/5);
 
 
 
@@ -138,7 +164,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
                         promedioPorCategorias=generaPromedioCategoriaByINDEXhasta(31,36,listOrecicleDataInitial);
                         listOrecicleDataInitial.get(37).setItemCalificadoName("Prom  ");//observacion
-                        listOrecicleDataInitial.get(37).setPromedio(promedioPorCategorias);
+                        listOrecicleDataInitial.get(37).setPromedio(promedioPorCategorias/6);
 
 
 
@@ -147,7 +173,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
                         promedioPorCategorias=generaPromedioCategoriaByINDEXhasta(39,46,listOrecicleDataInitial);
                         listOrecicleDataInitial.get(47).setItemCalificadoName("Prom  ");//observacion
-                        listOrecicleDataInitial.get(47).setPromedio(promedioPorCategorias);  //posicon deonde mostramos el promedio
+                        listOrecicleDataInitial.get(47).setPromedio(promedioPorCategorias/8);  //posicon deonde mostramos el promedio
 
 
                         //puedo poner si es los promeros 6 keys array //podemos generar un promedio by categorias....

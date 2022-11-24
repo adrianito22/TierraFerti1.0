@@ -56,12 +56,10 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
 
 
 
-
         holder.txtNameInform.setText(listAllFormsModel.get(position).getName());
         holder.txtInformDate.setText(listAllFormsModel.get(position).getDateCreate());
         holder. linearLayout.setTag(listAllFormsModel.get(position).getUniqueIDkeyInformAndKeYSharePref());
-
-
+        holder.txtCategory.setText(listAllFormsModel.get(position).getCategoryText());
 
 
     }
@@ -93,6 +91,8 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
 
         private TextView txtNameInform;
         private TextView txtInformDate;
+        private TextView txtCategory;
+
 
         private ImageView imageView;
         private LinearLayout linearLayout;
@@ -104,7 +104,7 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
 
             txtNameInform =  itemView.findViewById(R.id.txtNameInform);
             txtInformDate =  itemView.findViewById(R.id.txtInformDate);
-
+            txtCategory  =  itemView.findViewById(R.id.txtCategory);
 
             imageView =  itemView.findViewById(R.id.imageView);
             linearLayout =itemView.findViewById(R.id.linearLayout);

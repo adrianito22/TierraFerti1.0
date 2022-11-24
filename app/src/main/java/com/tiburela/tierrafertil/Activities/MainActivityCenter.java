@@ -215,8 +215,11 @@ public class MainActivityCenter extends AppCompatActivity {
 
                  SharePref.init(MainActivityCenter.this);
 
+                String nmameCategory ;
+                nmameCategory=generateNameStringById(informType);
+
                 //creamos el objeto
-                AllFormsModel object=new AllFormsModel(ediData1.getText().toString(),informType,nota );
+                AllFormsModel object=new AllFormsModel(ediData1.getText().toString(),informType,nota,nmameCategory);
 
 
 
@@ -249,6 +252,26 @@ public class MainActivityCenter extends AppCompatActivity {
         bottomSheetDialog.show();
 
     }
+
+
+    private String generateNameStringById(int informType){
+        String categoria  ="";
+
+        if(informType ==Typeinforms.CALIDAD_LABRES_AGRICOLAS){
+            categoria="Lbrs Agricolas";
+
+
+        }
+
+        else if(informType ==Typeinforms.INFORM_FITOSANITARIO){
+            categoria="Fitosanitario";
+
+        }
+
+
+        return categoria;
+    }
+
 
 
     private void decideIRActivity(int informType){

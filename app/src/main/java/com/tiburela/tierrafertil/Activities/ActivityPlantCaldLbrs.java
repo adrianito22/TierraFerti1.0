@@ -2,6 +2,7 @@ package com.tiburela.tierrafertil.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.gridlayout.widget.GridLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.tiburela.tierrafertil.R;
@@ -29,6 +32,14 @@ import java.util.UUID;
 
 public class ActivityPlantCaldLbrs extends AppCompatActivity {
   ///aquimostramos en un recilcerlos objetos plant...
+
+     GridLayout gridLayout;
+    TextView txtDtsGenrales;
+    LinearLayout layotl1;
+    LinearLayout  layotl2;
+
+
+
 
 
     RecyclerView mireciclerView;
@@ -74,6 +85,37 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
        /// opbtenmos plantas que cotneienn esteid...
         mireciclerView =findViewById(R.id.mirecicler);
         btnSaveAndCalc=findViewById(R.id.btnSaveAndCalc);
+
+
+        gridLayout=findViewById(R.id.gridLayout);
+        txtDtsGenrales=findViewById(R.id.txtDtsGenrales);
+        layotl1=findViewById(R.id.layotl1);
+        layotl2=findViewById(R.id.layotl2);
+
+        txtDtsGenrales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(gridLayout.getVisibility()==View.VISIBLE) {
+
+                    gridLayout.setVisibility(View.GONE);
+
+                    layotl1.setVisibility(View.GONE);
+                    layotl2.setVisibility(View.GONE);
+
+                }else{
+
+                    gridLayout.setVisibility(View.VISIBLE);
+
+                    layotl1.setVisibility(View.VISIBLE);
+                    layotl2.setVisibility(View.VISIBLE);
+                }
+
+
+
+            }
+        });
+
 
 
 
@@ -161,8 +203,6 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
              //abrimos dialog
 
                 Log.i("elcicklerxdff","el click es llamado aqui ...");
-
-
 
 
 

@@ -207,17 +207,39 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
       for (int indice = 0; indice < arrayColumnHn.length; indice++) {
 
          if (!arrayColumnHn[indice].getText().toString().trim().isEmpty()) {
+
+
+            if(! checkIFdATAiSvALIDATE(arrayColumnHn[indice].getText().toString(),arrayColumnHn[indice])) {
+
+               return ;
+            }
+
+
             Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
          }
 
 
          if (!arrayColumnTh[indice].getText().toString().trim().isEmpty()) {
+
+            if(! checkIFdATAiSvALIDATE(arrayColumnTh[indice].getText().toString(),arrayColumnTh[indice])) {
+
+               return ;
+            }
+
             Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
          }
 
 
          if (!arrayColumnHe[indice].getText().toString().trim().isEmpty()) {
+
+            if(! checkIFdATAiSvALIDATE(arrayColumnHe[indice].getText().toString(),arrayColumnHe[indice])) {
+
+               return ;
+            }
+
+
             Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+
          }
 
 
@@ -235,6 +257,44 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
 
+
+   }
+
+
+   static   boolean checkIFdATAiSvALIDATE(String value,EditText currentEditext){
+
+      try {
+
+         float valuex=Float.parseFloat(value);
+
+
+         if(valuex>40){
+            currentEditext.requestFocus();
+            currentEditext.setError("No mayor a 40");
+            return false;
+         }
+
+
+         if(valuex<=0){
+            currentEditext.requestFocus();
+            currentEditext.setError("No menor o igual a 0");
+            return false;
+         }
+
+
+
+
+
+      } catch (Exception e) {
+         e.printStackTrace();
+
+      }
+
+
+
+
+
+      return   true;
 
    }
 

@@ -1,6 +1,8 @@
 package com.tiburela.tierrafertil.adapters;
 
 import android.content.Context;
+import android.icu.text.DecimalFormat;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tiburela.tierrafertil.R;
@@ -22,7 +25,7 @@ import java.util.HashMap;
 public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterResultCalLabrsAgrcls2.MyViewHolder>  implements   View.OnClickListener  {
     private static ClickListener clickListener;
     private View.OnClickListener listener;
-
+    DecimalFormat format;
     private static final int LAYOUT_3_VALUES= 0;
     private static final int LAYOUT_TITLE_CATEGORY = 1;
     private static final int LAYOUT_OBSERV_AND_PROM = 2;
@@ -97,14 +100,24 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
 
         if(holder.getItemViewType() == LAYOUT_3_VALUES)
         {
+
+              format = new DecimalFormat("#.##");
+
+
+              String promDecim=format.format(Float.valueOf(listData.get(position).getPromedio()))   ;
+
+
+          //  String promDecim=format.format(String.valueOf(listData.get(position).getPromedio()))    ;
+
             holder. txtNameItem.setText(listData.get(position).getItemCalificadoName());
-            holder. txtPromedio.setText(String.valueOf(listData.get(position).getPromedio()));
+            holder. txtPromedio.setText(String.valueOf(promDecim));
             holder. txtNumPlntasd.setText(String.valueOf(listData.get(position).getUnmPlantasCalificadas()));
 
 
@@ -124,8 +137,17 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
 
         else  if (holder.getItemViewType() == LAYOUT_OBSERV_AND_PROM){ //es texto
 
-            holder. txtNameItem.setText(listData.get(position).getItemCalificadoName());
-            holder. txtNameItem.setText(String.valueOf(listData.get(position).getPromedio()));
+            format = new DecimalFormat("#.##");
+
+
+            String promDecim=format.format(Float.valueOf(listData.get(position).getPromedio()))   ;
+
+
+
+
+            holder. txtNameItem.setText(listData.get(position).getItemCalificadoName());   //para observaciones
+
+            holder. txtNameItem.setText("PROM: "+promDecim); //para el promedio
 
 
         }

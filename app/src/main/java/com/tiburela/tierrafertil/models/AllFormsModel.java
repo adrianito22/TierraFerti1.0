@@ -10,6 +10,8 @@ public class AllFormsModel {
    private  String uniqueIDkeyInformAndKeYSharePref;
     private String name;
     private String dateCreate;
+    private String categoryText;
+
     private String datelastModification;
     private int tipoFormPertenece;
     boolean  formIsUploaded;
@@ -78,7 +80,15 @@ public class AllFormsModel {
     }
 
 
-    public AllFormsModel( String name, int tipoFormPertenec,String notaInform) {
+    public String getCategoryText() {
+        return categoryText;
+    }
+
+    public void setCategoryText(String categoryText) {
+        this.categoryText = categoryText;
+    }
+
+    public AllFormsModel(String name, int tipoFormPertenec, String notaInform, String categoryText) {
         uniqueIDkeyInformAndKeYSharePref = UUID.randomUUID().toString();
         this.name = name;
         Format formatter = new SimpleDateFormat("dd-MM-yyyy");
@@ -87,6 +97,7 @@ public class AllFormsModel {
         this.tipoFormPertenece = tipoFormPertenec;
         formIsUploaded=false;
         this.notaInform=notaInform;
+        this.categoryText =categoryText;
 
     }
 

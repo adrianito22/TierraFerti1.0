@@ -148,7 +148,7 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
             });
 
 
-
+/*
             imageView.findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -157,6 +157,9 @@ public class AdapterPlant extends RecyclerView.Adapter<AdapterPlant.MyViewHolder
 
                 }
             });
+
+
+           */
 
         }
 

@@ -43,7 +43,8 @@
         android:inputType="number"
         android:padding="10dp"
         android:text="10df"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/txtNumPlntasd4"

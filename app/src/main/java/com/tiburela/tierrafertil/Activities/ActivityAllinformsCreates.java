@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,10 @@ ArrayList<AllFormsModel> lisInformFiltered;
     ArrayList<AllFormsModel> allInformsShareList;
 
     Map<String,AllFormsModel> mapAllInformsPrferences;
+    Map<String, AllFormsModel> mapaOfPREFERENces;
+
+    Spinner spinnerFilter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +49,18 @@ ArrayList<AllFormsModel> lisInformFiltered;
         setContentView(R.layout.activity_allinforms_creates);
 
         recylerVInformsAll=findViewById(R.id.recylerVInformsAll);
+        spinnerFilter=findViewById(R.id.spinnerFilter);
 
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             tipoInformCurrent = extras.getInt(Utils.keyIntentXtraAllinforms);
+            //The key argument here must match that used in the other activity
+        }
+
+        if (tipoInformCurrent==Typeinforms.ALL_INFORMS) {
+
+            //AGREGAMOS DATA IN SPINNER
             //The key argument here must match that used in the other activity
         }
 
@@ -62,46 +75,16 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
         //recuperamos el mapa  con informes allainform de perefrencias
 
-        Map<String, AllFormsModel> mapaOfPREFERENces= SharePref.loadMapPreferencesDataOfFields(SharePref.KEY_AllINFORMS_SHAREP);
+    mapaOfPREFERENces= SharePref.loadMapPreferencesDataOfFields(SharePref.KEY_AllINFORMS_SHAREP);
 
 
         //convertimos mapa en arra list
         allInformsShareList= Utils.arraListByHASMPAAllForms(mapaOfPREFERENces);
 
-
-
-
-        if(tipoInformCurrent == Typeinforms.ALL_INFORMS ){  //ES TODOSD LOS INFORMES
-            setDataRecyclerView((allInformsShareList));
-        }
-
-
-
-        else
-        {     //filtramos la lista
-
-
-            lisInformFiltered = (ArrayList<AllFormsModel>) generateListByEspecificType(allInformsShareList);
-
-            setDataRecyclerView(( lisInformFiltered));
-
-        }
-
-
-
-
-
-         //aquio chekear el tipo de informe...
-
-
-
-
-
-
-
-
-
         mapAllInformsPrferences = SharePref.loadMapPreferencesDataOfFields(SharePref.KEY_AllINFORMS_SHAREP);
+
+        filterdtaandCALLadpater();
+
 
 
         TextView txtAdvisser = findViewById(R.id.txtAdvisser);
@@ -139,8 +122,27 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
 
 
+private void filterdtaandCALLadpater()
+{
 
 
+    if(tipoInformCurrent == Typeinforms.ALL_INFORMS ){  //ES TODOSD LOS INFORMES
+        setDataRecyclerView((allInformsShareList));
+
+    }
+
+
+
+    else
+    {     //filtramos la lista
+
+        lisInformFiltered = (ArrayList<AllFormsModel>) generateListByEspecificType(allInformsShareList);
+
+        setDataRecyclerView(( lisInformFiltered));
+
+    }
+
+}
 
     private void setDataRecyclerView(ArrayList<AllFormsModel> list){
 
@@ -355,7 +357,37 @@ ArrayList<AllFormsModel> lisInformFiltered;
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(ActivityAllinformsCreates.this, "borramos el id "+idSelectedItem, Toast.LENGTH_SHORT).show();
+                if(tipoInformCurrent==Typeinforms.CALIDAD_LABRES_AGRICOLAS ){
+
+                    SharePref.init(ActivityAllinformsCreates.this);
+                    mapaOfPREFERENces.remove(idSelectedItem); //AQUI ELIMINAMOS
+
+                    allInformsShareList= Utils.arraListByHASMPAAllForms(mapaOfPREFERENces);
+                     // mapAllInformsPrferences = SharePref.loadMapPreferencesDataOfFields(SharePref.KEY_AllINFORMS_SHAREP);
+                    filterdtaandCALLadpater();
+                    SharePref.saveMapAlLINFORMS(mapaOfPREFERENces,SharePref.KEY_AllINFORMS_SHAREP);
+
+                    Toast.makeText(ActivityAllinformsCreates.this, "se borro exitosamente", Toast.LENGTH_SHORT).show();
+
+
+                }
+
+
+               else if(tipoInformCurrent==Typeinforms.INFORM_FITOSANITARIO ){ //tambien eliminar
+                    SharePref.init(ActivityAllinformsCreates.this);
+
+                    mapaOfPREFERENces.remove(idSelectedItem); //AQUI ELIMINAMOS
+
+                    allInformsShareList= Utils.arraListByHASMPAAllForms(mapaOfPREFERENces);
+                    filterdtaandCALLadpater();
+                    SharePref.saveMapAlLINFORMS(mapaOfPREFERENces,SharePref.KEY_AllINFORMS_SHAREP);
+
+                    Toast.makeText(ActivityAllinformsCreates.this, "se borro exitosamente", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+
 
                 bottomSheetDialog.dismiss();
 
