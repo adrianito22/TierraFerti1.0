@@ -54,7 +54,6 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
             // ((FragmtPlants7Semanas).fragment().
             //&& llamaos a los metodos del fragmts
 
-
             FragmentManager manager= getSupportFragmentManager();
             FragmtPlants7Semanas FRAGM= (FragmtPlants7Semanas) manager.findFragmentByTag("7semanas");
 
