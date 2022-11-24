@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.tiburela.tierrafertil.R;
+import com.tiburela.tierrafertil.utils.Utils;
 
 import java.text.DecimalFormat;
 
@@ -26,6 +27,7 @@ import java.text.DecimalFormat;
 public class FragmtPlantsAcosecha extends Fragment {
 
     ImageView IMGcHECKoperation;
+    String intentSahrePrefrencesKey = "";
 
     ConstraintLayout contraintLyPlantsAcosecha;
     TextView txtPlntasAlaCosecha;
@@ -533,6 +535,33 @@ public class FragmtPlantsAcosecha extends Fragment {
 
             }
         });
+
+    }
+
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        //chekeamos is hay un informe en prefrencias por aqui
+
+
+        //si hay un informe agrtegamos ladata
+
+
+        //meotodo para gregar data by hashmap
+        Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnHe,"/plCosecha");
+
+
+
+
+    }
+
+
+
+    public void saveDataCurrentPlantsAcosecha() {
+        Utils.SAVEhashmapCurrentCuadro("/plCosecha", arrayColumnHn, arrayColumnHe,intentSahrePrefrencesKey);
 
     }
 

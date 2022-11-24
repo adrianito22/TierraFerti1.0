@@ -12,21 +12,27 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import com.tiburela.tierrafertil.MyInterface;
 import com.tiburela.tierrafertil.R;
+import com.tiburela.tierrafertil.SharePref.SharePref;
+import com.tiburela.tierrafertil.utils.Utils;
 
 import java.text.DecimalFormat;
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FragmtPlants0Semns#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmtPlants0Semns extends Fragment {
+public class FragmtPlants0Semns extends Fragment implements MyInterface {
 
     ImageView IMGcHECKoperation;
 
     ConstraintLayout contraintfarhter0Semanas;
     TextView textPlatas0Semanas;
+
+    String intentSahrePrefrencesKey = "";
 
 
     EditText ediTh1;
@@ -127,6 +133,10 @@ public class FragmtPlants0Semns extends Fragment {
         initArraysEditex();
 
         addEVENT();
+
+
+
+
         // Inflate the layout for this fragment
         return view;
     }
@@ -537,10 +547,42 @@ private void addEVENT() {
 
 
 
-
-
-
-
 }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        //chekeamos is hay un informe en prefrencias por aqui
+
+
+        //si hay un informe agrtegamos ladata
+
+
+        //meotodo para gregar data by hashmap
+      Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/pl0Semns");
+
+
+
+
+
+
+    }
+
+//        String keyCurrent="/pl0Semns"+arrayColumnHn [indice].getId();
+
+
+
+    public void saveDataCurrentPlants0Semanas() {
+
+        Utils.SAVEhashmapCurrentCuadro("/pl0Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,intentSahrePrefrencesKey);
+
+
+    }
+
+
+    @Override
+    public void miaction() {
+
+    }
 }

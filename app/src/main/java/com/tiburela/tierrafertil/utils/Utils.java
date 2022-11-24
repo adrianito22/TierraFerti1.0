@@ -1,8 +1,10 @@
 package com.tiburela.tierrafertil.utils;
 
 import android.util.Log;
+import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.models.AllFormsModel;
 import com.tiburela.tierrafertil.models.Plant;
 import com.tiburela.tierrafertil.models.ResultCaldLabAgricls;
@@ -14,6 +16,9 @@ import java.util.Map;
 public class Utils {
 
    public static  String keyextraGLObal ="KEYEXTRASSparatodos";
+
+   public static HashMap<String, String> hasmapFitosnitario= new HashMap<>();
+
 
 
    public static  String [] arrayWhitkeysMapCategories ={"Enfunde","Deshoje","Apuntalamiento","Deshije","Otras labores"};
@@ -184,6 +189,164 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
    }
+
+
+
+
+
+   public static  void SAVEhashmapCurrentCuadro(String tag, EditText[]arrayColumnHn, EditText[]arrayColumnTh, EditText[]arrayColumnHe,String keyprefrences ) {
+      // un arary klist of views....
+     // String tag = "/pl0Semns";
+
+
+      for (int indice = 0; indice < arrayColumnHn.length; indice++) {
+
+         if (!arrayColumnHn[indice].getText().toString().trim().isEmpty()) {
+            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+         }
+
+
+         if (!arrayColumnTh[indice].getText().toString().trim().isEmpty()) {
+            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+         }
+
+
+         if (!arrayColumnHe[indice].getText().toString().trim().isEmpty()) {
+            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+         }
+
+
+      }
+
+
+      //aqui guardamos....
+
+      //lñe psamos un string inbtent
+
+
+
+      SharePref.saveMapPreferFields( Utils.hasmapFitosnitario,keyprefrences);
+
+
+
+
+
+   }
+
+
+   public static  void SAVEhashmapCurrentCuadro(String tag, EditText[]arrayColumnHn, EditText[]arrayColumnHe,String keyprefrences ) {
+      // un arary klist of views....
+      // String tag = "/pl0Semns";
+
+
+      for (int indice = 0; indice < arrayColumnHn.length; indice++) {
+
+         if (!arrayColumnHn[indice].getText().toString().trim().isEmpty()) {
+            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+         }
+
+
+
+
+         if (!arrayColumnHe[indice].getText().toString().trim().isEmpty()) {
+            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+         }
+
+
+      }
+
+
+      //aqui guardamos....
+
+      //lñe psamos un string inbtent
+
+
+
+      SharePref.saveMapPreferFields( Utils.hasmapFitosnitario,keyprefrences);
+
+
+
+
+
+   }
+
+
+
+
+
+
+   public static void addDataHashmapInEditext( HashMap<String, String> hasmapFitosnitario,EditText[]arrayColumnHn, EditText[]arrayColumnTh,
+                                               EditText[]arrayColumnHe, String currenTag) {
+
+      // Utils.hasmapFitosnitario= (HashMap<String, String>) SharePref.loadMapPreferencesDataOfFields(getActivity(),intentSahrePrefrencesKey);
+
+      //keys
+
+
+      for (int indice = 0; indice < arrayColumnHn.length; indice++) {
+
+         String keyCurrent=currenTag+arrayColumnHn [indice].getId();
+
+         if( hasmapFitosnitario.containsKey(keyCurrent)) {
+
+            String content = hasmapFitosnitario.get(keyCurrent);
+            arrayColumnHn [indice].setText(content);
+
+         }
+
+         if( hasmapFitosnitario.containsKey(keyCurrent)) {
+            String content = hasmapFitosnitario.get(keyCurrent);
+            arrayColumnHe [indice].setText(content);
+         }
+
+         if( hasmapFitosnitario.containsKey(keyCurrent)) {
+
+            String content = hasmapFitosnitario.get(keyCurrent);
+            arrayColumnTh [indice].setText(content);
+         }
+
+
+      }
+
+
+   }
+
+
+
+
+   public static void addDataHashmapInEditext( HashMap<String, String> hasmapFitosnitario,EditText[]arrayColumnHn,
+                                               EditText[]arrayColumnHe, String currenTag) {
+
+      // Utils.hasmapFitosnitario= (HashMap<String, String>) SharePref.loadMapPreferencesDataOfFields(getActivity(),intentSahrePrefrencesKey);
+
+      //keys
+
+
+      for (int indice = 0; indice < arrayColumnHn.length; indice++) {
+
+         String keyCurrent=currenTag+arrayColumnHn [indice].getId();
+
+         if( hasmapFitosnitario.containsKey(keyCurrent)) {
+
+            String content = hasmapFitosnitario.get(keyCurrent);
+            arrayColumnHn [indice].setText(content);
+
+         }
+
+         if( hasmapFitosnitario.containsKey(keyCurrent)) {
+            String content = hasmapFitosnitario.get(keyCurrent);
+            arrayColumnHe [indice].setText(content);
+         }
+
+
+
+
+      }
+
+
+   }
+
+
 
 
 }

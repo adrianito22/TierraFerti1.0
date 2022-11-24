@@ -47,6 +47,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView3"
+                android:tag="7semanas"
                 android:name="com.tiburela.tierrafertil.fragments.digntiFitoSanitario.FragmtPlants7Semanas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

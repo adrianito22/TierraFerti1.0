@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tiburela.tierrafertil.R;
+import com.tiburela.tierrafertil.utils.Utils;
 
 import java.text.DecimalFormat;
 
@@ -27,6 +28,7 @@ import java.text.DecimalFormat;
 public class FragmtPlantsJovenes extends Fragment {
 
     ImageView IMGcHECKoperation;
+    String intentSahrePrefrencesKey = "";
 
     ConstraintLayout contraintfarhter;
      TextView textPlatasjoevns;
@@ -536,6 +538,32 @@ private void addEVENT() {
         }
     });
 }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        //chekeamos is hay un informe en prefrencias por aqui
+
+
+        //si hay un informe agrtegamos ladata
+
+
+        //meotodo para gregar data by hashmap
+        Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/plJovenes");
+
+
+
+
+    }
+
+
+
+    public void saveDataCurrentPlantsAcosecha() {
+        Utils.SAVEhashmapCurrentCuadro("/plJovenes", arrayColumnHn,arrayColumnTh, arrayColumnHe,intentSahrePrefrencesKey);
+
+    }
 
 
 }

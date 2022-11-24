@@ -294,13 +294,6 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.69" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.56" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
@@ -1040,9 +1033,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/guideline30"
-            app:layout_constraintStart_toStartOf="@+id/guideline31"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_check_box_24" />
+            app:srcCompat="@drawable/ic_baseline_check_box_24"
+            tools:layout_editor_absoluteX="225dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

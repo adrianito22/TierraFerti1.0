@@ -239,15 +239,37 @@ ArrayList<AllFormsModel> lisInformFiltered;
                 Log.i("elcickler","el click es llamadoen sheet");
 
 
+                 //CHEKEAMOS ELK TIPO DE INFORMEÇ
+                if(tipoInformCurrent ==Typeinforms.CALIDAD_LABRES_AGRICOLAS) {
+                    Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityPlantCaldLbrs.class);
 
 
-                Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityPlantCaldLbrs.class);
-
-
-                   intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
+                    intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
                     intent.putExtra(SharePref.keyIntent,idSelectedItem); //aqui le pasamoe el id del form all forms
 
-                       startActivity(intent);
+                    startActivity(intent);
+
+
+
+
+                }
+
+
+                else if(tipoInformCurrent ==Typeinforms.INFORM_FITOSANITARIO) {
+
+
+                    Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityDiagnFitoSanitario.class);
+                 //   intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
+                    intent.putExtra(SharePref.keyIntent,idSelectedItem); //aqui le pasamoe el id del form all forms
+
+
+                    startActivity(intent);
+
+                }
+
+
+
+
 
 
 

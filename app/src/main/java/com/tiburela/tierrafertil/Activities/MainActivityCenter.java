@@ -125,9 +125,27 @@ public class MainActivityCenter extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                 Intent intencion = new Intent(MainActivityCenter.this,ActivityAllinformsCreates.class);
-                 intencion.putExtra(Utils.keyIntentXtraAllinforms, typeInform);
-                 startActivity(intencion);
+
+                if(typeInform ==Typeinforms.INFORM_FITOSANITARIO){
+
+                    Intent intencion = new Intent(MainActivityCenter.this,ActivityAllinformsCreates.class);
+                  //  Intent intencion = new Intent(MainActivityCenter.this,ActivityDiagnFitoSanitario.class);
+                    intencion.putExtra(Utils.keyIntentXtraAllinforms, typeInform);
+                    startActivity(intencion);
+
+                }
+
+
+               else  if(typeInform ==Typeinforms.CALIDAD_LABRES_AGRICOLAS){
+
+                    Intent intencion = new Intent(MainActivityCenter.this,ActivityAllinformsCreates.class);
+                    intencion.putExtra(Utils.keyIntentXtraAllinforms, typeInform);
+                    startActivity(intencion);
+
+                }
+
+
+
 
                 bottomSheetDialog.dismiss();
 

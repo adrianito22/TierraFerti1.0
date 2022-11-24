@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.tiburela.tierrafertil.R;
+import com.tiburela.tierrafertil.utils.Utils;
 
 import java.text.DecimalFormat;
 
@@ -22,6 +23,7 @@ import java.text.DecimalFormat;
  * create an instance of this fragment.
  */
 public class FragmtPlants7Semanas extends Fragment {
+    String intentSahrePrefrencesKey = "";
 
     ImageView IMGcHECKoperation;
 
@@ -530,5 +532,32 @@ private void addEVENT() {
     });
 
 }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        //chekeamos is hay un informe en prefrencias por aqui
+
+
+        //si hay un informe agrtegamos ladata
+
+
+        //meotodo para gregar data by hashmap
+        Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/pl7Semns");
+
+
+
+
+    }
+
+
+    public void saveDataCurrentPlants7Semanas() {
+
+        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,intentSahrePrefrencesKey);
+
+
+    }
+
 
 }
