@@ -12,10 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.models.AllFormsModel;
-import com.tiburela.tierrafertil.utils.Utils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.MyViewHolder>  implements   View.OnClickListener  {
@@ -102,9 +100,9 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            txtNameInform =  itemView.findViewById(R.id.txtNameInform);
+            txtNameInform =  itemView.findViewById(R.id.txtDateRange);
             txtInformDate =  itemView.findViewById(R.id.txtInformDate);
-            txtCategory  =  itemView.findViewById(R.id.txtCategory);
+            txtCategory  =  itemView.findViewById(R.id.txtNUmSeman);
 
             imageView =  itemView.findViewById(R.id.imageView);
             linearLayout =itemView.findViewById(R.id.linearLayout);

@@ -2,15 +2,13 @@
     <string name="app_name">tierra fertil</string>
 
 
-
     <string-array name="arraySpinnerTiposINFORMES">
         <item>TIPO 1</item>
         <item>TIPO 2</item>
 
-    <item></item>
+        <item></item>
 
     </string-array>
-
 
 
     <string-array name="porcentajesArray">

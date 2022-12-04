@@ -8,6 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="lila">#3F51B5</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="amarillo">#FFEB3B</color>
+    <color name="purupra">#673AB7</color>
+    <color name="rojo">#D30404</color>
+    <color name="cafe">#D3503600</color>
+    <color name="negro">#040404</color>
+    <color name="verde">#014C04</color>
+
+
 
 
 </resources>
