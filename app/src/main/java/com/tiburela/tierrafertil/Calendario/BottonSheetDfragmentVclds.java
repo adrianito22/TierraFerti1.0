@@ -80,6 +80,10 @@ public class BottonSheetDfragmentVclds extends BottomSheetDialogFragment {
             btnSave.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+                    saveUpadateItem();
+
+
                     ///
                 }
             });
@@ -193,7 +197,11 @@ public class BottonSheetDfragmentVclds extends BottomSheetDialogFragment {
     }
 
 
+private void saveUpadateItem(){
+     ///aqui gaurdamos....
 
+
+}
 
 
 
