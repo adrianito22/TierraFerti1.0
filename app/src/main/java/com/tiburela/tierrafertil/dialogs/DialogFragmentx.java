@@ -34,6 +34,7 @@ public class DialogFragmentx extends DialogFragment {
     Map<String, String> currentDataHhasmap = new HashMap<>();
 
     View vista;
+    private TextInputEditText ediFinca;
     private EditText mEditTextTextPersonName20;
 
     TextInputEditText[] globalTexinputEditex;
@@ -42,7 +43,6 @@ public class DialogFragmentx extends DialogFragment {
 
 
     private TextInputEditText ediProductor;
-    private TextInputEditText ediFinca;
     private TextInputEditText ediFecha;
     private TextInputEditText ediLugar;
     private TextInputEditText ediSemana;

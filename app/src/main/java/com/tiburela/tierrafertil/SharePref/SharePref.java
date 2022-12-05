@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.tiburela.tierrafertil.calendario.CalendarioEnf;
 import com.tiburela.tierrafertil.models.AllFormsModel;
 import com.tiburela.tierrafertil.models.Plant;
 
@@ -22,6 +23,7 @@ import java.util.Map;
 
 public class SharePref {
  //al menos 5 keys.. UNA POR CADA FORMULARIO
+ public static  final String KEY_CALENDARIO_ENFUNDE="HELOMICLAENDARIO";
 
     public static final String KEYI_CALIDAD_LABORES_AGRCICOLAS_MAP="KEYCALIDADLABORES";
     public static final String KEY_AllINFORMS_SHAREP="kEYALLINFORMSlIST";
@@ -279,6 +281,58 @@ public class SharePref {
 
 
     }
+
+
+
+
+
+
+    public static  void saveHashMapOfHashmapWhitCalendario(  Map<String, CalendarioEnf> inputMap,String keySharePref) {
+        if (mSharedPrefUniqueObjc != null){
+            // JSONObject jsonObject = new JSONObject(inputMap);
+            //   String jsonString = jsonObject.toString();
+            mSharedPrefUniqueObjc.edit()
+                    //  .remove("My_map")
+                    .putString(keySharePref, new Gson().toJson(inputMap))
+
+
+                    // .putString(keySharePref, jsonString)
+                    .apply();
+        }
+    }
+
+
+
+    public static   Map<String, CalendarioEnf> getMapOfCalendarioObjects(String KeyOfItem) {
+
+        Gson   gson = new Gson();
+        String response=mSharedPrefUniqueObjc.getString(KeyOfItem , "");
+
+        Type type = new TypeToken<Map<String,CalendarioEnf>>(){}.getType();
+
+        Map<String,CalendarioEnf> mapPlants;
+        mapPlants = gson.fromJson(response, type);
+
+
+        if(response.equals("")) {
+            Log.i("lashareperf","no hay data en share plant ");
+
+            mapPlants= new HashMap<>();
+            return mapPlants;
+
+        }else{
+
+            Log.i("lashareperf","Si hay data en share  plant y el length es "+mapPlants.size());
+
+            return mapPlants;
+
+
+        }
+
+
+    }
+
+
 
 
 

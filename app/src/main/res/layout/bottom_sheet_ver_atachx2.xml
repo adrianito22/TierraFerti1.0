@@ -1,308 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imgClose"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/ic_baseline_close_24" />
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#006E64"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="ENFUNDE"
+            android:textColor="@color/white" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"/>
+            android:layout_height="wrap_content">
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediV1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:hint="1º  VU" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediV2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:hint="2º  VU" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            app:layout_columnWeight="3" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#006E64"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="CINTAS CORTADAS"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="9"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediSem9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_item" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="10"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediSem10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="11"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediSem11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="12"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediSem12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="13"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediSem13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#006E64"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="DATOS DE COSECHA"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="RACIMOS CORTADOS"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediRacimosCortados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="RACIMOS RECHAZADOS"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediRacimosRechzds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="TOTAL CAJAS"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediTotalCajas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="% MERMA"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediPercentMerma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="RATIO"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediRatio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:text="GUARDAR">
+
+        </Button>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#006E64"
-        android:gravity="center_horizontal"
-        android:padding="5dp"
-        android:text="ENFUNDE"
-        android:textColor="@color/white" />
-
-
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:columnCount="3">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediV1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:hint="1º  VU" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediV2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:hint="2º  VU" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediV3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:hint="3º  VU" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </androidx.gridlayout.widget.GridLayout>
-
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Total"
-        app:layout_columnWeight="3" />
-
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#006E64"
-        android:gravity="center_horizontal"
-        android:padding="5dp"
-        android:text="CINTAS CORTADAS"
-        android:textColor="@color/white" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="3dp"
-            android:layout_weight="1"
-            android:hint="9"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediSem9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="10"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediSem10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="11"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediSem11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="12"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediSem12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="13"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediSem13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView47"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#006E64"
-        android:gravity="center_horizontal"
-        android:padding="5dp"
-        android:text="DATOS DE COSECHA"
-        android:textColor="@color/white" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="3dp"
-            android:layout_weight="1"
-            android:hint="RACIMOS CORTADOS"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediRacimosCortados"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="RACIMOS RECHAZADOS"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediRacimosRechzds"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_weight="1"
-            android:hint="TOTAL CAJAS"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediTotalCajas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="% MERMA"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediPercentMerma"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="RATIO"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediRatio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="10dp"
-        android:text="GUARDAR">
-
-    </Button>
-
 
 </LinearLayout>

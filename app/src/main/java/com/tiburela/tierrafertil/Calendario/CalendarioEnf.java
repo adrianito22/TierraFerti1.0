@@ -1,4 +1,4 @@
-package com.tiburela.tierrafertil.Calendario;
+package com.tiburela.tierrafertil.calendario;
 
 import java.util.UUID;
 
@@ -120,11 +120,11 @@ public class CalendarioEnf {
         this.totalCajas = totalCajas;
     }
 
-    public int getPerctenMerma() {
+    public float getPerctenMerma() {
         return perctenMerma;
     }
 
-    public void setPerctenMerma(int perctenMerma) {
+    public void setPerctenMerma(float perctenMerma) {
         this.perctenMerma = perctenMerma;
     }
 
@@ -139,7 +139,7 @@ public class CalendarioEnf {
     private int racimosCortados;
     private int racimosRechazados;
     private int totalCajas;
-    private int perctenMerma;
+    private float perctenMerma;
     private float ratio;
 
 

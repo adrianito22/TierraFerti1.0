@@ -14,9 +14,8 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tiburela.tierrafertil.Calendario.CalendarioEnf;
-import com.tiburela.tierrafertil.Calendario.UtilsCalendario;
 import com.tiburela.tierrafertil.R;
+import com.tiburela.tierrafertil.calendario.CalendarioEnf;
 
 import java.util.ArrayList;
 
@@ -66,6 +65,8 @@ public class AdapterCalendario extends RecyclerView.Adapter<AdapterCalendario.My
 
         holder.txtNUmSeman.setText(String.valueOf(listCalendarioEnf.get(position).getSemanaNum()));
         holder.txtDateRange.setText(listCalendarioEnf.get(position).getDate());
+        holder.layotItem.setTag(listCalendarioEnf.get(position).getUniqueId());
+
 
       //  holder.ViewColor.setBackgroundColor(Color.parseColor(mColors[position % UtilsCalendario.NUMS_CINTAS])); // 4 can be replaced by mColors.length
 

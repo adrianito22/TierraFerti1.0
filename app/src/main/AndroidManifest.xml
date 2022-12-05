@@ -14,7 +14,10 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".Calendario.ActivityCalendario"
+            android:name=".MisCalendarios"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityCalendario"
             android:exported="true" />
         <activity
             android:name=".Activities.ActivityPlantsSemanas"

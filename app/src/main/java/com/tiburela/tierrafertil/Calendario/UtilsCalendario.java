@@ -1,11 +1,13 @@
-package com.tiburela.tierrafertil.Calendario;
+package com.tiburela.tierrafertil.calendario;
 
 import android.util.Log;
 
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.adapters.AdapterCalendario;
+import com.tiburela.tierrafertil.calendario.CalendarioEnf;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -21,6 +23,12 @@ static Calendar calendar = Calendar.getInstance();
             "#3F51B5","#FFFFFFFF","#FFEB3B","#673AB7",
             "#D30404","#D3503600","#040404","#014C04"
     };
+
+
+    public static ArrayList<String>list= new ArrayList<>();
+
+
+
 
 
     public static void initArrayColorsCinta() {
@@ -214,6 +222,52 @@ static Calendar calendar = Calendar.getInstance();
         mCalendar.set(Calendar.DAY_OF_MONTH, 31); // Don't change
         return mCalendar.get(Calendar.WEEK_OF_YEAR);
     }
+
+    public static  void creaetAndOrdenaListColors(int indiceColorUserStart){
+
+        /**  "#3F51B5","#FFFFFFFF","#FFEB3B","#673AB7",
+         "#D30404","#D3503600","#040404","#014C04"*/
+
+        Log.i("miscolorX","el USER DEICIDIOO EMPEZAR POR : "+indiceColorUserStart);
+
+
+        for(int indice=indiceColorUserStart; indice<colorsArray.length; indice++){
+                list.add(coloresCintasArray[indice]);
+
+                Log.i("miscolorX","el color es "+coloresCintasArray[indice]);
+                //asi ponemos los primeros
+            }
+
+
+
+
+        //los elementos desde la poscion 0 hasta donde user seleciono
+        for(int indice=0; indice<indiceColorUserStart; indice++){
+            Log.i("miscolorX","el color es "+coloresCintasArray[indice]);
+
+            list.add(coloresCintasArray[indice]);
+            //asi ponemos los primeros
+        }
+
+
+
+
+
+/*
+        list.add( "#3F51B5");
+        list.add( "#FFFFFFFF");
+        list.add( "#FFEB3B");
+        list.add( "#673AB7");
+        list.add( "#D30404");
+        list.add( "#D3503600");
+        list.add( "#040404");
+        list.add( "#014C04");
+
+*/
+
+
+    }
+
 
     // Call as
 
