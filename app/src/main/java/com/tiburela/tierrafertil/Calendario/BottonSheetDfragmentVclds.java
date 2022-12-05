@@ -1,34 +1,22 @@
 package com.tiburela.tierrafertil.Calendario;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.R;
-
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
 
 public class BottonSheetDfragmentVclds extends BottomSheetDialogFragment {
         public static final String TAG = "ActionBottomDialog";
@@ -36,14 +24,24 @@ public class BottonSheetDfragmentVclds extends BottomSheetDialogFragment {
         Context context;
         static int idDondevinoActivity=0;
     ProgressDialog      progress;
-
-    RecyclerView mirecyclerViewAtach;
-    Spinner spinnerSelectrodate;
-    TextView txtAdviseer;
-    TextView txtAdviserDesvicunlar;
     ImageView imgClose;
-    TextView txtNumReportsVinclds;
- boolean esReportsVinculadosMod=false;
+
+    TextInputEditText ediV1;
+    TextInputEditText ediV2;
+    TextInputEditText ediV3;
+
+    TextInputEditText ediSem9;
+    TextInputEditText ediSem10;
+    TextInputEditText ediSem11;
+    TextInputEditText ediSem12;
+    TextInputEditText ediSem13;
+
+    TextInputEditText ediRacimosCortados;
+    TextInputEditText ediRacimosRechzds;
+    TextInputEditText ediTotalCajas;
+    TextInputEditText ediPercentMerma;
+    TextInputEditText ediRatio;
+    Button btnSave;
 
 
 
@@ -58,23 +56,40 @@ public class BottonSheetDfragmentVclds extends BottomSheetDialogFragment {
                                  @Nullable Bundle savedInstanceState) {
             vista= inflater.inflate(R.layout.bottom_sheet_ver_atachx2, container, false);
 
-
-            mirecyclerViewAtach =vista.findViewById(R.id.mirecyclerViewAtach);
-            spinnerSelectrodate =vista.findViewById(R.id.spinnerSelectrodate);
-
-            txtAdviseer =vista.findViewById(R.id.txtAdviseer);
-            txtAdviserDesvicunlar =vista.findViewById(R.id.txtAdviserDesvicunlar);
             imgClose=vista.findViewById(R.id.imgClose);
 
-            // context = getActivity();
-            Log.i("ontatch","se ejecuto onCreateView");
+
+             ediV1=vista.findViewById(R.id.ediV1);
+             ediV2=vista.findViewById(R.id.ediV2);
+             ediV3=vista.findViewById(R.id.ediV3);
+
+             ediSem9=vista.findViewById(R.id.ediSem9);
+             ediSem10=vista.findViewById(R.id.ediSem10);
+             ediSem11=vista.findViewById(R.id.ediSem11);
+             ediSem12=vista.findViewById(R.id.ediSem12);
+             ediSem13=vista.findViewById(R.id.ediSem13);
+
+             ediRacimosCortados=vista.findViewById(R.id.ediRacimosCortados);
+             ediRacimosRechzds=vista.findViewById(R.id.ediRacimosRechzds);
+             ediTotalCajas=vista.findViewById(R.id.ediTotalCajas);
+             ediPercentMerma=vista.findViewById(R.id.ediPercentMerma);
+             ediRatio=vista.findViewById(R.id.ediRatio);
+            btnSave=vista.findViewById(R.id.btnSave);
+
+
+            btnSave.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ///
+                }
+            });
+
 
 
 
             imgClose.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     //en la ac56ividad actualizamos elnume reportes vinculados y actualisamos el txt de rechzados y el iobjeto report parte 1 al;goasi
 
 

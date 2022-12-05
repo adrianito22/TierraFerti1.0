@@ -47,10 +47,24 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:layout_columnWeight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:hint="1º  VU" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediV2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -63,22 +77,11 @@
             app:layout_columnWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediV3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:hint="3º  VU" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:hint="1º  VU" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.gridlayout.widget.GridLayout>
@@ -116,6 +119,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediSem9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -129,6 +133,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediSem10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -143,6 +148,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediSem11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -157,6 +163,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediSem12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -171,6 +178,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediSem13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -206,6 +214,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediRacimosCortados"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -219,6 +228,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediRacimosRechzds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -229,9 +239,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -244,6 +253,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediTotalCajas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -257,6 +267,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediPercentMerma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -271,6 +282,7 @@
             app:layout_rowWeight="1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediRatio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp" />
@@ -278,6 +290,19 @@
 
 
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:text="GUARDAR">
+
+    </Button>
 
 
 </LinearLayout>
