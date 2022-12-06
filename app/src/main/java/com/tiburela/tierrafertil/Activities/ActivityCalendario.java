@@ -20,6 +20,7 @@ import com.tiburela.tierrafertil.calendario.CalendarioEnf;
 import com.tiburela.tierrafertil.utils.Variables;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
@@ -129,8 +130,8 @@ public class ActivityCalendario extends AppCompatActivity {
             UtilsCalendario.generateCalendarioYear(2022,2);
 
 
-
-
+            ///SORTER ARRA LIST
+            AdapterCalendario.listCalendario= generateArraylistByMapAndSOTER(Variables.miMap);
             setDataRecyclerView(AdapterCalendario.listCalendario);
 
             /**convertimos estearray list en mapa y lo gaurdamos en prefrencias*/
@@ -146,7 +147,7 @@ public class ActivityCalendario extends AppCompatActivity {
             Log.i("elcickler","SE EEJCUTO EL ELSE ");
 
 
-            AdapterCalendario.listCalendario= generateArraylistByMap(Variables.miMap);
+            AdapterCalendario.listCalendario= generateArraylistByMapAndSOTER(Variables.miMap);
 
 
             //OPRDENAMOS..
@@ -162,7 +163,7 @@ public class ActivityCalendario extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private ArrayList<CalendarioEnf>generateArraylistByMap(Map<String,CalendarioEnf> map){
+    private ArrayList<CalendarioEnf> generateArraylistByMapAndSOTER(Map<String,CalendarioEnf> map){
 
         ArrayList<CalendarioEnf>miArryList=new ArrayList<>();
 
@@ -199,7 +200,25 @@ public class ActivityCalendario extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        scrolloToPosition();
+
+    }
 
 
 
+    private void scrolloToPosition(){
+
+      //a que posicion vamos hacer scrollo
+
+        int semanaNum= Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+
+        Log.i("misemana","la semana es "+semanaNum);
+
+        mireciclerView.scrollToPosition(semanaNum-1);
+
+    }
 }

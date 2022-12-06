@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DADADA"
-    tools:context=".Calendario.ActivityCalendario">
+    tools:context=".Activities.ActivityCalendario">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mireciclerView"

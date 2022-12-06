@@ -25,6 +25,8 @@ public class MainActivityCenter extends AppCompatActivity {
     LinearLayout layCalidLabresAgriocolas;
     LinearLayout layDiagnotiscoFitosa;
     LinearLayout layMisInformes;
+    LinearLayout layMisICalendarios;
+
 
 
     int tipoInformeSelecionado;
@@ -41,6 +43,7 @@ public class MainActivityCenter extends AppCompatActivity {
          layDiagnotiscoFitosa=findViewById(R.id.layDiagnotiscoFitosa);
 
         layMisInformes=findViewById(R.id.layMisInformes);
+      layMisICalendarios =findViewById(R.id.layMisICalendarios);
 
         eventosBtn();
 
@@ -95,6 +98,27 @@ public class MainActivityCenter extends AppCompatActivity {
 
 
               //  sheetOptionsForm(intencion,tipoInformeSelecionado);
+
+
+
+            }
+        });
+
+
+        layMisICalendarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+              ///  tipoInformeSelecionado=Typeinforms.ALL_INFORMS;
+
+                Intent intencion = new Intent(MainActivityCenter.this,ActivityMisCalendarios.class );
+
+
+               // intencion.putExtra(Utils.keyIntentXtraAllinforms,Typeinforms.ALL_INFORMS);
+                startActivity(intencion);
+
+
+                //  sheetOptionsForm(intencion,tipoInformeSelecionado);
 
 
 

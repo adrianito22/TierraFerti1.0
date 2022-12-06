@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C8C8C8"
     android:orientation="vertical">
 
     <LinearLayout
@@ -84,10 +85,14 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtImpLay1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
+                android:background="#00FFFFFF"
                 android:hint="9"
                 app:layout_columnWeight="1"
                 app:layout_rowWeight="1">
@@ -96,13 +101,16 @@
                     android:id="@+id/ediSem9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/border_item" />
+                    android:background="#00FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtImpLay2"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="10"
                 app:layout_columnWeight="1"
@@ -112,13 +120,16 @@
                     android:id="@+id/ediSem10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp" />
+                    android:layout_margin="3dp"
+                    android:background="#00FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtImpLay3"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="11"
                 app:layout_columnWeight="1"
@@ -128,13 +139,16 @@
                     android:id="@+id/ediSem11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp" />
+                    android:layout_margin="3dp"
+                    android:background="#00FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtImpLay4"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 android:hint="12"
                 app:layout_columnWeight="1"
@@ -144,10 +158,12 @@
                     android:id="@+id/ediSem12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp" />
+                    android:layout_margin="3dp"
+                    android:background="#00FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtImpLay5"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -160,7 +176,8 @@
                     android:id="@+id/ediSem13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp" />
+                    android:layout_margin="3dp"
+                    android:background="#00FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
