@@ -37,13 +37,14 @@ public class ActivityCalendario extends AppCompatActivity {
 
         mireciclerView=findViewById(R.id.mireciclerView);
         SharePref.init(ActivityCalendario.this);
+
         getCalendarPrefrencesAndSave();
 
 
         /***DE PRUEBA*/
-        UtilsCalendario.initArrayColorsCinta();   //inicilziamos array de colores
+       // UtilsCalendario.initArrayColorsCinta();   //inicilziamos array de colores
 
-        UtilsCalendario.creaetAndOrdenaListColors(3);
+        //UtilsCalendario.creaetAndOrdenaListColors(3);
 
     }
 
@@ -118,7 +119,7 @@ public class ActivityCalendario extends AppCompatActivity {
 
         Variables.miMap= SharePref.getMapOfCalendarioObjects(SharePref.KEY_CALENDARIO_ENFUNDE);
 
-        if(Variables.miMap.size()<= 1){ //cremaosno existe el mapa
+        if(Variables.miMap.size()<= 1){ //no exite calendario creamos uno nuevo
 
 
 
@@ -131,7 +132,7 @@ public class ActivityCalendario extends AppCompatActivity {
 
 
             ///SORTER ARRA LIST
-            AdapterCalendario.listCalendario= generateArraylistByMapAndSOTER(Variables.miMap);
+          //  AdapterCalendario.listCalendario= generateArraylistByMapAndSOTER(Variables.miMap);
             setDataRecyclerView(AdapterCalendario.listCalendario);
 
             /**convertimos estearray list en mapa y lo gaurdamos en prefrencias*/

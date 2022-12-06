@@ -92,7 +92,9 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
 
                Log.i("serte","se presiono ");
 
-                    setColorCintasCoratdas();
+                    saveUpadateItem(Variables.currentCalEnfundeoBJECt);
+
+                    //setColorCintasCoratdas();
 
 
                   dismiss();
@@ -128,7 +130,7 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
     @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             Log.i("ontatch","se ejecuto onViewCreated");
-        saveUpadateItem(Variables.currentCalEnfundeoBJECt);
+       // saveUpadateItem(Variables.currentCalEnfundeoBJECt);
 
             //  view.findViewById(R.id.textView4).setOnClickListener(this);
         }

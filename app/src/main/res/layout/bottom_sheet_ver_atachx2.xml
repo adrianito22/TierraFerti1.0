@@ -42,7 +42,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:hint="1º  VU" />
+                    android:hint="1º  VU"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -56,7 +57,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:hint="2º  VU" />
+                    android:hint="2º  VU"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -101,7 +103,9 @@
                     android:id="@+id/ediSem9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#00FFFFFF" />
+                    android:background="#00FFFFFF"
+                    android:digits="0123456789"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -121,7 +125,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:background="#00FFFFFF" />
+                    android:background="#00FFFFFF"
+                    android:digits="0123456789"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -140,7 +146,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:background="#00FFFFFF" />
+                    android:background="#00FFFFFF"
+                    android:digits="0123456789"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -159,7 +167,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:background="#00FFFFFF" />
+                    android:background="#00FFFFFF"
+                    android:digits="0123456789"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -177,7 +187,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:background="#00FFFFFF" />
+                    android:background="#00FFFFFF"
+                    android:digits="0123456789"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -212,7 +224,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ediRacimosCortados"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -228,7 +241,8 @@
                     android:id="@+id/ediRacimosRechzds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp" />
+                    android:layout_margin="3dp"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -252,7 +266,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ediTotalCajas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -284,7 +299,8 @@
                     android:id="@+id/ediRatio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp" />
+                    android:layout_margin="3dp"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
