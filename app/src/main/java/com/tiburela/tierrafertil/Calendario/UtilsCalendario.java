@@ -50,9 +50,22 @@ static Calendar calendar = Calendar.getInstance();
 
 
     public static  void generateCalendarioYear(int year, int diaEneroDondeEmpezamos){ //por defecto sera del ano donde nos encontramos......,,pero tambien podria generar del proximo...
+/*
+        GregorianCalendar gregorianCalendar = new GregorianCalendar(year,12,31);
+        gregorianCalendar.setFirstDayOfWeek(Calendar.MONDAY); // week beginn from Monday
+        gregorianCalendar.setMinimalDaysInFirstWeek(4); // 1week mininum from Thursday
+        int totalWeeks2 = gregorianCalendar.getMaximum(Calendar.WEEK_OF_YEAR);
 
-          int totalWeeks = getTotalWeeksInYear(year);
+        Log.i("samas","la semana n here es  "+totalWeeks2);
+*/
+
+
+        int totalWeeks = getTotalWeeksInYear(year);
         SimpleDateFormat formatDiaEnd = new SimpleDateFormat("dd");
+
+        int weeksOfYear = Calendar.getInstance().getActualMaximum(Calendar.WEEK_OF_YEAR);
+
+          Log.i("samas","la semana n here es  "+weeksOfYear);
 
         int currentMonth ;
         int currentDay;
@@ -65,7 +78,7 @@ static Calendar calendar = Calendar.getInstance();
 
 
 
-        for(int indice=0; indice<totalWeeks; indice++){
+        for(int indice=0; indice<totalWeeks-1; indice++){
 
 
             //  calendar.add(Calendar.DATE, 0);
@@ -222,6 +235,9 @@ static Calendar calendar = Calendar.getInstance();
         mCalendar.set(Calendar.DAY_OF_MONTH, 31); // Don't change
         return mCalendar.get(Calendar.WEEK_OF_YEAR);
     }
+
+
+
 
     public static  void creaetAndOrdenaListColors(int indiceColorUserStart){
 
