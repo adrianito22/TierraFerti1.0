@@ -64,7 +64,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView42"
+            android:id="@+id/txtTotalEnfunde"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total"
@@ -300,6 +300,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
+                    android:enabled="false"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -8,11 +8,14 @@ import android.graphics.LightingColorFilter;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -119,6 +122,9 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
             });
 */
             setColorCintasCoratdas();
+
+
+            addChangeTextListenners();
 
 
             return  vista;
@@ -551,5 +557,112 @@ private void saveUpadateItem(CalendarioEnf object){
 
 
     }
+
+    private void addChangeTextListenners(){
+
+        final int[] vuelta1 = new int[1];
+        final int[] vuelta2 = new int[1];
+
+
+        ediV1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+
+
+
+                //    if(s.length() != 0)
+
+
+                //    field2.setText("");
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                //testear dejando doble  espacio
+
+                       if(ediV1.getText().toString().trim().isEmpty()){
+                           vuelta1[0] =0;
+
+
+                           Log.i("menudo","se eejcuto este if ");
+
+
+
+
+                       }else{
+                           Log.i("menudo","se eejcuto este else zz");
+                           vuelta1[0] =Integer.parseInt(ediV1.getText().toString());
+
+
+                       }
+
+
+                updateTotalEnfunde(vuelta1[0],vuelta2[0]);
+
+            }
+        });
+
+
+        ediV2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                //testear dejando doble  espacio
+
+                if(ediV2.getText().toString().trim().isEmpty()){
+                    vuelta2[0] =0;
+
+
+                    Log.i("menudo","se eejcuto este if ");
+
+
+
+
+                }else{
+                    Log.i("menudo","se eejcuto este else zz");
+                    vuelta2[0] =Integer.parseInt(ediV2.getText().toString());
+
+
+                }
+
+
+                updateTotalEnfunde(vuelta1[0],vuelta2[0]);
+
+
+            }
+        });
+
+    }
+
+
+    private void updateTotalEnfunde(int vuelta1, int vuelta2){
+
+        TextView txtTotalEnfunde=vista.findViewById(R.id.txtTotalEnfunde);
+
+        int resultTotal = vuelta1+vuelta2;
+
+
+        txtTotalEnfunde.setText(String.valueOf(resultTotal));
+
+
+    }
+
 }
 
