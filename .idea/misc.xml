@@ -4,7 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable-v24/backrgound_round_plant.xml" value="0.252" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable-v24/border_amarillo.xml" value="0.165" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable-v24/border_cafe.xml" value="0.165" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable-v24/border_negro.xml" value="0.165" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/backrgound_item.xml" value="0.252" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/border_amarillo.xml" value="0.165" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/border_ite2.xml" value="0.165" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/border_item.xml" value="0.252" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/border_purpura.xml" value="0.165" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/border_rojo.xml" value="0.165" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/border_verde.xml" value="0.165" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/btn.xml" value="0.252" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ic_baseline_nature_24.xml" value="0.252" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/drawable/ll.xml" value="0.252" />
@@ -14,11 +23,12 @@
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_diagn_fito_sanitario.xml" value="0.19966230476994512" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_main_center.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_mis_calendarios.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_result_ctr_labr.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/all_inform_item.xml" value="0.20222317229585293" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/apuntalamiento.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx.xml" value="0.4" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx2.xml" value="0.264" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx2.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1.xml" value="0.2" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1_item.xml" value="0.136" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1_itemx.xml" value="0.176" />

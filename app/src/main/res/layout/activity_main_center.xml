@@ -170,10 +170,11 @@
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
                 android:paddingRight="5dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:cardCornerRadius="30dp">
 
                 <LinearLayout
+                    android:id="@+id/layMisICalendarios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -199,7 +200,7 @@
                         android:ems="10"
                         android:fontFamily="sans-serif-black"
                         android:gravity="center_horizontal"
-                        android:text="Diagnotico fitosanitario"
+                        android:text="Calendarios"
                         android:textSize="15sp" />
 
                 </LinearLayout>

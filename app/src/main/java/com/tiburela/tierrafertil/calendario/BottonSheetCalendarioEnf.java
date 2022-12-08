@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,8 +20,10 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
+import com.tiburela.tierrafertil.adapters.AdapterCalendario;
 import com.tiburela.tierrafertil.utils.Variables;
 
 public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
@@ -89,13 +92,10 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
 
                Log.i("serte","se presiono ");
 
-                    Drawable myIcon=ContextCompat.getDrawable(getActivity(), R.drawable.border_item);
-                  //  Drawable myIcon = getResources().getDrawable( R.drawable.button );
-                    ColorFilter filter = new LightingColorFilter( Color.BLACK, Color.BLACK);
-                    myIcon.setColorFilter(filter);
+                    saveUpadateItem(Variables.currentCalEnfundeoBJECt);
 
-                    ediSem10.setBackgroundDrawable(myIcon);
-                  saveUpadateItem(Variables.currentCalEnfundeoBJECt);
+                    //setColorCintasCoratdas();
+
 
                   dismiss();
 
@@ -118,16 +118,19 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
                 }
             });
 */
-
+            setColorCintasCoratdas();
 
 
             return  vista;
 
 
         }
-        @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+
+    @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             Log.i("ontatch","se ejecuto onViewCreated");
+       // saveUpadateItem(Variables.currentCalEnfundeoBJECt);
 
             //  view.findViewById(R.id.textView4).setOnClickListener(this);
         }
@@ -161,8 +164,6 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
     @Override
     public void onStart() {
         super.onStart();
-
-
 
 
         Log.i("ontatch","se ejecuto onStart");
@@ -387,12 +388,168 @@ private void saveUpadateItem(CalendarioEnf object){
 
 
 
-    private void setColorCintasCoratdas(){
+    private void setColorCintasCoratdas(){//cual es el numero item atras....
 
+        int numSemanaCurrent=Variables.currentCalEnfundeoBJECt.getSemanaNum();
+
+
+        TextInputLayout txtImpLay9=vista.findViewById(R.id.txtImpLay1);
+        TextInputLayout txtImpLay10=vista.findViewById(R.id.txtImpLay2);
+        TextInputLayout txtImpLay11=vista.findViewById(R.id.txtImpLay3);
+        TextInputLayout txtImpLay12=vista.findViewById(R.id.txtImpLay4);
+        TextInputLayout txtImpLay13=vista.findViewById(R.id.txtImpLay5);
+
+
+        if(numSemanaCurrent==1 ){
+            Log.i("dbuhehjr","se ejecuto este");
+            numSemanaCurrent=9;
+           // return;
+
+        }else if(numSemanaCurrent==2 ){
+
+            numSemanaCurrent=10;
+
+
+        }
+        else if(numSemanaCurrent==3 ){
+
+            numSemanaCurrent=11;
+
+
+        }
+
+        else if(numSemanaCurrent==4 ){
+
+            numSemanaCurrent=12;
+
+
+        }
+
+
+        else if(numSemanaCurrent==5 ){
+
+            numSemanaCurrent=13;
+
+
+        }
+
+
+
+
+
+        String color=AdapterCalendario.listCalendario.get(numSemanaCurrent-2).getColorCintaString();
+        decideSlectDrawable(color,txtImpLay9);
+
+
+
+        color=AdapterCalendario.listCalendario.get(numSemanaCurrent-3).getColorCintaString();
+        decideSlectDrawable(color,txtImpLay10);
+
+
+        color=AdapterCalendario.listCalendario.get(numSemanaCurrent-4).getColorCintaString();
+        decideSlectDrawable(color,txtImpLay11);
+
+
+
+        color=AdapterCalendario.listCalendario.get(numSemanaCurrent-5).getColorCintaString();
+        decideSlectDrawable(color,txtImpLay12);
+
+
+
+        color=AdapterCalendario.listCalendario.get(numSemanaCurrent-6).getColorCintaString();
+        decideSlectDrawable(color,txtImpLay13);
 
 
     }
 
+    public static void setBackground(View v, int backgroundColor, int borderColor) {
+        GradientDrawable shape = new GradientDrawable();
+        shape.setShape(GradientDrawable.RECTANGLE);
+        shape.setCornerRadii(new float[] { 16, 16, 16, 16, 0, 0, 0, 0 });
+        shape.setColor(backgroundColor);
+        shape.setStroke(3, borderColor);
+        v.setBackground(shape);
+    }
 
+
+
+    private void decideSlectDrawable(String colorParse,TextInputLayout layoutx){
+
+        if(colorParse.equals("#3F51B5")){ //azul
+            layoutx.setBackgroundResource(R.drawable.border_azul);
+
+
+
+        }
+
+
+
+        else if(colorParse.equals("#FFFFFFFF")){ //blanco
+
+            layoutx.setBackgroundResource(R.drawable.border_white);
+
+
+
+        }
+
+
+        else if(colorParse.equals("#FFEB3B")){ //amarillo
+
+            layoutx.setBackgroundResource(R.drawable.border_amarillo);
+
+
+
+        }
+
+
+        else if(colorParse.equals("#673AB7")){ //lila1
+
+            layoutx.setBackgroundResource(R.drawable.border_purpura);
+
+
+
+        }
+
+
+
+        else if(colorParse.equals("#D30404")){ //rojo
+
+            layoutx.setBackgroundResource(R.drawable.border_rojo);
+
+
+
+        }
+
+
+        else if(colorParse.equals("#D3503600")){ //cafe
+
+            layoutx.setBackgroundResource(R.drawable.border_cafe);
+
+
+
+        }
+
+        else if(colorParse.equals("#040404")){ //negro
+
+            layoutx.setBackgroundResource(R.drawable.border_negro);
+
+
+
+        }
+
+
+        else if(colorParse.equals("#014C04")){ //verde
+
+            layoutx.setBackgroundResource(R.drawable.border_verde);
+
+
+
+        }
+
+
+
+
+
+    }
 }
 
