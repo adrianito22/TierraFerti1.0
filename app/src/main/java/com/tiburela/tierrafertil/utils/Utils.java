@@ -19,6 +19,7 @@ public class Utils {
 
    public static HashMap<String, String> hasmapFitosnitario= new HashMap<>();
 
+  public static HashMap<String,String>miMapaToSaveMoreInfoPlants= new HashMap<>();
 
 
    public static  String [] arrayWhitkeysMapCategories ={"Enfunde","Deshoje","Apuntalamiento","Deshije","Otras labores"};

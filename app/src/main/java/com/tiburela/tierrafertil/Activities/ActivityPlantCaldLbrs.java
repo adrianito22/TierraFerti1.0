@@ -6,26 +6,30 @@ import androidx.gridlayout.widget.GridLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.Plant;
-import com.tiburela.tierrafertil.utils.Typeinforms;
 import com.tiburela.tierrafertil.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -39,7 +43,15 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     LinearLayout  layotl2;
 
 
-
+    TextInputEditText ediProductor;
+    TextInputEditText ediFinca;
+    TextInputEditText ediFecha;
+    TextInputEditText ediLugar;
+    TextInputEditText ediSemana;
+    TextInputEditText odiCodigO;
+    TextInputEditText ediFirmaTec;
+    TextInputEditText ediObservacionesAll;
+    TextInputEditText ediPercentAll;
 
 
     RecyclerView mireciclerView;
@@ -61,6 +73,19 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ediFecha=findViewById(R.id.ediFecha);
+
+        ediFecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                selecionaFecha();
+
+            }
+        });
+
 
 
         Bundle extras = getIntent().getExtras();
@@ -164,15 +189,14 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                addMoreDataInMapAndSave();
+
                 Intent intencion= new Intent(ActivityPlantCaldLbrs.this, ActivityResultCtrLabr.class);
                 intencion.putExtra(Utils.keyextraGLObal,keySharePrefeItem);
                 startActivity(intencion);
 
 
-
-
                 //deploySheetaddNewPlant();
-
 
 
             }
@@ -386,5 +410,48 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
     }
 
+    void selecionaFecha(){
+
+
+        final Calendar cldr = Calendar.getInstance();
+        int year = cldr.get(Calendar.YEAR);
+        int daySemana = cldr.get(Calendar.DAY_OF_WEEK);
+        int mes = cldr.get(Calendar.MONTH);
+
+        // time picker dialog
+        DatePickerDialog picker = new DatePickerDialog(ActivityPlantCaldLbrs.this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+
+                        String dateSelec=i2+"/"+i1+"/"+i;
+
+                        ediFecha.setText(dateSelec);
+
+                        // ediFecha.setText(daySemana+"/"+mes+"/"+year);
+
+                    }
+                }, year,  mes, daySemana);
+
+        picker.setButton(DialogInterface.BUTTON_POSITIVE, "OK", picker);
+        picker.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancelar", picker);
+
+
+        picker.show();
+    }
+
+
+    private void addMoreDataInMapAndSave(){
+        Utils.miMapaToSaveMoreInfoPlants.put("productos",ediProductor.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("finca",ediFinca.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("fecha",ediFecha.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("lugar",ediLugar.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("semana",ediSemana.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("codigo",odiCodigO.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("firma",ediFirmaTec.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("observaciones",ediObservacionesAll.getText().toString());
+        Utils.miMapaToSaveMoreInfoPlants.put("percent",ediPercentAll.getText().toString());
+
+    }
 
 }

@@ -31,6 +31,8 @@ public class DialogFragmentx extends DialogFragment {
 
     String keyPreferencesThisForm ="";
 
+    boolean isPrimerItem=false;
+
     Map<String, String> currentDataHhasmap = new HashMap<>();
 
     View vista;
@@ -559,6 +561,19 @@ return true;
                     SharePref.init(getActivity());
                     SharePref.saveMapPreferFields(hashMap, keyPreferencesThisForm);
                     Toast.makeText(getActivity(), "Se guardo", Toast.LENGTH_SHORT).show();
+
+                     if(isPrimerItem){//gaurdamos el texto
+
+                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesEnfunde",ediObservacionesEnfunde.getText().toString());
+                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesDeshoje",ediObservacionesDeshoje.getText().toString());
+                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesApuntalamiento",ediObservacionesApuntalamiento.getText().toString());
+                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesOtrasLabores",ediObservacionesEnfunde.getText().toString());
+                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesDeshije",ediObservacionesDeshije.getText().toString());
+
+
+                     }
+
+
 
 
                     dismiss();

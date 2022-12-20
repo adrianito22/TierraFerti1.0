@@ -19,292 +19,295 @@
         android:text="Datos Generales"
         android:textColor="@color/white" />
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:columnCount="2">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:hint="PRODUCTOR"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediProductor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:hint="FINCA"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediFinca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:hint="FECHA"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediFecha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:hint="lUGAR"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediLugar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:hint="SEMANA"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediSemana"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:hint="CODIGO"
-            app:layout_columnWeight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/odiCodigO"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </androidx.gridlayout.widget.GridLayout>
-
-    <LinearLayout
-        android:id="@+id/layotl1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:hint="FIRMA DEL PRODUCTOR">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mirecicler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                tools:layout_editor_absoluteY="16dp">
 
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+            </androidx.recyclerview.widget.RecyclerView>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:hint="FIRMA DEL TECNICO">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                app:columnCount="2">
 
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="PRODUCTOR"
+                    app:layout_columnWeight="1">
 
-    <LinearLayout
-        android:id="@+id/layotl2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediProductor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="7"
-            android:hint="OBSERVACIONES">
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediObservacionesAll"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="FINCA"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediFinca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="FECHA"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="lUGAR"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediLugar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="SEMANA"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediSemana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:hint="CODIGO"
+                    app:layout_columnWeight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/odiCodigO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <LinearLayout
+                android:id="@+id/layotl1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:hint="FIRMA DEL PRODUCTOR">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="3"
-            android:hint="% PROMED:">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediFirma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ediPercentAll"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="FIRMA DEL TECNICO">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediFirmaTec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layotl2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="7"
+                    android:hint="OBSERVACIONES">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediObservacionesAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:hint="% PROMED:">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediPercentAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:tag="datgenerales/"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveAndCalc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
-                android:digits="0123456789."
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:padding="10dp"
-                android:tag="datgenerales/"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                android:layout_marginRight="25dp"
+                android:text="Guardar y  Calcular" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mirecicler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        tools:layout_editor_absoluteY="16dp">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <ImageView
-        android:id="@+id/btnAdnewPlant"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_baseline_note_add_24"
-        android:text="Add Plant" />
-
-    <Button
-        android:id="@+id/btnSaveAndCalc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:text="Guardar y  Calcular" />
+            <ImageView
+                android:id="@+id/btnAdnewPlant"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_baseline_note_add_24"
+                android:text="Add Plant" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
