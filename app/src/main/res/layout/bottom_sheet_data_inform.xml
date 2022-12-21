@@ -34,7 +34,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/backrgound_item"
         android:ems="10"
-        android:hint="Nombre Set"
+        android:hint="Nombre Informe"
         android:inputType="textPersonName"
         android:padding="10dp" />
 

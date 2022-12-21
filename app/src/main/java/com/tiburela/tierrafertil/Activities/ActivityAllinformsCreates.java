@@ -165,8 +165,7 @@ private void filterdtaandCALLadpater()
 
                 // String keySharePrefrencesItemClicked=v.getTag().toString();
 
-
-                sheetBootomInforOptions(v.getTag().toString());
+                sheetBootomInforOptions(v.getTag(R.id.tagUniqueId1).toString(),v.getTag(R.id.tagUniqueId2).toString());
 
 
                 Log.i("elcickler","el click es llamado");
@@ -190,17 +189,10 @@ private void filterdtaandCALLadpater()
 
 
             for(AllFormsModel object : listPreferencesAllinforms) {
-
                     if(object.getTipoFormPertenece() == tipoInformCurrent){
-
                         listPreferencesAllinformsX.add(object);
                     }
                    // listPreferencesAllinformsX.add(object);
-
-
-
-
-
         }
 
 
@@ -213,7 +205,7 @@ private void filterdtaandCALLadpater()
 }
 
 
-    private void sheetBootomInforOptions(String idSelectedItem){
+    private void sheetBootomInforOptions(String idSelectedItem,String idSelected2ItemExtraData){
 
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ActivityAllinformsCreates.this);
@@ -248,6 +240,7 @@ private void filterdtaandCALLadpater()
 
                     intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
                     intent.putExtra(SharePref.keyIntent,idSelectedItem); //aqui le pasamoe el id del form all forms
+                    intent.putExtra(SharePref.keyIntenExtraData,idSelected2ItemExtraData); //aqui le pasamoe el id del form all forms
 
                     startActivity(intent);
 

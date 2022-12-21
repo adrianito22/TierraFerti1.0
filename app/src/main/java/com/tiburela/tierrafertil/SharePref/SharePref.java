@@ -28,6 +28,7 @@ public class SharePref {
     public static final String KEYI_CALIDAD_LABORES_AGRCICOLAS_MAP="KEYCALIDADLABORES";
     public static final String KEY_AllINFORMS_SHAREP="kEYALLINFORMSlIST";
     public static  final String KEY_ALL_PLANTS="HELOOHEYPLANTS";
+    public static  final String keyIntenExtraData="extraDataddd";
 
     public static  final String keyIntent="esunketuur";
 

@@ -52,7 +52,7 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     TextInputEditText ediFirmaTec;
     TextInputEditText ediObservacionesAll;
     TextInputEditText ediPercentAll;
-
+     String keyextradata;
 
     RecyclerView mireciclerView;
    int tipoInformCurrent=0;
@@ -94,8 +94,7 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
             tipoInformCurrent = extras.getInt(Utils.keyIntentXtraInformsPlant);
             keySharePrefeItem = extras.getString(SharePref.keyIntent);
-
-
+            keyextradata=extras.getString(SharePref.keyIntenExtraData);
 
             //The key argument here must match that used in the other activity
         }
@@ -151,6 +150,17 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
         //y mostramos solo las plantas.... de este
 
 
+        //agregamos la info como productor,finca ,lugar,etec...
+
+        Map<String, String>miMapa= SharePref.loadMapPreferencesDataOfFields(ActivityPlantCaldLbrs.this,keyextradata);
+        addExtradatInViews(miMapa);
+
+
+        Log.i("debuggg","el size de map es "+miMapa.size());
+
+        Log.i("debuggg","el value de inten 2 es "+keyextradata);
+
+
         if(mapPlants != null) {
 
             milist=Utils.arraListByHASMPA(mapPlants);
@@ -158,7 +168,6 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
             setDataRecyclerView(milist);
 
             ///llamaos recicler
-
 
             Log.i("debuggg.","no es nuelo");
         }else
@@ -169,7 +178,6 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
 
         }
-
 
 
 
@@ -189,8 +197,9 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                addMoreDataInMapAndSave();
+                addmMoreDataOfFormAndSave();
 
+                //mostramos el formulario de planta
                 Intent intencion= new Intent(ActivityPlantCaldLbrs.this, ActivityResultCtrLabr.class);
                 intencion.putExtra(Utils.keyextraGLObal,keySharePrefeItem);
                 startActivity(intencion);
@@ -223,6 +232,17 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
             @Override
             public void onItemClick(int position, View v) {
 
+
+                if(position==0){
+
+                    Utils.esPrimerItemPlanta=true;
+
+                }else{
+
+                    Utils.esPrimerItemPlanta=false;
+
+
+                }
 
              //abrimos dialog
 
@@ -266,6 +286,15 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
         CheckBox checkBox4=bottomSheetDialog.findViewById(R.id.checkBox4);
         CheckBox checkBox5=bottomSheetDialog.findViewById(R.id.checkBox5);
 
+        /**MARCAMOS TODOS POR DEFECTO*/
+        checkBox1.setChecked(true);
+        checkBox2.setChecked(true);
+        checkBox3.setChecked(true);
+        checkBox4.setChecked(true);
+        checkBox5.setChecked(true);
+
+
+
         Button btnActualizar=bottomSheetDialog.findViewById(R.id.btnActualizar);
         ImageView imgClose=bottomSheetDialog.findViewById(R.id.imgClose);
 
@@ -285,6 +314,7 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
                 String nombrePlanta="Planta Num "+ mapPlants.size()+1;
 
                 HashMap<String, String>categoriresVinculadosMap= new HashMap<>();
+
 
 
                 for(int indice=0; indice<checkBoxs.length; indice++){
@@ -441,8 +471,19 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     }
 
 
-    private void addMoreDataInMapAndSave(){
-        Utils.miMapaToSaveMoreInfoPlants.put("productos",ediProductor.getText().toString());
+    private void addmMoreDataOfFormAndSave(){
+
+        ediProductor=findViewById(R.id.ediProductor);
+        ediFinca=findViewById(R.id.ediFinca);
+        ediFecha=findViewById(R.id.ediFecha);
+        ediLugar=findViewById(R.id.ediLugar);
+        ediSemana=findViewById(R.id.ediSemana);
+        odiCodigO=findViewById(R.id.odiCodigO);
+        ediFirmaTec=findViewById(R.id.ediFirmaTec);
+        ediObservacionesAll=findViewById(R.id.ediObservacionesAll);
+        ediPercentAll=findViewById(R.id.ediPercentAll);
+
+        Utils.miMapaToSaveMoreInfoPlants.put("productor",ediProductor.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("finca",ediFinca.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("fecha",ediFecha.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("lugar",ediLugar.getText().toString());
@@ -452,6 +493,41 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
         Utils.miMapaToSaveMoreInfoPlants.put("observaciones",ediObservacionesAll.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("percent",ediPercentAll.getText().toString());
 
+        SharePref.init(ActivityPlantCaldLbrs.this);
+       SharePref.saveMapPreferFields(Utils.miMapaToSaveMoreInfoPlants,keyextradata);
+
+
+        //guardamos esto en preferencias
+
     }
+
+
+    private void addExtradatInViews(Map<String,String> mimapa){
+
+        ediProductor=findViewById(R.id.ediProductor);
+        ediFinca=findViewById(R.id.ediFinca);
+        ediFecha=findViewById(R.id.ediFecha);
+        ediLugar=findViewById(R.id.ediLugar);
+        ediSemana=findViewById(R.id.ediSemana);
+        odiCodigO=findViewById(R.id.odiCodigO);
+        ediFirmaTec=findViewById(R.id.ediFirmaTec);
+        ediObservacionesAll=findViewById(R.id.ediObservacionesAll);
+        ediPercentAll=findViewById(R.id.ediPercentAll);
+
+
+        TextInputEditText [] miarray={ediProductor,ediFinca,ediFecha,ediLugar,ediSemana,odiCodigO,ediFirmaTec,ediObservacionesAll,ediPercentAll};
+
+        for(TextInputEditText editext: miarray){
+            if(mimapa.containsKey(editext.getTag().toString())){
+                editext.setText(mimapa.get(editext.getTag().toString()));
+            }
+        }
+
+
+    }
+
+
+
+
 
 }

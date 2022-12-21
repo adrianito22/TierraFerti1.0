@@ -34,7 +34,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="deshije a tiempo">
+            android:hint="DESHIJE A TIEMPO">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDeshijeAtiempo"
@@ -55,7 +55,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="direccion">
+            android:hint="DIRECCIÓN">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDirecccion"
@@ -76,7 +76,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ubicacion">
+            android:hint="UBICACIÓN">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediUbicacion"
@@ -97,7 +97,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ubicacion">
+            android:hint="HIJOS DE AGUA">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediHijosDeAgua"
@@ -118,7 +118,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="dobles">
+            android:hint="DOBLES">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDobles"
@@ -139,7 +139,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="resiembra">
+            android:hint="RESIEMBRA">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediResiembra"

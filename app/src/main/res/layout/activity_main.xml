@@ -61,7 +61,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="productor"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +83,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="finca"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,7 +105,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="fecha"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,7 +127,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="lugar"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -149,7 +149,7 @@
                         android:gravity="center"
                         android:inputType="number"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="semana"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,7 +171,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="codigo"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -203,7 +203,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="firma"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -259,7 +259,7 @@
                         android:gravity="center"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="observaciones"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -284,7 +284,7 @@
                         android:gravity="center"
                         android:inputType="number"
                         android:padding="10dp"
-                        android:tag="datgenerales/"
+                        android:tag="percent"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>

@@ -12,6 +12,13 @@ public class AllFormsModel {
     private String dateCreate;
     private String categoryText;
 
+    public String getExtraDataAllFormUniqIdKey() {
+        return extraDataAllFormUniqIdKey;
+    }
+
+    private String extraDataAllFormUniqIdKey;
+
+
     private String datelastModification;
     private int tipoFormPertenece;
     boolean  formIsUploaded;
@@ -98,6 +105,7 @@ public class AllFormsModel {
         formIsUploaded=false;
         this.notaInform=notaInform;
         this.categoryText =categoryText;
+        extraDataAllFormUniqIdKey=UUID.randomUUID().toString();
 
     }
 

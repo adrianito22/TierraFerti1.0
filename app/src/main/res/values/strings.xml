@@ -11,6 +11,12 @@
     </string-array>
 
 
+
+    <item type="id" name="tagUniqueId1" />
+    <item type="id" name="tagUniqueId2" />
+
+
+
     <string-array name="porcentajesArray">
         <item>No</item>ç
         <item>0-25%</item>

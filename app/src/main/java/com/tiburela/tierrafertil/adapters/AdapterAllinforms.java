@@ -56,8 +56,11 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
 
         holder.txtNameInform.setText(listAllFormsModel.get(position).getName());
         holder.txtInformDate.setText(listAllFormsModel.get(position).getDateCreate());
-        holder. linearLayout.setTag(listAllFormsModel.get(position).getUniqueIDkeyInformAndKeYSharePref());
         holder.txtCategory.setText(listAllFormsModel.get(position).getCategoryText());
+
+        holder.linearLayout.setTag(R.id.tagUniqueId1,listAllFormsModel.get(position).getUniqueIDkeyInformAndKeYSharePref());
+        holder. linearLayout.setTag(R.id.tagUniqueId2,listAllFormsModel.get(position).getExtraDataAllFormUniqIdKey());
+
 
 
     }

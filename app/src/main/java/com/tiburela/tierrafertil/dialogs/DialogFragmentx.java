@@ -172,6 +172,26 @@ public class DialogFragmentx extends DialogFragment {
         imageviCloseDialog=vista.findViewById(R.id.imageviCloseDialog);
         mBtnGuardar = vista.findViewById(R.id.btnGuardar);
 
+
+        ediObservacionesDeshoje = vista.findViewById(R.id.ediObservacionesDeshoje);
+        ediObservacionesApuntalamiento = vista.findViewById(R.id.ediObservacionesApuntalamiento);
+        ediObservacionesEnfunde = vista.findViewById(R.id.ediObservacionesEnfunde);
+        ediObservacionesOtrasLabores = vista.findViewById(R.id.ediObservacionesOtrasLabores);
+        ediObservacionesDeshije = vista.findViewById(R.id.ediObservacionesDeshije);
+
+
+        if(!Utils.esPrimerItemPlanta){
+            ediObservacionesEnfunde.setVisibility(View.GONE);
+            ediObservacionesDeshoje.setVisibility(View.GONE);
+            ediObservacionesApuntalamiento.setVisibility(View.GONE);
+            ediObservacionesOtrasLabores.setVisibility(View.GONE);
+            ediObservacionesDeshije.setVisibility(View.GONE);
+
+
+        }
+
+
+
         eventoBtns();
         return builder.create();
     }
@@ -248,11 +268,6 @@ public class DialogFragmentx extends DialogFragment {
 
 
 
-           ediObservacionesDeshoje = vista.findViewById(R.id.ediObservacionesDeshoje);
-           ediObservacionesApuntalamiento = vista.findViewById(R.id.ediObservacionesApuntalamiento);
-           ediObservacionesEnfunde = vista.findViewById(R.id.ediObservacionesEnfunde);
-           ediObservacionesOtrasLabores = vista.findViewById(R.id.ediObservacionesOtrasLabores);
-           ediObservacionesDeshije = vista.findViewById(R.id.ediObservacionesDeshije);
 
 
         ediObservacionesAll = vista.findViewById(R.id.ediObservacionesAll);
@@ -499,8 +514,7 @@ public class DialogFragmentx extends DialogFragment {
 
             if(editextCurrenTdEVULETO!=null){
 
-                editextCurrenTdEVULETO.setText(value);
-
+                    editextCurrenTdEVULETO.setText(value);
 
             }
 
@@ -555,24 +569,23 @@ return true;
 
                HashMap<String ,String> hashMap= createHashMapWhitEditextArray(arrayEditex);
 
-                if(hashMap.size()>0){
 
+                /*
+                if(Utils.esPrimerItemPlanta){//gaurdamos el texto
+                    hashMap.put("deshoje/observacionesEnfunde",ediObservacionesEnfunde.getText().toString());
+                    hashMap.put("ediObservacionesDeshoje",ediObservacionesDeshoje.getText().toString());
+                    hashMap.put("ediObservacionesApuntalamiento",ediObservacionesApuntalamiento.getText().toString());
+                    hashMap.put("ediObservacionesOtrasLabores",ediObservacionesOtrasLabores.getText().toString());
+                    hashMap.put("ediObservacionesDeshije",ediObservacionesDeshije.getText().toString());
+
+                }
+                */
+
+                if(hashMap.size()>0){
 
                     SharePref.init(getActivity());
                     SharePref.saveMapPreferFields(hashMap, keyPreferencesThisForm);
                     Toast.makeText(getActivity(), "Se guardo", Toast.LENGTH_SHORT).show();
-
-                     if(isPrimerItem){//gaurdamos el texto
-
-                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesEnfunde",ediObservacionesEnfunde.getText().toString());
-                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesDeshoje",ediObservacionesDeshoje.getText().toString());
-                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesApuntalamiento",ediObservacionesApuntalamiento.getText().toString());
-                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesOtrasLabores",ediObservacionesEnfunde.getText().toString());
-                         Utils.miMapaToSaveMoreInfoPlants.put("ediObservacionesDeshije",ediObservacionesDeshije.getText().toString());
-
-
-                     }
-
 
 
 

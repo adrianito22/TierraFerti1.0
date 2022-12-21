@@ -33,7 +33,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="nutricion">
+            android:hint="NUTRICIÓN">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediNutricion"
@@ -54,7 +54,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="manejo de cobertura">
+            android:hint="MANEJO DE COBERTURA">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediManejoDeCobertura"
@@ -75,7 +75,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="limpieza matas">
+            android:hint="LIMPIEZA MATAS">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaDePlantas"
@@ -96,7 +96,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="riego">
+            android:hint="RIEGO">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediRiego"
@@ -117,7 +117,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="drenajes">
+            android:hint="DRENAJES">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediDrenajes"
@@ -138,7 +138,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="limpieza empacado">
+            android:hint="LIMPIEZA EMPACADO">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaEmpacado"
@@ -159,7 +159,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="limpieza de bodegas">
+            android:hint="LIMPIEZA DE BODEGAS">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediLimpiezaBODEGA"
@@ -180,7 +180,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="manejo de deshechos">
+            android:hint="MANEJO DE DESHECHOS">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ediManejoDeDesechos"

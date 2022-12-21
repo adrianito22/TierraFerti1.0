@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Utils {
+   public static  boolean esPrimerItemPlanta =false;
 
    public static  String keyextraGLObal ="KEYEXTRASSparatodos";
 

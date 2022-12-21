@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,8 @@ import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterCalendario;
 import com.tiburela.tierrafertil.utils.Variables;
+
+import java.text.DecimalFormat;
 
 public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
         public static final String TAG = "ActionBottomDialog";
@@ -51,6 +54,9 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
     TextInputEditText ediPercentMerma;
     TextInputEditText ediRatio;
     Button btnSave;
+
+
+    ImageView imgCaculateRatio;
 
 
 
@@ -84,6 +90,18 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
              ediPercentMerma=vista.findViewById(R.id.ediPercentMerma);
              ediRatio=vista.findViewById(R.id.ediRatio);
             btnSave=vista.findViewById(R.id.btnSave);
+            imgCaculateRatio=vista.findViewById(R.id.imgCaculateRatio);
+
+            imgCaculateRatio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    getRatioNum();
+
+                }
+            });
+
+
 
             setDatInVIEWS(Variables.currentCalEnfundeoBJECt);
 
@@ -660,6 +678,39 @@ private void saveUpadateItem(CalendarioEnf object){
 
 
         txtTotalEnfunde.setText(String.valueOf(resultTotal));
+
+
+    }
+
+
+    void getRatioNum(){
+        if(ediRacimosCortados.getText().toString().trim().length()==0){
+            ediRacimosCortados.requestFocus();
+            ediRacimosCortados.setError("Valor requerido");
+            return;
+        }
+
+
+        if(ediTotalCajas.getText().toString().trim().length()==0){
+            ediTotalCajas.requestFocus();
+            ediTotalCajas.setError("Valor requerido");
+            return;
+        }
+
+
+        float ratio=Float.parseFloat(ediTotalCajas.getText().toString())/Float.parseFloat(ediRacimosCortados.getText().toString());
+
+
+        Log.i("elva;uer","el ratio es "+ratio);
+
+
+        /***no olvidar que falra el ratio y eso  */
+
+        DecimalFormat miforma= new DecimalFormat("#.#");
+
+        String ratioString= miforma.format(ratio);
+
+        ediRatio.setText(ratioString);
 
 
     }

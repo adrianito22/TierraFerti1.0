@@ -78,6 +78,8 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
     private  void  generateArrayListTOreciclerandCallRecyclerAdapt(ArrayList<Plant>listPlantsObjects){
 
+        boolean sellamoUnVEZ=false;
+
 
         String [] miarrayKEY=Utils.returnaRRYkey();
         String [] miarrayNamesValue=Utils.returnarrayDataNames();
@@ -129,9 +131,10 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
 
 
-                    if(indiceListPlants==listPlantsObjects.size()-1) {
+                    if(indiceListPlants==listPlantsObjects.size()-1 && ! sellamoUnVEZ) {
                         ///si es el ultimo indice de listPlantsObjects.size(); hacemos la operacion
-                        Log.i("esdebrr","generamos promedio ");
+                        Log.i("sanax","generamos promedio ");
+                        Log.i("sanax","compare "+indiceListPlants+" "+(listPlantsObjects.size()-1));
 
 
                         ///multiplicamos los valores del 1 al 5.....
@@ -139,8 +142,22 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
                         /**para enfunde promedio y descripcion, pero ahora no tiene descripcion*/
 
                         float promedioPorCategorias=generaPromedioCategoriaByINDEXhasta(1,12,listOrecicleDataInitial);
+
+                        Log.i("sanaxxx","generamos promedio uno es  "+promedioPorCategorias);
+
+
                         listOrecicleDataInitial.get(13).setItemCalificadoName("Prom  ");//observacion
                         listOrecicleDataInitial.get(13).setPromedio(promedioPorCategorias/12 ); // 12 es el numero de items de esta categoria
+
+
+                        //Log.i("sanaxxx","generamos total y es "+listOrecicleDataInitial.get(13).getPromedio());
+
+
+                        Log.i("sanaxxx"," el rpmedio es  "+(promedioPorCategorias/12 ));
+
+
+
+
 
 
 
@@ -184,7 +201,7 @@ public class ActivityResultCtrLabr extends AppCompatActivity {
 
                         Log.i("noContains","el valor peomedio de este item es "+promedioTotalDelInforme);
 
-
+                       // sellamoUnVEZ=true;
                     }
 
 
