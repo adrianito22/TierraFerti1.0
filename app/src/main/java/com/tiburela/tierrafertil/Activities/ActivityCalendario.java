@@ -217,7 +217,13 @@ public class ActivityCalendario extends AppCompatActivity {
 
         int semanaNum= Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
 
+
         Log.i("misemana","la semana es "+semanaNum);
+
+        if(semanaNum>50){
+            semanaNum=50;
+
+        }
 
         mireciclerView.scrollToPosition(semanaNum-1);
 

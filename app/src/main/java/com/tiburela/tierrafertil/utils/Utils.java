@@ -119,11 +119,12 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
    public static  String [] returnaRRYkey(){
+
       String [] arraysWhitKeys = {"TITLE", "enfunde/enfundetiempo","enfunde/amareenfunde","enfunde/usodefunda","enfunde/identificacionedad","enfunde/toldeodefunda" ,
               "enfunde/limpiezaracimo","enfunde/dipadisco","enfunde/deschive",
               "enfunde/cirujiaDedosx","enfunde/enfundebarrera","enfunde/racimoscorrectos","enfunde/destore","porcentajexxENfundeYobsrvacion"
 
-              ,"TITLE","deshoje/deshoje","deshoje/cortehojacorrecto","deshoje/despunte", "deshoje/codo","deshoje/hojapuente","deshoje/deshoje/saneocirujiax"
+              ,"TITLE","deshoje/deshoje","deshoje/cortehojacorrecto","deshoje/despunte", "deshoje/codo","deshoje/hojapuente","deshoje/saneocirujiax"
               ,"deshoje/devioHijos","porcentajexxDeshojeYobsrvacion",
 
               "TITLE", "apuntalamiento/ensunche","apuntalamiento/recogepuntual","apuntalamiento/ubicacionsuncho","apuntalamiento/ubicaciondepuntual",
@@ -138,9 +139,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
               "otraslabores/drenajes","otraslabores/limpiezempcado","otraslabores/limpiezabodega","otraslabores/manejodeshechos"
               ,"porcentajexxOtrasLaboresYobsrvacion"  //48 creo
 
-
       };
-
 
 
       return arraysWhitKeys;
@@ -179,18 +178,51 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
    public static   ArrayList<ResultCaldLabAgricls> returnListInitialResults( String []  namesItems,int numPlantasCalificadas){
       ArrayList<ResultCaldLabAgricls>LIStff= new ArrayList();
 
+      Log.i("xxxxxx","el size de names es "+namesItems.length);
+
       for(int indice=0; indice<namesItems.length; indice++){
          //aquii le agregamos si es title otro u optro....pilaxx //dpendiendo del indice
 
          LIStff.add(new ResultCaldLabAgricls(namesItems[indice],numPlantasCalificadas,0 ,false));
 
+         Log.i("xxxxxx","el size de lista es "+LIStff.size());
 
       }
 
+
+      Log.i("sixdd","el size de la lista inicia es "+LIStff.size());
+
+      getPromedioByCategories(LIStff);
       return LIStff;
 
 
    }
+
+   private static void getPromedioByCategories(ArrayList<ResultCaldLabAgricls> listOrecicleDataInitial){
+      //promedio del primer value..
+
+      float promedioEnfunde=0;
+
+
+      Log.i("dddd","el size aqui es cccxccc "+listOrecicleDataInitial.size());
+
+      for(ResultCaldLabAgricls obje: listOrecicleDataInitial){
+
+         if(obje.getPromedio()==0){
+            Log.i("dddd","sizxx");
+
+
+         }
+
+
+
+      }
+
+
+
+
+   }
+
 
 
 

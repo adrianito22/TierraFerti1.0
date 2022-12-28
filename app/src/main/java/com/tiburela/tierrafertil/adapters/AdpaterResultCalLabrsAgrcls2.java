@@ -179,15 +179,15 @@ public class AdpaterResultCalLabrsAgrcls2 extends RecyclerView.Adapter<AdpaterRe
 
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+   public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView txtResultCaldLabAgriclsName;
        // private ImageView imageView;
       //  private LinearLayout linearLayout;
 
-        private TextView txtNameItem;
-        private TextView txtNumPlntasd;
-        private TextView txtPromedio;
+        public TextView txtNameItem;
+        public TextView txtNumPlntasd;
+        public TextView txtPromedio;
 
 
 

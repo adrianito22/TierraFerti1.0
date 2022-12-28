@@ -2,10 +2,6 @@ package com.tiburela.tierrafertil.calendario;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.LightingColorFilter;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.Editable;
@@ -20,7 +16,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.textfield.TextInputEditText;
@@ -96,7 +91,7 @@ public class BottonSheetCalendarioEnf extends BottomSheetDialogFragment {
                 @Override
                 public void onClick(View view) {
 
-                    getRatioNum();
+                    getRatioNumAndShowNUmRacimosCortados();
 
                 }
             });
@@ -317,19 +312,29 @@ private void saveUpadateItem(CalendarioEnf object){
 
     private void setDatInVIEWS(CalendarioEnf object){
 
+          int totalEnfundadosVuelta=0;
 
         if (object.getVuelta1() >0){
-
             ediV1.setText(String.valueOf(object.getVuelta1()));
-
+            totalEnfundadosVuelta=totalEnfundadosVuelta+ object.getVuelta1();
         }
+
 
 
         if (object.getVuelta2() >0){
 
             ediV2.setText(String.valueOf(object.getVuelta2()));
+            totalEnfundadosVuelta=totalEnfundadosVuelta+ object.getVuelta2();
 
         }
+
+
+
+        TextView txtTotalEnfunde=vista.findViewById(R.id.txtTotalEnfunde);
+
+        txtTotalEnfunde.setText(String.valueOf(totalEnfundadosVuelta));
+
+
 
         if (object.getSem9() >0){
 
@@ -683,12 +688,46 @@ private void saveUpadateItem(CalendarioEnf object){
     }
 
 
-    void getRatioNum(){
-        if(ediRacimosCortados.getText().toString().trim().length()==0){
-            ediRacimosCortados.requestFocus();
-            ediRacimosCortados.setError("Valor requerido");
-            return;
+    void getRatioNumAndShowNUmRacimosCortados(){
+
+        //comprobamos que al menos tenga uno de estos....
+
+        int totalRcimosCortados=0;
+
+        if(ediSem9.getText().toString().isEmpty() && ediSem10.getText().toString().isEmpty()
+                && ediSem11.getText().toString().isEmpty() &&
+                ediSem12.getText().toString().isEmpty()  && ediSem13.getText().toString().isEmpty()){
+
+            ediRacimosCortados.setError("INSERTE AL MENOS UN VALOR EN CINTAS CORTADAS");
+
         }
+
+
+
+
+        if(!ediSem9.getText().toString().isEmpty()){
+            totalRcimosCortados=totalRcimosCortados+Integer.parseInt(ediSem9.getText().toString());
+        }
+
+        if(!ediSem10.getText().toString().isEmpty()){
+
+            totalRcimosCortados=totalRcimosCortados+Integer.parseInt(ediSem10.getText().toString());
+        }
+        if(!ediSem11.getText().toString().isEmpty()){
+
+            totalRcimosCortados=totalRcimosCortados+Integer.parseInt(ediSem11.getText().toString());
+        }
+
+        if(!ediSem12.getText().toString().isEmpty()){
+
+            totalRcimosCortados=totalRcimosCortados+Integer.parseInt(ediSem12.getText().toString());
+        }
+        if(!ediSem13.getText().toString().isEmpty()){
+
+            totalRcimosCortados=totalRcimosCortados+Integer.parseInt(ediSem13.getText().toString());
+        }
+
+        ediRacimosCortados.setText(String.valueOf(totalRcimosCortados));
 
 
         if(ediTotalCajas.getText().toString().trim().length()==0){
@@ -698,7 +737,9 @@ private void saveUpadateItem(CalendarioEnf object){
         }
 
 
-        float ratio=Float.parseFloat(ediTotalCajas.getText().toString())/Float.parseFloat(ediRacimosCortados.getText().toString());
+
+
+        float ratio=Float.parseFloat(ediTotalCajas.getText().toString())/totalRcimosCortados;
 
 
         Log.i("elva;uer","el ratio es "+ratio);

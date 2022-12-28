@@ -43,6 +43,7 @@ public class ResultCaldLabAgricls {
 
 
 
+
     public ResultCaldLabAgricls(String itemCalificadoName, int unmPlantasCalificadas, float promedio,boolean isTitle) {
         this.itemCalificadoName = itemCalificadoName;
         this.unmPlantasCalificadas = unmPlantasCalificadas;
