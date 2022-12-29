@@ -60,6 +60,8 @@ public class AdapterAllinforms extends RecyclerView.Adapter<AdapterAllinforms.My
 
         holder.linearLayout.setTag(R.id.tagUniqueId1,listAllFormsModel.get(position).getUniqueIDkeyInformAndKeYSharePref());
         holder. linearLayout.setTag(R.id.tagUniqueId2,listAllFormsModel.get(position).getExtraDataAllFormUniqIdKey());
+        holder. linearLayout.setTag(R.id.codigoProductor,listAllFormsModel.get(position).getCodigoProductor());
+
 
 
 

@@ -477,6 +477,8 @@ public class MainActivityCenter extends AppCompatActivity {
 
         allProductoresList = new ArrayList<>();
 
+        Variables.allProductores=new ArrayList<>();
+
         RealtimDatabase.initDatabasesRootOnly();
         DatabaseReference usersdRef = RealtimDatabase.rootDatabaseReference.child("Productores").child("todosLosProductores");
 
@@ -492,6 +494,9 @@ public class MainActivityCenter extends AppCompatActivity {
                     allProductoresList.add(user);
 
                 }
+
+
+                Variables.allProductores=allProductoresList;
 
 
                 /**ojo por aqui puede haber un posible bug.. en caso que aun no tengamos data en nuestro array list principal*/

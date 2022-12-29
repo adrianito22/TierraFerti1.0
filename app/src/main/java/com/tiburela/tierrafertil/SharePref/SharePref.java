@@ -31,6 +31,7 @@ public class SharePref {
     public static  final String keyIntenExtraData="extraDataddd";
 
     public static  final String keyIntent="esunketuur";
+    public static  final String keyCodigoProd="codkf";
 
 
     private static SharedPreferences mSharedPrefUniqueObjc;

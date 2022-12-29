@@ -15,6 +15,7 @@
     <item type="id" name="tagUniqueId1" />
     <item type="id" name="tagUniqueId2" />
 
+    <item type="id" name="codigoProductor" />
 
 
     <string-array name="porcentajesArray">

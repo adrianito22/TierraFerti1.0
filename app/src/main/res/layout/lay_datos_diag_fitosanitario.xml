@@ -33,8 +33,9 @@
             android:paddingRight="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiLayfinca"
                 style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
@@ -45,16 +46,26 @@
 
                     android:id="@+id/ediFinca"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="52dp"
                     android:background="@android:color/transparent"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <Spinner
+                android:id="@+id/spInnerFinca"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1">
+
+            </Spinner>
+
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiLayUbicacion"
                 style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
@@ -65,13 +76,21 @@
 
                     android:id="@+id/ediUbicacion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="52dp"
                     android:background="@android:color/transparent"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <Spinner
+                android:id="@+id/spinnerUbicacion"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1">
+
+            </Spinner>
 
         </LinearLayout>
 
@@ -86,7 +105,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="52dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/backrgound_item2"
@@ -98,14 +117,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textImputLayoutFecha"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="52dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/backrgound_item2"
@@ -119,6 +140,7 @@
                     android:background="@android:color/transparent"
                     android:gravity="center"
                     android:inputType="text"
+                    android:onClick="selecionaFecha"
                     android:textSize="13sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,9 +155,10 @@
             android:paddingRight="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiLayArea"
                 style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -153,10 +176,18 @@
                     android:textSize="13sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <Spinner
+                android:id="@+id/spinnerArea"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1">
+
+            </Spinner>
+
             <com.google.android.material.textfield.TextInputLayout
                 style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -169,6 +200,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />

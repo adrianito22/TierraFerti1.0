@@ -27,6 +27,7 @@ import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.Plant;
 import com.tiburela.tierrafertil.utils.Utils;
+import com.tiburela.tierrafertil.utils.Variables;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -53,6 +54,9 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     TextInputEditText ediObservacionesAll;
     TextInputEditText ediPercentAll;
      String keyextradata;
+
+
+
 
     RecyclerView mireciclerView;
    int tipoInformCurrent=0;
@@ -526,6 +530,9 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
     }
 
+
+
+/**set data of current object */
 
 
 

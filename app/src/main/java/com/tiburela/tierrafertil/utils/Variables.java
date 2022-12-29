@@ -3,6 +3,7 @@ package com.tiburela.tierrafertil.utils;
 import com.tiburela.tierrafertil.calendario.CalendarioEnf;
 import com.tiburela.tierrafertil.models.ProductorTierraFertil;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ public class Variables {
 
  public static ProductorTierraFertil currentProductorBJECt;
 
+ public static ArrayList<ProductorTierraFertil> allProductores= new ArrayList<>();
 
 
  public static CalendarioEnf currentCalEnfundeoBJECt;
