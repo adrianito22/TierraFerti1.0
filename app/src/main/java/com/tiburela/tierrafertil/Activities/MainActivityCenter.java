@@ -2,9 +2,14 @@ package com.tiburela.tierrafertil.Activities;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,12 +17,22 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
+import com.tiburela.tierrafertil.adapters.AdapterAllinforms;
+import com.tiburela.tierrafertil.adapters.AdapterProductor;
+import com.tiburela.tierrafertil.database.RealtimDatabase;
 import com.tiburela.tierrafertil.models.AllFormsModel;
+import com.tiburela.tierrafertil.models.ProductorTierraFertil;
 import com.tiburela.tierrafertil.utils.Typeinforms;
 import com.tiburela.tierrafertil.utils.Utils;
+import com.tiburela.tierrafertil.utils.Variables;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class MainActivityCenter extends AppCompatActivity {
@@ -26,6 +41,13 @@ public class MainActivityCenter extends AppCompatActivity {
     LinearLayout layDiagnotiscoFitosa;
     LinearLayout layMisInformes;
     LinearLayout layMisICalendarios;
+
+     RecyclerView miReciclerAllOptions;
+    EditText ediNombreProductor;
+
+
+     ArrayList<ProductorTierraFertil> allProductoresList = new ArrayList<>();
+    ArrayList<ProductorTierraFertil>listFiltered= new ArrayList<>();
 
 
 
@@ -46,6 +68,9 @@ public class MainActivityCenter extends AppCompatActivity {
       layMisICalendarios =findViewById(R.id.layMisICalendarios);
 
         eventosBtn();
+
+        getAllUser();
+
 
     }
 
@@ -211,12 +236,12 @@ public class MainActivityCenter extends AppCompatActivity {
 
         EditText ediData2=bottomSheetDialog.findViewById(R.id.ediData2);
         EditText ediData1=bottomSheetDialog.findViewById(R.id.ediData1);
-
-
+         ediNombreProductor=bottomSheetDialog.findViewById(R.id.ediNombreProductor);
+        miReciclerAllOptions=bottomSheetDialog.findViewById(R.id.miReciclerAllOptions);
         Button btnCreateInform=bottomSheetDialog.findViewById(R.id.btnCreateInform);
 
-        //ImageView imgClose=bottomSheetDialog.findViewById(R.id.imgClose);
-      //8  bottomSheetDialog.setCancelable(false);
+
+        textWatcher();
 
 
         btnCreateInform.setOnClickListener(new View.OnClickListener() {
@@ -237,14 +262,23 @@ public class MainActivityCenter extends AppCompatActivity {
 
                 }
 
-                 SharePref.init(MainActivityCenter.this);
+
+                if(ediNombreProductor.getText().toString().trim().isEmpty()  || Variables.currentProductorBJECt==null) {
+                    ediNombreProductor.requestFocus();
+                    ediNombreProductor.setError("No has selecionado un productor");
+                    return;
+                }
+
+
+
+
+                SharePref.init(MainActivityCenter.this);
 
                 String nmameCategory ;
                 nmameCategory=generateNameStringById(informType);
 
                 //creamos el objeto
-                AllFormsModel object=new AllFormsModel(ediData1.getText().toString(),informType,nota,nmameCategory);
-
+                AllFormsModel object=new AllFormsModel(ediData1.getText().toString(),informType,nota,nmameCategory,Variables.currentProductorBJECt.getCodigo());
 
 
                 //obtebnemos el mapa
@@ -254,10 +288,7 @@ public class MainActivityCenter extends AppCompatActivity {
 
                 SharePref.saveMapAlLINFORMS(mapaOfPREFERENces,SharePref.KEY_AllINFORMS_SHAREP);
 
-
-
                 //empezamos intencion
-
                 //decide a donde ir
 
 
@@ -314,5 +345,167 @@ public class MainActivityCenter extends AppCompatActivity {
         }
 
     }
+
+
+
+    //descrgamos la lista de productores allProductores
+
+
+
+    private void dowloadAllProductoresList(){
+        //cuando descragemos,,, mostramos la opcion de automcompletar...
+
+
+
+    }
+
+    private void textWatcher(  ) {
+
+        ediNombreProductor.addTextChangedListener(new TextWatcher() {
+            private boolean ignorar = false;
+            private long ultimaCorrida = -1;
+            private String textoOriginal="";
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // Log.i("comisaria","el size en before text es "+ i2);
+                // Log.i("comisaria","el size  en ontexttext es "+edt_search.getText().toString().length() );
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+
+
+               // Log.i("comisaria","el size  en ontexttext es "+edt_search.getText().toString().length() );
+                Log.i("comisaria","llamamos " );
+
+               // addDataReciclerAndShowOptions(redondeadoTotalCreate);
+
+
+                listFiltered.clear();
+                listFiltered= new ArrayList<>();
+
+                for(int index = 0; index< allProductoresList.size(); index++) {
+
+                        //  String textSearch=charSequence.toString().toUpperCase(Locale.ROOT);
+
+                    if( charSequence.toString().isEmpty() || allProductoresList.get(index).getNombre().contains(charSequence.toString().toUpperCase()))
+                    {
+
+                        listFiltered.add(allProductoresList.get(index));
+
+                        Log.i("comisaria","llamamos el size de lista es "+listFiltered.size() );
+
+
+                        addDataReciclerAndShowOptions(listFiltered);
+
+                    }
+
+
+
+                    //llaamos a crear recilcer nuevamente todos
+
+            }
+
+                if(listFiltered.size()==0){
+
+                    addDataReciclerAndShowOptions(listFiltered);
+
+                }
+
+
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                //  Log.i("comisaria","el size  en affter es "+edt_search.getText().toString().length() );
+
+
+            }
+
+        });
+
+    }
+
+
+    private void addDataReciclerAndShowOptions(ArrayList<ProductorTierraFertil> listProductores) {
+
+        //createData(numeroListCrear);
+        miReciclerAllOptions.setVisibility(View.VISIBLE);
+
+
+        miReciclerAllOptions.setHasFixedSize(true);
+
+        AdapterProductor adapter = new AdapterProductor(MainActivityCenter.this, listProductores);
+
+        miReciclerAllOptions.setLayoutManager(new LinearLayoutManager(MainActivityCenter.this, LinearLayoutManager.VERTICAL, false));
+
+        miReciclerAllOptions.setAdapter(adapter);
+
+
+        adapter.setOnItemClickListener(new AdapterProductor.ClickListener() {
+            @Override
+            public void onItemClick(int position, View v) {
+
+
+                Variables.currentProductorBJECt=listProductores.get(position);
+
+                 /***aqui obtenemos el objeto global*/
+
+                 ediNombreProductor.setText(Variables.currentProductorBJECt.getNombre());
+
+                miReciclerAllOptions.setVisibility(View.GONE);
+
+                Log.i("elcickler","el nombre del productor es "+Variables.currentProductorBJECt.getNombre());
+                Log.i("elcickler","el nombre del CODIGO DE PRODUCTOR ES  es "+Variables.currentProductorBJECt.getCodigo());
+
+
+
+
+            }
+        });
+
+
+    }
+
+
+    private void getAllUser(){
+
+        allProductoresList = new ArrayList<>();
+
+        RealtimDatabase.initDatabasesRootOnly();
+        DatabaseReference usersdRef = RealtimDatabase.rootDatabaseReference.child("Productores").child("todosLosProductores");
+
+        ValueEventListener eventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                   ProductorTierraFertil  user=ds.getValue(ProductorTierraFertil.class);
+
+                    Log.i("misdata","la data es "+user.getNombre());
+                    //  array.add(name);
+
+                    allProductoresList.add(user);
+
+                }
+
+
+                /**ojo por aqui puede haber un posible bug.. en caso que aun no tengamos data en nuestro array list principal*/
+                ///aqui ya podemos activar........
+
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+        usersdRef.addListenerForSingleValueEvent(eventListener);
+    }
+
+
 
 }

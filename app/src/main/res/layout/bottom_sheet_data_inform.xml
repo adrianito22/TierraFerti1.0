@@ -38,6 +38,27 @@
         android:inputType="textPersonName"
         android:padding="10dp" />
 
+
+    <EditText
+        android:id="@+id/ediNombreProductor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/backrgound_item"
+        android:ems="10"
+        android:hint="Nombre Productor"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/miReciclerAllOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
     <EditText
         android:id="@+id/ediData2"
         android:layout_width="match_parent"

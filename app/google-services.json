@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "632758195177",
+    "firebase_url": "https://tierrafertil-b791c-default-rtdb.firebaseio.com",
+    "project_id": "tierrafertil-b791c",
+    "storage_bucket": "tierrafertil-b791c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632758195177:android:c078defa0014ef9473b178",
+        "android_client_info": {
+          "package_name": "com.tiburela.tierrafertil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632758195177-1r45v3lhfe4sogd2q1icmt8jr3sti6np.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiburela.tierrafertil",
+            "certificate_hash": "085d4cbea929f456a4107837fddc610f711ce8f7"
+          }
+        },
+        {
+          "client_id": "632758195177-jh4bnspvs4lbis4kd51r1bva93h68b3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs6PFJA8utk1h76IvZlB6AgqTrOzmdKVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632758195177-jh4bnspvs4lbis4kd51r1bva93h68b3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

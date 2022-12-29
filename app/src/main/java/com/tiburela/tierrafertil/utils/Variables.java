@@ -1,11 +1,17 @@
 package com.tiburela.tierrafertil.utils;
 
 import com.tiburela.tierrafertil.calendario.CalendarioEnf;
+import com.tiburela.tierrafertil.models.ProductorTierraFertil;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Variables {
+
+ public static ProductorTierraFertil currentProductorBJECt;
+
+
+
  public static CalendarioEnf currentCalEnfundeoBJECt;
 public static Map<String, CalendarioEnf> miMap= new HashMap<>();
 

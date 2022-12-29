@@ -31,7 +31,7 @@
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/activity_result_ctr_labr.xml" value="0.176" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/all_inform_item.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/apuntalamiento.xml" value="0.4" />
-        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_data_inform.xml" value="0.536" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_data_inform.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/bottom_sheet_ver_atachx2.xml" value="0.4" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/calidad_labrs_agricolas_1.xml" value="0.2" />
@@ -53,6 +53,7 @@
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_control_cald_checkbx.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_control_cald_checkbx2.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_oservaciones_and_prom.xml" value="0.20222317229585293" />
+        <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_productor.xml" value="0.264" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/item_title_categoria.xml" value="0.10009267840593142" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/lay_datos_diag_fitosanitario.xml" value="0.19966230476994512" />
         <entry key="..\:/Users/adrix/AndroidStudioProjects/tierrafertil/app/src/main/res/layout/layout_all_calid_labr_agrcls.xml" value="0.4" />

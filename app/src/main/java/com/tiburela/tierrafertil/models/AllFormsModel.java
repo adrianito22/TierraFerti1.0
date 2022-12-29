@@ -12,6 +12,13 @@ public class AllFormsModel {
     private String dateCreate;
     private String categoryText;
 
+    public String getCodigoProductor() {
+        return codigoProductor;
+    }
+
+    private String codigoProductor;
+
+
     public String getExtraDataAllFormUniqIdKey() {
         return extraDataAllFormUniqIdKey;
     }
@@ -95,7 +102,7 @@ public class AllFormsModel {
         this.categoryText = categoryText;
     }
 
-    public AllFormsModel(String name, int tipoFormPertenec, String notaInform, String categoryText) {
+    public AllFormsModel(String name, int tipoFormPertenec, String notaInform, String categoryText,String codigoProductor) {
         uniqueIDkeyInformAndKeYSharePref = UUID.randomUUID().toString();
         this.name = name;
         Format formatter = new SimpleDateFormat("dd-MM-yyyy");
@@ -106,6 +113,7 @@ public class AllFormsModel {
         this.notaInform=notaInform;
         this.categoryText =categoryText;
         extraDataAllFormUniqIdKey=UUID.randomUUID().toString();
+        this.codigoProductor=codigoProductor;
 
     }
 
