@@ -21,8 +21,10 @@ import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterAllinforms;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.AllFormsModel;
+import com.tiburela.tierrafertil.models.ProductorTierraFertil;
 import com.tiburela.tierrafertil.utils.Typeinforms;
 import com.tiburela.tierrafertil.utils.Utils;
+import com.tiburela.tierrafertil.utils.Variables;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +63,11 @@ ArrayList<AllFormsModel> lisInformFiltered;
         if (tipoInformCurrent==Typeinforms.ALL_INFORMS) {
 
             //AGREGAMOS DATA IN SPINNER
-            //The key argument here must match that used in the other activity
-        }
+         }
+
+
+        Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.loadMapPreferencesProductorTierraF(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+
 
     }
 

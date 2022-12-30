@@ -9,6 +9,10 @@ import com.tiburela.tierrafertil.models.AllFormsModel;
 import com.tiburela.tierrafertil.models.Plant;
 import com.tiburela.tierrafertil.models.ResultCaldLabAgricls;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -446,7 +450,26 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
    }
 
 
+   public static boolean isReachable(String targetUrl) throws IOException
+   {
 
+      HttpURLConnection httpUrlConnection = (HttpURLConnection) new URL(
+              targetUrl).openConnection();
+      httpUrlConnection.setRequestMethod("HEAD");
+
+      try
+      {
+         int responseCode = httpUrlConnection.getResponseCode();
+
+         return responseCode == HttpURLConnection.HTTP_OK;
+      } catch (UnknownHostException noInternetConnection)
+      {
+         return false;
+      }
+
+
+
+   }
 
 
 

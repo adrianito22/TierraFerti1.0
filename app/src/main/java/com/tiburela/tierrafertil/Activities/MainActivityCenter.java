@@ -32,6 +32,7 @@ import com.tiburela.tierrafertil.utils.Typeinforms;
 import com.tiburela.tierrafertil.utils.Utils;
 import com.tiburela.tierrafertil.utils.Variables;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -69,7 +70,7 @@ public class MainActivityCenter extends AppCompatActivity {
 
         eventosBtn();
 
-        getAllUser();
+        getAllUser(false,0);
 
 
     }
@@ -210,10 +211,28 @@ public class MainActivityCenter extends AppCompatActivity {
 
                 /**aqui agregamos el tipo de informe que queremos agregar por ahorasoloagudaremos uno  INFORM_FITOSANITARIO*/
 
-                sheetBootomInformNew(typeInform,intencion);
+
+                //obtenmos de prefeencias
+                Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.loadMapPreferencesProductorTierraF(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+                 //descragamos la lista con todos nombre de productores...
+                if(Variables.allProductores.size()==0){ //si la lista no esta descargada
+                    getAllUser(true,typeInform);
+
+                }
+                else{
+
+                    try {
+                        sheetBootomInformNew(typeInform);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
 
-               //  startActivity(intencion);
+                }
+
+
+
+                //  startActivity(intencion);
                 bottomSheetDialog.dismiss();
 
 
@@ -228,7 +247,14 @@ public class MainActivityCenter extends AppCompatActivity {
     }
 
 
-    private void sheetBootomInformNew(int informType,Intent intencion){
+    private void sheetBootomInformNew(int informType) throws IOException {
+
+
+        if(!chekIfUserHaveInternetOrExistMapPreferences()){
+            Toast.makeText(this, "  No tienes conexion a internet", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivityCenter.this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_data_inform);
@@ -240,8 +266,10 @@ public class MainActivityCenter extends AppCompatActivity {
         miReciclerAllOptions=bottomSheetDialog.findViewById(R.id.miReciclerAllOptions);
         Button btnCreateInform=bottomSheetDialog.findViewById(R.id.btnCreateInform);
 
-
         textWatcher();
+
+
+
 
 
         btnCreateInform.setOnClickListener(new View.OnClickListener() {
@@ -473,7 +501,7 @@ public class MainActivityCenter extends AppCompatActivity {
     }
 
 
-    private void getAllUser(){
+    private void getAllUser(boolean isCreateNewReport, int tipeInfomrOptional){
 
         allProductoresList = new ArrayList<>();
 
@@ -497,6 +525,19 @@ public class MainActivityCenter extends AppCompatActivity {
 
 
                 Variables.allProductores=allProductoresList;
+                SharePref.saveMapProductorTierrFertil((Map<String, ProductorTierraFertil>) Variables.allProductores,SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+
+
+                if(isCreateNewReport && allProductoresList.size()>0){
+
+                    try {
+                        sheetBootomInformNew(tipeInfomrOptional);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    ///
+
+                }
 
 
                 /**ojo por aqui puede haber un posible bug.. en caso que aun no tengamos data en nuestro array list principal*/
@@ -511,6 +552,54 @@ public class MainActivityCenter extends AppCompatActivity {
         usersdRef.addListenerForSingleValueEvent(eventListener);
     }
 
+
+
+    private boolean chekIfUserHaveInternetOrExistMapPreferences() throws IOException {
+             boolean isReady;
+
+        Map<String,ProductorTierraFertil>miMap= SharePref.loadMapPreferencesProductorTierraF(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+
+        if(miMap.size()==0){
+            Log.i("mapadd","es un mapa vacio");
+            isReady=false;
+        }else{
+            Log.i("mapadd","este mapa tiene data hurra ");
+            isReady=true;
+
+        }
+
+
+        if(isReady){
+            return true;
+        }
+
+
+        if(Utils.isReachable("http://www.google.com/")){
+            Log.i("mapadd","bien hay conexion internet ");
+            return true;
+
+        }
+
+        else
+
+        {
+            Log.i("mapadd","No hay conexion internet ");
+
+            return false;
+
+
+        }
+
+
+
+        ///1.el usuario tiene que tener conexion internet
+        //.2.tiene que haber una lista de prefrencias...
+
+        //4. si el user no tiene un map en prefrencias y tampoco tiene conexion a internet ,entonces no puede..
+        //5. si no tiene prefrencias ,tiene conexion a intenert , pero no se le descrga la lista por algun motivo tampoco pued...
+
+
+    }
 
 
 }

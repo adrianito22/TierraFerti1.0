@@ -10,6 +10,7 @@ import com.google.gson.reflect.TypeToken;
 import com.tiburela.tierrafertil.calendario.CalendarioEnf;
 import com.tiburela.tierrafertil.models.AllFormsModel;
 import com.tiburela.tierrafertil.models.Plant;
+import com.tiburela.tierrafertil.models.ProductorTierraFertil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +36,9 @@ public class SharePref {
 
 
     private static SharedPreferences mSharedPrefUniqueObjc;
+
+    public static final String kEYPRODUCTOR_TIERRA_FERTIL="KEYPRODUCTORTIERRAFertilMap";
+
 
 
     public static void init(Context context)
@@ -335,6 +339,44 @@ public class SharePref {
     }
 
 
+
+    public static  void saveMapProductorTierrFertil(Map<String, ProductorTierraFertil> inputMap, String keySharePref) {
+        if (mSharedPrefUniqueObjc != null){
+            // JSONObject jsonObject = new JSONObject(inputMap);
+            //   String jsonString = jsonObject.toString();
+            mSharedPrefUniqueObjc.edit()
+                    //  .remove("My_map")
+                    .putString(keySharePref, new Gson().toJson(inputMap))
+
+
+                    // .putString(keySharePref, jsonString)
+                    .apply();
+        }
+    }
+
+    public static  Map<String,ProductorTierraFertil> loadMapPreferencesProductorTierraF(String keyShare) {
+
+        Gson   gson = new Gson();
+        String response=mSharedPrefUniqueObjc.getString(keyShare , "");
+
+        Type type = new TypeToken<Map<String,ProductorTierraFertil>>(){}.getType();
+        Map<String,ProductorTierraFertil> map;
+        map = gson.fromJson(response, type);
+
+
+        if(response.equals("")) {
+            Log.i("lashareperf","no hay data en share");
+
+            map= new HashMap<>();
+            return map;
+
+        }else{
+            Log.i("lashareperf","Si hay data en share y data es length es "+response);
+            return map;
+        }
+
+
+    }
 
 
 

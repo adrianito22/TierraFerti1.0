@@ -9,6 +9,12 @@ import java.util.Map;
 
 public class Variables {
 
+
+ public static int NO_HAY_PREFRECNES_MAP=100;
+ public static int NO_HAY_CONEXION_INTERNET=100;
+ public static int NO_HAY_PREFRENCIAS_NI_INTERNET=100;
+
+
  public static ProductorTierraFertil currentProductorBJECt;
 
  public static ArrayList<ProductorTierraFertil> allProductores= new ArrayList<>();
