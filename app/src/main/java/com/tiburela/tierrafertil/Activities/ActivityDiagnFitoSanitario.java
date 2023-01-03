@@ -114,6 +114,7 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
             keyprefrencesGlobaL=keyprefrences;
             codigoProductor=extras.getString(SharePref.keyCodigoProd,"");
             //The key argument here must match that used in the other activity
+
         }
 
 

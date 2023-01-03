@@ -133,18 +133,18 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
 
         /**obtebnemos nuestro objeto Current**/
-        if(Variables.currentProductorBJECt==null){
-            try {
 
-                if(Variables.allProductores.size()>0){
-                    Log.i("nosood","se ejecto el if ");
-                    getProductorByID(codigoProductor,Variables.allProductores);
-                }
+        try {
 
-            } catch (Exception e) {
-                e.printStackTrace();
+            if(Variables.allProductores.size()>0){
+                Log.i("nosood","se ejecto el if ");
+                getProductorByID(codigoProductor,Variables.allProductores);
             }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
 
 
         Utils.hasmapDataGlobal = (HashMap<String, String>) SharePref.loadMapPreferencesDataOfFields(ActivityPlantCaldLbrs.this,keyextradata);
@@ -783,5 +783,11 @@ private void addDataGeneralInViews(){
         ediPercentAll=findViewById(R.id.ediPercentAll);
 
     }
+
+
+    /****chekear que pasa cuando el productor no es nulo porque se seleciono de otra parte*
+     *mirar
+     *
+     * */
 
 }
