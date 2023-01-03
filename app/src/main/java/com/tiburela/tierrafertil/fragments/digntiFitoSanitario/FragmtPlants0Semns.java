@@ -15,11 +15,9 @@ import androidx.fragment.app.Fragment;
 import com.tiburela.tierrafertil.Activities.ActivityDiagnFitoSanitario;
 import com.tiburela.tierrafertil.MyInterface;
 import com.tiburela.tierrafertil.R;
-import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.utils.Utils;
 
 import java.text.DecimalFormat;
-import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -131,7 +129,7 @@ public class FragmtPlants0Semns extends Fragment implements MyInterface {
          view = inflater.inflate(R.layout.fragment_plantas_0_semns, container, false);
         findviewsId();
         initArraysEditex();
-        if(Utils.hasmapFitosnitario.size()>0) {
+        if(Utils.hasmapDataGlobal.size()>0) {
             Log.i("slaerorfd","zznsi es mayor de cero");
 
         }else {
@@ -567,7 +565,7 @@ private void addEVENT() {
 
 
         //meotodo para gregar data by hashmap
-      Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/pl0Semns");
+      Utils.addDataHashmapInEditext(  Utils.hasmapDataGlobal,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/pl0Semns");
 
 
 

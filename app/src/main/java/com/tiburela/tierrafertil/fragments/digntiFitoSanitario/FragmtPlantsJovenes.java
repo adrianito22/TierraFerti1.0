@@ -1,6 +1,5 @@
 package com.tiburela.tierrafertil.fragments.digntiFitoSanitario;
 
-import android.opengl.Visibility;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -131,7 +129,7 @@ public class FragmtPlantsJovenes extends Fragment {
         findviewsId();
         initArraysEditex();
 
-        if(Utils.hasmapFitosnitario.size()>0) {
+        if(Utils.hasmapDataGlobal.size()>0) {
             Log.i("slaerorfd","zznsi es mayor de cero");
 
         }else {
@@ -562,7 +560,7 @@ private void addEVENT() {
 
 
         //meotodo para gregar data by hashmap
-        Utils.addDataHashmapInEditext( Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/plJovenes");
+        Utils.addDataHashmapInEditext( Utils.hasmapDataGlobal,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/plJovenes");
 
 
 

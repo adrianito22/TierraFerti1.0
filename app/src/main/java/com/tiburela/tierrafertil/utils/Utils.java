@@ -22,7 +22,7 @@ public class Utils {
 
    public static  String keyextraGLObal ="KEYEXTRASSparatodos";
 
-   public static HashMap<String, String> hasmapFitosnitario= new HashMap<>();
+   public static HashMap<String, String> hasmapDataGlobal = new HashMap<>();
 
   public static HashMap<String,String>miMapaToSaveMoreInfoPlants= new HashMap<>();
 
@@ -238,7 +238,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
 
-      Log.i("slaerorfd","en save cuadro el size es "+ Utils.hasmapFitosnitario.size());
+      Log.i("slaerorfd","en save cuadro el size es "+ Utils.hasmapDataGlobal.size());
 
 
 
@@ -253,7 +253,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
             }
 
 
-            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+            Utils.hasmapDataGlobal.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
          }
 
 
@@ -264,7 +264,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
                return ;
             }
 
-            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+            Utils.hasmapDataGlobal.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
          }
 
 
@@ -276,7 +276,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
             }
 
 
-            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+            Utils.hasmapDataGlobal.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
 
          }
 
@@ -290,7 +290,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
 
-      SharePref.saveMapPreferFields( Utils.hasmapFitosnitario,keyprefrences);
+      SharePref.saveMapPreferFields( Utils.hasmapDataGlobal,keyprefrences);
 
 
 
@@ -345,14 +345,14 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
       for (int indice = 0; indice < arrayColumnHn.length; indice++) {
 
          if (!arrayColumnHn[indice].getText().toString().trim().isEmpty()) {
-            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+            Utils.hasmapDataGlobal.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
          }
 
 
 
 
          if (!arrayColumnHe[indice].getText().toString().trim().isEmpty()) {
-            Utils.hasmapFitosnitario.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
+            Utils.hasmapDataGlobal.put(tag + arrayColumnHn[indice].getId(), arrayColumnHn[indice].getText().toString());
          }
 
 
@@ -365,7 +365,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
 
-      SharePref.saveMapPreferFields( Utils.hasmapFitosnitario,keyprefrences);
+      SharePref.saveMapPreferFields( Utils.hasmapDataGlobal,keyprefrences);
 
 
 

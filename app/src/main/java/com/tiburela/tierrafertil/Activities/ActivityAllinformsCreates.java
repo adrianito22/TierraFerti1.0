@@ -250,16 +250,12 @@ private void filterdtaandCALLadpater()
                 if(tipoInformCurrent ==Typeinforms.CALIDAD_LABRES_AGRICOLAS) {
                     Intent intent = new Intent(ActivityAllinformsCreates.this,ActivityPlantCaldLbrs.class);
 
-
                     intent.putExtra(Utils.keyIntentXtraInformsPlant,Typeinforms.PLANT_SET);
                     intent.putExtra(SharePref.keyIntent,idSelectedItem); //aqui le pasamoe el id del form all forms
                     intent.putExtra(SharePref.keyIntenExtraData,idSelected2ItemExtraData); //aqui le pasamoe el id del form all forms
-
-
+                    intent.putExtra(SharePref.keyCodigoProd,codigoProductor); //aqui le pasamoe el id del form all forms
 
                     startActivity(intent);
-
-
 
 
                 }

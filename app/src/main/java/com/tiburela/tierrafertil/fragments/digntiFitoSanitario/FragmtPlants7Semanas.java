@@ -128,7 +128,7 @@ public class FragmtPlants7Semanas extends Fragment {
         initArraysEditex();
 
 
-        if(Utils.hasmapFitosnitario.size()>0) {
+        if(Utils.hasmapDataGlobal.size()>0) {
             Log.i("slaerorfd","zznsi es mayor de cero");
 
         }else {
@@ -556,7 +556,7 @@ private void addEVENT() {
 
 
         //meotodo para gregar data by hashmap
-        Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/pl7Semns");
+        Utils.addDataHashmapInEditext(  Utils.hasmapDataGlobal,arrayColumnHn,arrayColumnTh,arrayColumnHe,"/pl7Semns");
 
 
 

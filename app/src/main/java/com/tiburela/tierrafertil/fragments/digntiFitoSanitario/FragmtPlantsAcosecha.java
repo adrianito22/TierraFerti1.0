@@ -130,7 +130,7 @@ public class FragmtPlantsAcosecha extends Fragment {
         view = inflater.inflate(R.layout.fragment_plantas_a_cosecha, container, false);
         findviewsId();
         initArraysEditex();
-        if(Utils.hasmapFitosnitario.size()>0) {
+        if(Utils.hasmapDataGlobal.size()>0) {
             Log.i("slaerorfd","zznsi es mayor de cero");
 
         }else {
@@ -558,7 +558,7 @@ public class FragmtPlantsAcosecha extends Fragment {
 
 
         //meotodo para gregar data by hashmap
-        Utils.addDataHashmapInEditext(  Utils.hasmapFitosnitario,arrayColumnHn,arrayColumnHe,"/plCosecha");
+        Utils.addDataHashmapInEditext(  Utils.hasmapDataGlobal,arrayColumnHn,arrayColumnHe,"/plCosecha");
 
 
 

@@ -2,7 +2,6 @@ package com.tiburela.tierrafertil.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.gridlayout.widget.GridLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,23 +11,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
 import com.tiburela.tierrafertil.adapters.AdapterPlant;
 import com.tiburela.tierrafertil.dialogs.DialogFragmentx;
 import com.tiburela.tierrafertil.models.Plant;
+import com.tiburela.tierrafertil.models.ProductorTierraFertil;
 import com.tiburela.tierrafertil.utils.Utils;
 import com.tiburela.tierrafertil.utils.Variables;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -38,12 +42,12 @@ import java.util.UUID;
 public class ActivityPlantCaldLbrs extends AppCompatActivity {
   ///aquimostramos en un recilcerlos objetos plant...
 
-     GridLayout gridLayout;
+     LinearLayout lay_container_datsGrales;
     TextView txtDtsGenrales;
     LinearLayout layotl1;
     LinearLayout  layotl2;
 
-
+    String codigoProductor;
     TextInputEditText ediProductor;
     TextInputEditText ediFinca;
     TextInputEditText ediFecha;
@@ -55,7 +59,8 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     TextInputEditText ediPercentAll;
      String keyextradata;
 
-
+      Spinner spInnerFinca;
+      Spinner spinnerUbicacion;
 
 
     RecyclerView mireciclerView;
@@ -80,6 +85,24 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
 
         ediFecha=findViewById(R.id.ediFecha);
+        ediFecha.setKeyListener(null);
+
+        Calendar  calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+        String date = dateFormat.format(calendar.getTime());
+        ediFecha.setText(date);
+
+         spInnerFinca=findViewById(R.id.spInnerFinca);
+         spinnerUbicacion=findViewById(R.id.spinnerUbicacion);
+        findViewsIds();
+
+        int semanaNum= Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+
+        ediSemana.setText(String.valueOf(semanaNum));
+
+        //colccamos la semana..
+
 
         ediFecha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,40 +123,70 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
             keySharePrefeItem = extras.getString(SharePref.keyIntent);
             keyextradata=extras.getString(SharePref.keyIntenExtraData);
 
+            codigoProductor=extras.getString(SharePref.keyCodigoProd,"");
+
             //The key argument here must match that used in the other activity
         }
 
+        Log.i("misfinca","el key aqui es "+keySharePrefeItem);
 
 
 
+        /**obtebnemos nuestro objeto Current**/
+        if(Variables.currentProductorBJECt==null){
+            try {
+
+                if(Variables.allProductores.size()>0){
+                    Log.i("nosood","se ejecto el if ");
+                    getProductorByID(codigoProductor,Variables.allProductores);
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        Utils.hasmapDataGlobal = (HashMap<String, String>) SharePref.loadMapPreferencesDataOfFields(ActivityPlantCaldLbrs.this,keyextradata);
+        /***si tenemos data en preferences*/
+
+        if ( Utils.hasmapDataGlobal.size()>0) {
+
+            Log.i("misfinca","SE EJECUTO EL if");
+            setDtaInVIEWSGENRALESBySharePreferences();
+
+
+        } else {
+
+
+            Log.i("misfinca","SE EJECUTO EL ELSE");
+
+            addDataGeneralInViews();  //agregamos la data...
+
+        }
 
         ///obtenemos una lista con las plantas...
         //obtenemos la lista.......
 
        /// opbtenmos plantas que cotneienn esteid...
-        mireciclerView =findViewById(R.id.mirecicler);
-        btnSaveAndCalc=findViewById(R.id.btnSaveAndCalc);
 
 
-        gridLayout=findViewById(R.id.gridLayout);
-        txtDtsGenrales=findViewById(R.id.txtDtsGenrales);
-        layotl1=findViewById(R.id.layotl1);
-        layotl2=findViewById(R.id.layotl2);
+
 
         txtDtsGenrales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(gridLayout.getVisibility()==View.VISIBLE) {
+                if(lay_container_datsGrales.getVisibility()==View.VISIBLE) {
 
-                    gridLayout.setVisibility(View.GONE);
+                    lay_container_datsGrales.setVisibility(View.GONE);
 
                     layotl1.setVisibility(View.GONE);
                     layotl2.setVisibility(View.GONE);
 
                 }else{
 
-                    gridLayout.setVisibility(View.VISIBLE);
+                    lay_container_datsGrales.setVisibility(View.VISIBLE);
 
                     layotl1.setVisibility(View.VISIBLE);
                     layotl2.setVisibility(View.VISIBLE);
@@ -220,6 +273,21 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     }
 
 
+    private void getProductorByID(String idSearch,ArrayList<ProductorTierraFertil>listGlobal){
+
+        for(int index=0;index<listGlobal.size();index++){
+
+            if(listGlobal.get(index).getCodigo().equalsIgnoreCase(idSearch)){
+
+                Variables.currentProductorBJECt= listGlobal.get(index);
+            }
+
+
+        }
+
+
+
+    }
 
 
     private void setDataRecyclerView(ArrayList<Plant>list){
@@ -477,25 +545,43 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
     private void addmMoreDataOfFormAndSave(){
 
-        ediProductor=findViewById(R.id.ediProductor);
-        ediFinca=findViewById(R.id.ediFinca);
-        ediFecha=findViewById(R.id.ediFecha);
-        ediLugar=findViewById(R.id.ediLugar);
-        ediSemana=findViewById(R.id.ediSemana);
-        odiCodigO=findViewById(R.id.odiCodigO);
-        ediFirmaTec=findViewById(R.id.ediFirmaTec);
-        ediObservacionesAll=findViewById(R.id.ediObservacionesAll);
-        ediPercentAll=findViewById(R.id.ediPercentAll);
+
 
         Utils.miMapaToSaveMoreInfoPlants.put("productor",ediProductor.getText().toString());
-        Utils.miMapaToSaveMoreInfoPlants.put("finca",ediFinca.getText().toString());
+
+        if(spInnerFinca.getVisibility()==View.VISIBLE){
+            Utils.miMapaToSaveMoreInfoPlants.put("finca",spInnerFinca.getSelectedItem().toString());
+
+
+        }else{
+            Utils.miMapaToSaveMoreInfoPlants.put("finca",ediFinca.getText().toString());
+
+
+        }
+
+
+
         Utils.miMapaToSaveMoreInfoPlants.put("fecha",ediFecha.getText().toString());
-        Utils.miMapaToSaveMoreInfoPlants.put("lugar",ediLugar.getText().toString());
+
+
+        if(spinnerUbicacion.getVisibility()==View.VISIBLE){
+            Utils.miMapaToSaveMoreInfoPlants.put("ubicacion",spinnerUbicacion.getSelectedItem().toString());
+
+
+        }else{
+            Utils.miMapaToSaveMoreInfoPlants.put("ubicacion",ediLugar.getText().toString());
+
+
+        }
+
         Utils.miMapaToSaveMoreInfoPlants.put("semana",ediSemana.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("codigo",odiCodigO.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("firma",ediFirmaTec.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("observaciones",ediObservacionesAll.getText().toString());
         Utils.miMapaToSaveMoreInfoPlants.put("percent",ediPercentAll.getText().toString());
+
+        Log.i("misfinca","el key aqui es "+keySharePrefeItem);
+
 
         SharePref.init(ActivityPlantCaldLbrs.this);
        SharePref.saveMapPreferFields(Utils.miMapaToSaveMoreInfoPlants,keyextradata);
@@ -508,15 +594,7 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
     private void addExtradatInViews(Map<String,String> mimapa){
 
-        ediProductor=findViewById(R.id.ediProductor);
-        ediFinca=findViewById(R.id.ediFinca);
-        ediFecha=findViewById(R.id.ediFecha);
-        ediLugar=findViewById(R.id.ediLugar);
-        ediSemana=findViewById(R.id.ediSemana);
-        odiCodigO=findViewById(R.id.odiCodigO);
-        ediFirmaTec=findViewById(R.id.ediFirmaTec);
-        ediObservacionesAll=findViewById(R.id.ediObservacionesAll);
-        ediPercentAll=findViewById(R.id.ediPercentAll);
+
 
 
         TextInputEditText [] miarray={ediProductor,ediFinca,ediFecha,ediLugar,ediSemana,odiCodigO,ediFirmaTec,ediObservacionesAll,ediPercentAll};
@@ -535,6 +613,175 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 /**set data of current object */
 
 
+private void addDataGeneralInViews(){
 
+    /**si existe */
+
+
+
+
+    if(Variables.currentProductorBJECt==null){
+        Log.i("juanala","es nulo");
+
+    }
+
+
+
+    if(Variables.currentProductorBJECt!=null){
+        Log.i("juanala","no es nulo");
+
+
+        ediProductor.setText(Variables.currentProductorBJECt.getNombre());
+        odiCodigO.setText(Variables.currentProductorBJECt.getCodigo());
+
+        ArrayAdapter<String> spinnerArrayAdapter;
+
+        /**ahora con los datos que estan separados por &&*/
+
+
+        if(Variables.currentProductorBJECt.getFinca().contains("&")){
+
+            spinnerArrayAdapter= new ArrayAdapter<String>(
+                    this, android.R.layout.simple_spinner_item, createListByString(Variables.currentProductorBJECt.getFinca()));
+            spInnerFinca.setAdapter(spinnerArrayAdapter);
+            spInnerFinca.setVisibility(View.VISIBLE);
+
+            TextInputLayout tiLayfinca=findViewById(R.id.tiLayfinca);
+            tiLayfinca.setVisibility(View.GONE);
+            Log.i("misfinca","hay un & ");
+
+            ediFinca.setVisibility(View.GONE);
+
+
+        }else{
+            ediFinca.setText(Variables.currentProductorBJECt.getFinca());
+            spInnerFinca.setVisibility(View.GONE);
+        }
+
+
+
+
+        if(Variables.currentProductorBJECt.getUbicacion().contains("&")){
+            spinnerArrayAdapter= new ArrayAdapter<String>(
+                    this, android.R.layout.simple_spinner_item, createListByString(Variables.currentProductorBJECt.getUbicacion()) );
+            spinnerUbicacion.setAdapter(spinnerArrayAdapter);
+            spinnerUbicacion.setVisibility(View.VISIBLE);
+            TextInputLayout tiLayUbicacion=findViewById(R.id.tiLayUbicacion);
+
+            tiLayUbicacion.setVisibility(View.GONE);
+
+          //  spinnerUbicacion.setVisibility(View.GONE);
+
+        }
+        else{
+            ediLugar.setText(Variables.currentProductorBJECt.getUbicacion());
+            spinnerUbicacion.setVisibility(View.GONE);
+
+
+        }
+
+
+
+
+    }
+
+
+}
+
+    private ArrayList<String>createListByString(String word){
+
+        ArrayList<String> list = new ArrayList<>();
+
+        String[] array=word.split("&");
+
+        for(int indice=0; indice< array.length; indice++){
+
+            if(!array[indice].trim().isEmpty()){
+                list.add(array[indice]);
+
+            }
+
+
+        }
+
+
+        return  list;
+    }
+
+
+    private void setDtaInVIEWSGENRALESBySharePreferences() {
+
+
+        if(Utils.hasmapDataGlobal.containsKey("finca")) {
+
+            ediFinca.setText(Utils.hasmapDataGlobal.get("finca"));
+            Log.i("misfinca","SE EJECUTO EL IFHERE  Y EL TEXTO ES "+Utils.hasmapDataGlobal.get(String.valueOf(R.id.ediFinca)));
+            spInnerFinca.setVisibility(View.GONE);
+            Log.i("comenzart","es finca gone spinner");
+
+
+        }
+
+
+
+        if( Utils.hasmapDataGlobal.containsKey("ubicacion")) {
+
+           Log.i("comenzart","es ubicacion gone spinner");
+
+            ediLugar.setText(Utils.hasmapDataGlobal.get("ubicacion"));
+            spinnerUbicacion.setVisibility(View.GONE);
+
+        }
+
+
+        if( Utils.hasmapDataGlobal.containsKey(String.valueOf(R.id.ediProductor))) {
+
+            ediProductor.setText(Utils.hasmapDataGlobal.get(String.valueOf(R.id.ediProductor)));
+
+        }
+
+
+
+        if( Utils.hasmapDataGlobal.containsKey(String.valueOf(R.id.ediFecha))) {
+            ediFecha.setText(Utils.hasmapDataGlobal.get(String.valueOf(R.id.ediFecha)));
+        }
+
+
+
+        if( Utils.hasmapDataGlobal.containsKey(String.valueOf(R.id.ediCodigo))) {
+
+            odiCodigO.setText(Utils.hasmapDataGlobal.get(String.valueOf(R.id.ediCodigo)));
+
+        }
+
+
+
+
+    }
+
+
+    void findViewsIds(){
+
+
+        mireciclerView =findViewById(R.id.mirecicler);
+        btnSaveAndCalc=findViewById(R.id.btnSaveAndCalc);
+
+
+        lay_container_datsGrales=findViewById(R.id.lay_container_datsGrales);
+        txtDtsGenrales=findViewById(R.id.txtDtsGenrales);
+        layotl1=findViewById(R.id.layotl1);
+        layotl2=findViewById(R.id.layotl2);
+
+        ediProductor=findViewById(R.id.ediProductor);
+        ediFinca=findViewById(R.id.ediFinca);
+        ediFecha=findViewById(R.id.ediFecha);
+        ediLugar=findViewById(R.id.ediLugar);
+        ediSemana=findViewById(R.id.ediSemana);
+        odiCodigO=findViewById(R.id.odiCodigO);
+        ediFirmaTec=findViewById(R.id.ediFirmaTec);
+        ediObservacionesAll=findViewById(R.id.ediObservacionesAll);
+        ediPercentAll=findViewById(R.id.ediPercentAll);
+
+    }
 
 }

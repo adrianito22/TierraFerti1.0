@@ -37,41 +37,19 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <androidx.gridlayout.widget.GridLayout
-                android:id="@+id/gridLayout"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:columnCount="2">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiLayfinca"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:hint="PRODUCTOR"
-                    app:layout_columnWeight="1">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ediProductor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:layout_marginTop="10dp"
-                        android:ems="10"
-                        android:gravity="center"
-                        android:inputType="text"
-                        android:padding="10dp"
-                        android:tag="productor"
-                        android:textSize="14sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:hint="FINCA"
-                    app:layout_columnWeight="1">
+                    android:layout_weight="1"
+                    android:hint="FINCA">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/ediFinca"
@@ -87,13 +65,49 @@
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <Spinner
+                    android:id="@+id/spInnerFinca"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </Spinner>
+
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:hint="FECHA"
-                    app:layout_columnWeight="1">
+                    android:layout_weight="1"
+                    android:hint="PRODUCTOR">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediProductor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:tag="productor"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:hint="FECHA">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/ediFecha"
@@ -110,12 +124,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiLayUbicacion"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:hint="lUGAR"
-                    app:layout_columnWeight="1">
+                    android:layout_weight="1"
+                    android:hint="lUGAR">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/ediLugar"
@@ -131,13 +146,28 @@
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <Spinner
+                    android:id="@+id/spinnerUbicacion"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:hint="SEMANA"
-                    app:layout_columnWeight="1">
+                    android:layout_weight="1"
+                    android:hint="SEMANA">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/ediSemana"
@@ -158,8 +188,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:hint="CODIGO"
-                    app:layout_columnWeight="1">
+                    android:layout_weight="1"
+                    android:hint="CODIGO">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/odiCodigO"
@@ -174,8 +204,7 @@
                         android:tag="codigo"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
-
-            </androidx.gridlayout.widget.GridLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layotl1"
