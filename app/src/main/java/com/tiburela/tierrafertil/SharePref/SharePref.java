@@ -45,7 +45,11 @@ public class SharePref {
     {
         if(mSharedPrefUniqueObjc == null)
             mSharedPrefUniqueObjc = context.getSharedPreferences(context.getPackageName(), Activity.MODE_PRIVATE);
+
+
     }
+
+
 
 
     public static void saveMapPreferFields(Map<String, String> inputMap,String KeyTOsAVE) {
@@ -121,6 +125,9 @@ public class SharePref {
         }
     }
 
+
+
+
     public static  Map<String,AllFormsModel> loadMapPreferencesDataOfFields(String keyShare) {
 
             Gson   gson = new Gson();
@@ -137,32 +144,21 @@ public class SharePref {
                 map= new HashMap<>();
                 return map;
 
-            }else{
+            }
+
+            else
+
+            {
+
 
                 Log.i("lashareperf","Si hay data en share y data es length es "+response);
-
                 return map;
 
 
             }
-
-
-
-
-
     }
 
 
-    public static void saveListInformAllInforms (List<AllFormsModel> listInforms, String KeyTOsAVE) {
-        Gson   gson = new Gson();
-        String jsonListString = gson.toJson(listInforms);
-
-        mSharedPrefUniqueObjc.edit()
-                //.remove("My_map")
-                .putString(KeyTOsAVE, jsonListString) //se guarda en una solo string..
-                .apply();
-
-    }
 
 
     public static void saveListInformPlants (List<Plant> listInforms, String KeyTOsAVE) {
@@ -176,10 +172,57 @@ public class SharePref {
 
     }
 
+    public static void saveListProductores (List<ProductorTierraFertil> listInforms, String KeyTOsAVE) {
+        Gson   gson = new Gson();
+        String jsonListString = gson.toJson(listInforms);
+
+        mSharedPrefUniqueObjc.edit()
+                //.remove("My_map")
+                .putString(KeyTOsAVE, jsonListString);
+
+    }
 
 
 
 
+
+    public static  List<ProductorTierraFertil> getListProductores ( String KeyOfItem) {
+        Gson   gson = new Gson();
+        String response=mSharedPrefUniqueObjc.getString(KeyOfItem , "");
+
+        Type type = new TypeToken<List<ProductorTierraFertil>>(){}.getType();
+        List<ProductorTierraFertil> listProductores;
+        listProductores = gson.fromJson(response, type);
+
+
+        if(response.equals("")) {
+            Log.i("lashareperf","no hay data en share");
+
+            listProductores= new ArrayList<>();
+            return listProductores;
+        }
+
+        else{
+            Log.i("lashareperf","Si hay data en share y el length es "+listProductores.size());
+
+            return listProductores;
+        }
+
+    }
+
+
+
+
+    public static void saveListInformAllInforms (List<AllFormsModel> listInforms, String KeyTOsAVE) {
+        Gson   gson = new Gson();
+        String jsonListString = gson.toJson(listInforms);
+
+        mSharedPrefUniqueObjc.edit()
+                //.remove("My_map")
+                .putString(KeyTOsAVE, jsonListString) //se guarda en una solo string..
+                .apply();
+
+    }
     public static  List<AllFormsModel> getListAlLiforms ( String KeyOfItem) {
         Gson   gson = new Gson();
         String response=mSharedPrefUniqueObjc.getString(KeyOfItem , "");

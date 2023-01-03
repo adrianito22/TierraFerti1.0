@@ -48,6 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -78,6 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />
@@ -171,6 +173,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:gravity="center"
                     android:inputType="text"
                     android:textSize="13sp" />

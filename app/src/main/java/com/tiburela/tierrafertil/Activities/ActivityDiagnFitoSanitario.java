@@ -122,17 +122,11 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
         /**obtebnemos nuestro objeto Current**/
                if(Variables.currentProductorBJECt==null){
 
-                   if(Variables.allProductores.size()==0){
+                   if(Variables.allProductores.size()>0){
 
                        Log.i("nosood","se ejecto el if ");
 
                        getProductorByID(codigoProductor,Variables.allProductores);
-
-                   }else{
-
-                       Log.i("nosood","se ejecto el else ");
-
-                       //descragamos la lista
 
                    }
 
@@ -263,21 +257,6 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
         }
 
 
-        if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.spInnerFinca))) {
-
-            Log.i("misfinca","SE EJECUo esto tambein ");
-
-            if(!Utils.hasmapFitosnitario.get(String.valueOf(R.id.spInnerFinca)).trim().isEmpty()){
-                Log.i("misfinca","SE EJECUo esto tambein ");
-
-                fincA=Utils.hasmapFitosnitario.get(String.valueOf(R.id.spInnerFinca));
-            }
-
-            Log.i("misfinca","SE EJECUo esto tambein ye el valor de finca es  "+fincA);
-
-        }
-
-
 
         if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.ediUbicacion))) {
 
@@ -290,22 +269,13 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
 
         }
 
-        if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.spinnerUbicacion))) {
-
-
-            if(!Utils.hasmapFitosnitario.get(String.valueOf(R.id.spinnerUbicacion)).trim().isEmpty()){
-
-                area=Utils.hasmapFitosnitario.get(String.valueOf(R.id.spinnerUbicacion));
-            }
-
-        }
-
 
         if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.ediProductor))) {
 
             ediProductor.setText(Utils.hasmapFitosnitario.get(String.valueOf(R.id.ediProductor)));
 
         }
+
 
 
         if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.ediFecha))) {
@@ -326,20 +296,6 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
             }
 
         }
-
-
-        if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.spinnerArea))) {
-
-
-            if(!Utils.hasmapFitosnitario.get(String.valueOf(R.id.spinnerArea)).trim().isEmpty()){
-
-                area=Utils.hasmapFitosnitario.get(String.valueOf(R.id.spinnerArea));
-            }
-
-        }
-
-
-
 
 
         if( Utils.hasmapFitosnitario.containsKey(String.valueOf(R.id.ediCodigo))) {
@@ -364,36 +320,36 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
     private void saveValues() {
 
 
-        if(spInnerFinca.getVisibility()==View.VISIBLE){
-            Utils.hasmapFitosnitario.put(String.valueOf(spInnerFinca.getId()) ,  spInnerFinca.getSelectedItem().toString()) ;
-          Log.i("misfinca","es visible");
+        if(spInnerFinca.getVisibility() == View.VISIBLE){
+
+            Utils.hasmapFitosnitario.put(String.valueOf(ediFinca.getId()) ,  spInnerFinca.getSelectedItem().toString() ) ;
 
         }else{
             Utils.hasmapFitosnitario.put(String.valueOf(ediFinca.getId()) ,  ediFinca.getText().toString() ) ;
+
+
         }
 
 
-        if(spinnerUbicacion.getVisibility()==View.VISIBLE){
+        if(spinnerUbicacion.getVisibility() == View.VISIBLE){
 
-            Utils.hasmapFitosnitario.put(String.valueOf(spinnerUbicacion.getId()) ,  spinnerUbicacion.getSelectedItem().toString() ) ;
+            Utils.hasmapFitosnitario.put(String.valueOf(ediUbicacion.getId()) ,  spinnerUbicacion.getSelectedItem().toString() ) ;
 
         }else{
             Utils.hasmapFitosnitario.put(String.valueOf(ediUbicacion.getId()) ,  ediUbicacion.getText().toString() ) ;
+
         }
 
 
+        if(spinnerArea.getVisibility() == View.VISIBLE){
 
-
-        if(spinnerArea.getVisibility()==View.VISIBLE){
-            Utils.hasmapFitosnitario.put(String.valueOf(spinnerArea.getId()) ,  spinnerArea.getSelectedItem().toString() ) ;
-
-
-
+            Utils.hasmapFitosnitario.put(String.valueOf(ediArea.getId()) ,  spinnerArea.getSelectedItem().toString() ) ;
 
         }else{
             Utils.hasmapFitosnitario.put(String.valueOf(ediArea.getId()) ,  ediArea.getText().toString() ) ;
-        }
 
+
+        }
 
 
         Utils.hasmapFitosnitario.put(String.valueOf(ediProductor.getId()) ,  ediProductor.getText().toString() ) ;
@@ -408,18 +364,15 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
     private void addDatatInViews(String Finca,String ubicacion,String area){
 
 
-        Log.i("misfinca","el valor de finca es "+Variables.currentProductorBJECt.getFinca());
 
 
         if(Variables.currentProductorBJECt!=null){
+
             ediProductor.setText(Variables.currentProductorBJECt.getNombre());
             ediCodigo.setText(Variables.currentProductorBJECt.getCodigo());
             ArrayAdapter<String> spinnerArrayAdapter;
 
             /**ahora con los datos que estan separados por &&*/
-
-          //  String [] array=Variables.currentProductorBJECt.getFinca().split("&");
-
 
             Log.i("misfinca","el valor de finca es "+Variables.currentProductorBJECt.getFinca());
 
@@ -437,18 +390,26 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
                 TextInputLayout tiLayfinca=findViewById(R.id.tiLayfinca);
                 tiLayfinca.setVisibility(View.GONE);
 
-
                 ///COLOCAMOS EL PRIMERO ARRIBA....
 
                 Log.i("misfinca","hay un & ");
 
                 Log.i("misfinca","el texto de finca es"+Finca);
 
-
                 spinnerArrayAdapter= new ArrayAdapter<String>(
                         this, android.R.layout.simple_spinner_item, reordenamosSpinner( Finca,createListByString(Variables.currentProductorBJECt.getFinca()) ));
                 spInnerFinca.setAdapter(spinnerArrayAdapter);
+                ediFinca.setVisibility(View.GONE);
 
+
+            }
+
+
+            else{
+
+                ediFinca.setText(Variables.currentProductorBJECt.getFinca());
+
+                spInnerFinca.setVisibility(View.GONE);
 
             }
 
@@ -468,9 +429,16 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
                 spinnerArrayAdapter= new ArrayAdapter<String>(
                         this, android.R.layout.simple_spinner_item, reordenamosSpinner( ubicacion,createListByString(Variables.currentProductorBJECt.getUbicacion())) );
                 spinnerUbicacion.setAdapter(spinnerArrayAdapter);
-
+                 ediUbicacion.setVisibility(View.GONE);
 
             }
+
+            else{
+
+                ediUbicacion.setText(Variables.currentProductorBJECt.getUbicacion());
+                spinnerUbicacion.setVisibility(View.GONE);
+            }
+
 
 
             if(Variables.currentProductorBJECt.getArea().contains("&")){
@@ -486,8 +454,18 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
                 spinnerArrayAdapter= new ArrayAdapter<String>(
                         this, android.R.layout.simple_spinner_item, reordenamosSpinner( area,createListByString(Variables.currentProductorBJECt.getArea() )));
                 spinnerArea.setAdapter(spinnerArrayAdapter);
+                ediArea.setVisibility(View.GONE);
 
             }
+
+            else{
+
+                ediArea.setText(Variables.currentProductorBJECt.getArea());
+
+                spinnerArea.setVisibility(View.GONE);
+
+            }
+
 
 
 

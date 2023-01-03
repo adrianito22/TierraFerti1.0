@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -23,7 +24,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.tiburela.tierrafertil.R;
 import com.tiburela.tierrafertil.SharePref.SharePref;
-import com.tiburela.tierrafertil.adapters.AdapterAllinforms;
 import com.tiburela.tierrafertil.adapters.AdapterProductor;
 import com.tiburela.tierrafertil.database.RealtimDatabase;
 import com.tiburela.tierrafertil.models.AllFormsModel;
@@ -42,12 +42,14 @@ public class MainActivityCenter extends AppCompatActivity {
     LinearLayout layDiagnotiscoFitosa;
     LinearLayout layMisInformes;
     LinearLayout layMisICalendarios;
+    boolean hayLista=false;
 
-     RecyclerView miReciclerAllOptions;
+    RecyclerView miReciclerAllOptions;
     EditText ediNombreProductor;
 
+    ProgressDialog progressDialog;
 
-     ArrayList<ProductorTierraFertil> allProductoresList = new ArrayList<>();
+
     ArrayList<ProductorTierraFertil>listFiltered= new ArrayList<>();
 
 
@@ -61,15 +63,26 @@ public class MainActivityCenter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_center);
 
+        SharePref.init(MainActivityCenter.this);
 
-         layCalidLabresAgriocolas=findViewById(R.id.layCalidLabresAgriocolas);
-         layDiagnotiscoFitosa=findViewById(R.id.layDiagnotiscoFitosa);
+        layCalidLabresAgriocolas=findViewById(R.id.layCalidLabresAgriocolas);
+        layDiagnotiscoFitosa=findViewById(R.id.layDiagnotiscoFitosa);
 
         layMisInformes=findViewById(R.id.layMisInformes);
-      layMisICalendarios =findViewById(R.id.layMisICalendarios);
+        layMisICalendarios =findViewById(R.id.layMisICalendarios);
 
         eventosBtn();
 
+        progressDialog = new ProgressDialog(MainActivityCenter.this);
+        progressDialog.setTitle("Cargando data");
+        progressDialog.setMax(100);
+        progressDialog.setMessage("CARGANDO...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progressDialog.show();
+
+
+
+        /***descargamos la lista de productores*/
         getAllUser(false,0);
 
 
@@ -209,26 +222,31 @@ public class MainActivityCenter extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                 /**mejor mostrar dialog mientras se descarga la lista o obtiene de prefrencias*/
                 /**aqui agregamos el tipo de informe que queremos agregar por ahorasoloagudaremos uno  INFORM_FITOSANITARIO*/
-
+               /**aqui deberiamos tener una lista descargada de internet si no al menos la lista de preferencias*/
 
                 //obtenmos de prefeencias
-                Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.loadMapPreferencesProductorTierraF(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
-                 //descragamos la lista con todos nombre de productores...
+                //Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.getListProductores(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+                  //descragamos la lista con todos nombre de productores...
+
+
+                try {
+                    sheetBootomInformNew(typeInform);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
                 if(Variables.allProductores.size()==0){ //si la lista no esta descargada
-                    getAllUser(true,typeInform);
 
+                 //   getAllUser(true,typeInform);
+
+
+                    Log.i("sanamsmd","se eejcuto el if ");
                 }
-                else{
-
-                    try {
-                        sheetBootomInformNew(typeInform);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
 
 
-                }
 
 
 
@@ -250,11 +268,17 @@ public class MainActivityCenter extends AppCompatActivity {
     private void sheetBootomInformNew(int informType) throws IOException {
 
 
-        if(!chekIfUserHaveInternetOrExistMapPreferences()){
-            Toast.makeText(this, "  No tienes conexion a internet", Toast.LENGTH_SHORT).show();
-            return;
+        Log.i("siuperfs","el size de la data es "+Variables.allProductores.size());
+
+        if(Variables.allProductores.size()==0) {
+            Log.i("siuperfs","se eejcuto sdhjdsghjfsd"+Variables.allProductores.size());
+
+            Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.getListProductores(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+            hayLista=true;
+
         }
 
+        //entonces aqui ya deberiamos tener en
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivityCenter.this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_data_inform);
@@ -262,20 +286,30 @@ public class MainActivityCenter extends AppCompatActivity {
 
         EditText ediData2=bottomSheetDialog.findViewById(R.id.ediData2);
         EditText ediData1=bottomSheetDialog.findViewById(R.id.ediData1);
-         ediNombreProductor=bottomSheetDialog.findViewById(R.id.ediNombreProductor);
+
+        ediNombreProductor=bottomSheetDialog.findViewById(R.id.ediNombreProductor);
         miReciclerAllOptions=bottomSheetDialog.findViewById(R.id.miReciclerAllOptions);
         Button btnCreateInform=bottomSheetDialog.findViewById(R.id.btnCreateInform);
 
+/*
+        if(!hayLista){
+
+            ediNombreProductor.requestFocus();
+            ediNombreProductor.setError("No hay nombres de productores");
+
+        }
+*/
+
         textWatcher();
-
-
 
 
 
         btnCreateInform.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String nota="";
+
 
                 if(ediData1.getText().toString().trim().isEmpty()  ) {
                     ediData1.requestFocus();
@@ -285,19 +319,15 @@ public class MainActivityCenter extends AppCompatActivity {
 
 
                 if(! ediData2.getText().toString().trim().isEmpty() ) {
-
                     nota=ediData2.getText().toString();
-
                 }
 
 
                 if(ediNombreProductor.getText().toString().trim().isEmpty()  || Variables.currentProductorBJECt==null) {
                     ediNombreProductor.requestFocus();
-                    ediNombreProductor.setError("No has selecionado un productor");
+                    ediNombreProductor.setError("No has selecionado un productor Valido");
                     return;
                 }
-
-
 
 
                 SharePref.init(MainActivityCenter.this);
@@ -410,19 +440,20 @@ public class MainActivityCenter extends AppCompatActivity {
                 Log.i("comisaria","llamamos " );
 
                // addDataReciclerAndShowOptions(redondeadoTotalCreate);
+                Log.i("siuperfs","llamamos el size de lista variables all es "+Variables.allProductores.size() );
 
 
                 listFiltered.clear();
                 listFiltered= new ArrayList<>();
 
-                for(int index = 0; index< allProductoresList.size(); index++) {
+                for(int index = 0; index<  Variables.allProductores.size(); index++) {
 
                         //  String textSearch=charSequence.toString().toUpperCase(Locale.ROOT);
 
-                    if( charSequence.toString().isEmpty() || allProductoresList.get(index).getNombre().contains(charSequence.toString().toUpperCase()))
+                    if( charSequence.toString().isEmpty() ||  Variables.allProductores.get(index).getNombre().contains(charSequence.toString().toUpperCase()))
                     {
 
-                        listFiltered.add(allProductoresList.get(index));
+                        listFiltered.add(Variables.allProductores.get(index));
 
                         Log.i("comisaria","llamamos el size de lista es "+listFiltered.size() );
 
@@ -503,8 +534,6 @@ public class MainActivityCenter extends AppCompatActivity {
 
     private void getAllUser(boolean isCreateNewReport, int tipeInfomrOptional){
 
-        allProductoresList = new ArrayList<>();
-
         Variables.allProductores=new ArrayList<>();
 
         RealtimDatabase.initDatabasesRootOnly();
@@ -513,39 +542,38 @@ public class MainActivityCenter extends AppCompatActivity {
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                    ProductorTierraFertil  user=ds.getValue(ProductorTierraFertil.class);
 
-                    Log.i("misdata","la data es "+user.getNombre());
-                    //  array.add(name);
-
-                    allProductoresList.add(user);
-
+                    Variables.allProductores.add(user);
                 }
 
 
-                Variables.allProductores=allProductoresList;
-                SharePref.saveMapProductorTierrFertil((Map<String, ProductorTierraFertil>) Variables.allProductores,SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+                if(Variables.allProductores.size()>0){
 
+                    Log.i("siuperfs","se eejcuto este if nn  y el size es "+Variables.allProductores.size());
+                    SharePref.saveListProductores(Variables.allProductores,SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
 
-                if(isCreateNewReport && allProductoresList.size()>0){
-
-                    try {
-                        sheetBootomInformNew(tipeInfomrOptional);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    ///
+                    progressDialog.dismiss();
 
                 }
 
+                else
 
-                /**ojo por aqui puede haber un posible bug.. en caso que aun no tengamos data en nuestro array list principal*/
-                ///aqui ya podemos activar........
+                {
+                    progressDialog.dismiss();
+
+                    Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.getListProductores(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+                    Log.i("siuperfs","se eejcuto elsse nnn ");
+
+                }
+
 
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                progressDialog.dismiss();
 
             }
         };
@@ -555,51 +583,29 @@ public class MainActivityCenter extends AppCompatActivity {
 
 
     private boolean chekIfUserHaveInternetOrExistMapPreferences() throws IOException {
-             boolean isReady;
+        boolean isReady;
+        Log.i("solaris", "se ejecto netodo ");
 
-        Map<String,ProductorTierraFertil>miMap= SharePref.loadMapPreferencesProductorTierraF(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+        Variables.allProductores = (ArrayList<ProductorTierraFertil>) SharePref.getListProductores(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
 
-        if(miMap.size()==0){
-            Log.i("mapadd","es un mapa vacio");
-            isReady=false;
-        }else{
-            Log.i("mapadd","este mapa tiene data hurra ");
-            isReady=true;
-
-        }
-
-
-        if(isReady){
-            return true;
-        }
-
-
-        if(Utils.isReachable("http://www.google.com/")){
-            Log.i("mapadd","bien hay conexion internet ");
-            return true;
-
-        }
-
-        else
+        if (Variables.allProductores.size() == 0 && !Utils.isReachable("http://www.google.com/")) {
+            Log.i("solaris", "no es ready no hay data o no hay acceso a internet");
+            isReady = false;
+        } else
 
         {
-            Log.i("mapadd","No hay conexion internet ");
-
-            return false;
-
+            Log.i("solaris", "hay un hurra ");
+            isReady = true;
 
         }
 
 
-
-        ///1.el usuario tiene que tener conexion internet
-        //.2.tiene que haber una lista de prefrencias...
-
-        //4. si el user no tiene un map en prefrencias y tampoco tiene conexion a internet ,entonces no puede..
-        //5. si no tiene prefrencias ,tiene conexion a intenert , pero no se le descrga la lista por algun motivo tampoco pued...
+        if (isReady) {
+            return true;
+        }
 
 
+        return isReady;
     }
-
 
 }

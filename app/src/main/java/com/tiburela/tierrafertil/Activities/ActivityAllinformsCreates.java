@@ -66,7 +66,7 @@ ArrayList<AllFormsModel> lisInformFiltered;
          }
 
 
-        Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.loadMapPreferencesProductorTierraF(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
+        //Variables.allProductores= (ArrayList<ProductorTierraFertil>) SharePref.getListProductores(SharePref.kEYPRODUCTOR_TIERRA_FERTIL);
 
 
     }
@@ -120,7 +120,15 @@ ArrayList<AllFormsModel> lisInformFiltered;
 
             lisInformFiltered = (ArrayList<AllFormsModel>) generateListByEspecificType(allInformsShareList);
 
+
+            if(lisInformFiltered.size()==0){
+
+                txtAdvisser.setVisibility(View.VISIBLE);
+
+            }
+
             setDataRecyclerView(( lisInformFiltered));
+
 
         }
     }
