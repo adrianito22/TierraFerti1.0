@@ -283,7 +283,7 @@ public class FragmtPlantsJovenes extends Fragment {
 
             //mostramos el total
             int enteroResult;
-            DecimalFormat df = new DecimalFormat("#,#");
+            DecimalFormat df = new DecimalFormat("#,##");
 
             if(totalHojas % 1 ==0){
                 Log.i("hamemr","el total hojas es entero y es "+totalHojas);

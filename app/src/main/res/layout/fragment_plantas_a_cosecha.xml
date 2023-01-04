@@ -990,7 +990,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/guideline30"
-            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline31"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_check_box_24" />
 

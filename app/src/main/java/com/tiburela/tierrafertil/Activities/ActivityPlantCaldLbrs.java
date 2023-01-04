@@ -57,6 +57,8 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
     TextInputEditText ediFirmaTec;
     TextInputEditText ediObservacionesAll;
     TextInputEditText ediPercentAll;
+
+
      String keyextradata;
 
       Spinner spInnerFinca;
@@ -134,16 +136,20 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
         /**obtebnemos nuestro objeto Current**/
 
-        try {
 
+
+        try {
             if(Variables.allProductores.size()>0){
                 Log.i("nosood","se ejecto el if ");
                 getProductorByID(codigoProductor,Variables.allProductores);
             }
+        }
 
-        } catch (Exception e) {
+
+        catch (Exception e) {
             e.printStackTrace();
         }
+
 
 
 
@@ -158,10 +164,9 @@ public class ActivityPlantCaldLbrs extends AppCompatActivity {
 
         } else {
 
-
             Log.i("misfinca","SE EJECUTO EL ELSE");
 
-            addDataGeneralInViews();  //agregamos la data...
+            addDataGeneralInViews();
 
         }
 

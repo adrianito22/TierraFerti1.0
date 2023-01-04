@@ -1032,10 +1032,12 @@
             android:id="@+id/IMGcHECKoperation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline30"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_check_box_24"
-            tools:layout_editor_absoluteX="225dp" />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_check_box_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
