@@ -571,7 +571,7 @@ private void addEVENT() {
 
     public void saveDataCurrentPlantsJovenes() {
 
-        Utils.SAVEhashmapCurrentCuadro("/plJovenes", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
+        Utils.SAVEhashmapCurrentCuadro("/plJovenes", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL,getActivity());
 
     }
 

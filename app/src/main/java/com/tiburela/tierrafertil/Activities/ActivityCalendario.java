@@ -128,7 +128,7 @@ public class ActivityCalendario extends AppCompatActivity {
             UtilsCalendario.indiceColors=0; //resetamos en cero el indice del claendario
             UtilsCalendario.initArrayColorsCinta();   //inicilziamos array de colores
             AdapterCalendario.listCalendario= new ArrayList<CalendarioEnf>(); //inicilizamos este array
-            UtilsCalendario.generateCalendarioYear(2022,2);
+            UtilsCalendario.generateCalendarioYear(2023,2);
 
 
             ///SORTER ARRA LIST

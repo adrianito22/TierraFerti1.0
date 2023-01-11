@@ -566,7 +566,7 @@ private void addEVENT() {
 
     public void addDtainViews() {// si no se colca la data llmaos erste metodo
 
-        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
+        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe,ActivityDiagnFitoSanitario.keyprefrencesGlobaL,getActivity());
 
 
     }
@@ -593,7 +593,7 @@ if(ediTh1== null)  {
 
 
 
-        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
+        Utils.SAVEhashmapCurrentCuadro("/pl7Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL,getActivity());
 
 
     }

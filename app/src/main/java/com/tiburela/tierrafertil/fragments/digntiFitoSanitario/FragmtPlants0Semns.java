@@ -580,7 +580,7 @@ private void addEVENT() {
 
     public void saveDataCurrentPlants0Semanas() {
 
-        Utils.SAVEhashmapCurrentCuadro("/pl0Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL);
+        Utils.SAVEhashmapCurrentCuadro("/pl0Semns", arrayColumnHn,arrayColumnTh, arrayColumnHe, ActivityDiagnFitoSanitario.keyprefrencesGlobaL,getActivity());
 
 
     }

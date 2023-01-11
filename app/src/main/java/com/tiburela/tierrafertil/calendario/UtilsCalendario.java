@@ -20,8 +20,7 @@ static Calendar calendar = Calendar.getInstance();
     public static final int NUMS_CINTAS=8;
 
     public static String [] coloresCintasArray={
-            "#3F51B5","#FFFFFFFF","#FFEB3B","#673AB7",
-            "#D30404","#D3503600","#040404","#014C04"
+            "#673AB7", "#D30404","#D3503600","#040404","#014C04","#3F51B5","#FFFFFFFF","#FFEB3B",
     };
 
 
@@ -36,14 +35,15 @@ static Calendar calendar = Calendar.getInstance();
 
      colorsArray = new int[8];
 
-                colorsArray[0] = R.color.lila;
-                colorsArray[1] = R.color.blanco;
-                colorsArray[2] = R.color.amarillo;
-                colorsArray[3] = R.color.purupra;
-                colorsArray[4] = R.color.rojo;
-                colorsArray[5] = R.color.cafe;
-                colorsArray[6] = R.color.negro;
-                colorsArray[7] = R.color.verde;
+        colorsArray[0] = R.color.purupra;
+        colorsArray[1] = R.color.rojo;
+        colorsArray[2] = R.color.cafe;
+        colorsArray[3] = R.color.negro;
+        colorsArray[4] = R.color.verde;
+                colorsArray[5] = R.color.lila;
+                colorsArray[6] = R.color.blanco;
+                colorsArray[7] = R.color.amarillo;
+
 
 
     }
@@ -59,13 +59,14 @@ static Calendar calendar = Calendar.getInstance();
         Log.i("samas","la semana n here es  "+totalWeeks2);
 */
 
-
-        int totalWeeks = getTotalWeeksInYear(year);
+        int totalWeeks = getTotalWeeksInYear(year); //por alguna razon no quiere funciona
         SimpleDateFormat formatDiaEnd = new SimpleDateFormat("dd");
 
         int weeksOfYear = Calendar.getInstance().getActualMaximum(Calendar.WEEK_OF_YEAR);
 
           Log.i("samas","la semana n here es  "+weeksOfYear);
+        Log.i("samas","el total wekends es   "+totalWeeks);
+
 
         int currentMonth ;
         int currentDay;
@@ -78,7 +79,8 @@ static Calendar calendar = Calendar.getInstance();
 
 
 
-        for(int indice=0; indice<totalWeeks-1; indice++){
+        for(int indice=0; indice<weeksOfYear; indice++){  //estab en menos 1
+            Log.i("samas","seejecuto el for ");
 
 
             //  calendar.add(Calendar.DATE, 0);
@@ -109,6 +111,7 @@ static Calendar calendar = Calendar.getInstance();
     private static void createObjecAndAddList(int diaStart,int diaEnd,int numMes,int semanaNum,int contadorIteracion){
 
     // int  currentColorCinta=col;
+        Log.i("samas","se llamo createObjecAndAddList ");
 
 
         if(contadorIteracion % NUMS_CINTAS ==0  ){ //cada 8 veces aumentamos uno

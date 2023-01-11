@@ -1,7 +1,9 @@
 package com.tiburela.tierrafertil.utils;
 
+import android.content.Context;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.tiburela.tierrafertil.SharePref.SharePref;
@@ -232,7 +234,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
 
 
-   public static  void SAVEhashmapCurrentCuadro(String tag, EditText[]arrayColumnHn, EditText[]arrayColumnTh, EditText[]arrayColumnHe,String keyprefrences ) {
+   public static  void SAVEhashmapCurrentCuadro(String tag, EditText[]arrayColumnHn, EditText[]arrayColumnTh, EditText[]arrayColumnHe, String keyprefrences, Context contexto) {
       // un arary klist of views....
      // String tag = "/pl0Semns";
 
@@ -292,7 +294,7 @@ public static ArrayList <Plant> arraListByHASMPA(Map<String, Plant> hasmpap){
 
       SharePref.saveMapPreferFields( Utils.hasmapDataGlobal,keyprefrences);
 
-
+      Toast.makeText(contexto, "Guardado", Toast.LENGTH_SHORT).show();
 
 
 

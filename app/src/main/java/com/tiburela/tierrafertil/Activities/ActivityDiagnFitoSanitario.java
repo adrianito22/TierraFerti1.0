@@ -101,7 +101,7 @@ public class ActivityDiagnFitoSanitario extends AppCompatActivity implements Vie
                 FRAGMxx.saveDataCurrentPlantsJovenes();
 
 
-                finish();
+              //  finish();
 
             }
         });
